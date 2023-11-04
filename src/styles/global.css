@@ -1,0 +1,58 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+:root {
+  --primary-color: hsl(196, 79%, 35%);
+  --primary-text-color: hsl(0, 0%, 100%);
+  --secondary-color: hsl(208, 7%, 46%);
+  --secondary-text-color: hsl(0, 0%, 100%);
+  --success-color: hsl(152, 69%, 31%);
+  --success-text-color: hsl(0, 0%, 100%);
+  --warning-color: hsl(190, 90%, 50%);
+  --warning-text-color: hsl(0, 0%, 100%);
+  --danger-color: hsl(354, 70%, 54%);
+  --danger-text-color: hsl(0, 0%, 100%);
+  --disable-button: 0.5;
+  --font-family: "Roboto", sans-serif;
+  --font-size: 0.95rem;
+  --line-height: normal;
+  --letter-spacing: 0.5px;
+  --word-spacing: normal;
+  --radius: 0.5rem;
+}
+
+.button {
+  font-family: var(--font-family);
+  font-size: var(--font-size);
+  line-height: var(--line-height);
+  letter-spacing: var(--letter-spacing);
+  word-spacing: var(--word-spacing);
+  border: var(--border);
+  border-radius: var(--radius);
+  cursor: pointer;
+  padding: 8px 13px;
+}
+
+.disabled-button {
+  opacity: var(--disable-button);
+}
+
+.primary {
+  background-color: var(--primary-color);
+  color: var(--primary-text-color);
+}
+.secondary {
+  background-color: var(--secondary-color);
+  color: var(--secondary-text-color);
+}
+.success {
+  background-color: var(--success-color);
+  color: var(--success-text-color);
+}
+.warning {
+  background-color: var(--warning-color);
+  color: var(--warning-text-color);
+}
+.danger {
+  background-color: var(--danger-color);
+  color: var(--danger-text-color);
+}

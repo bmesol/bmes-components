@@ -1,29 +1,50 @@
 import React from "react";
-import "./../styles/css/main.css";
-import { PropTypes } from 'prop-types';
+import PropTypes from "prop-types";
+import "./../styles/global.css";
 
-// ----- * Button Component * -----
-const ButtonVariants = {
+export const ButtonVariants = {
   PRIMARY: "primary",
   SECONDARY: "secondary",
+  SUCCESS: "success",
+  WARNING: "warning",
+  DANGER: "danger",
 };
-const Button = ({ label, variant, className, ...rest }) => {
+export const Button = ({
+  label,
+  onClick,
+  variant,
+  classNames = "",
+  isDisabled = false,
+}) => {
+  const maxLabelLength = 13;
+  const isValidLabel = label.length <= maxLabelLength ? true : false;
+  if (!isValidLabel) isDisabled = true;
   return (
     <>
       <button
-        type="button"
-        className={`button ${variant} ${className}`}
-        {...rest}
+        className={`button ${variant} ${classNames} ${
+          isDisabled ? "disabled-button" : ""
+        }`}
+        onClick={onClick}
+        disabled={isDisabled}
       >
-        {label}
+        <span>{label.slice(0, maxLabelLength)}</span>
       </button>
+      {!isValidLabel && (
+        <>
+          <br />
+          <span className="text-danger d-inline-block mt-1">
+            Button labels must be no longer than {maxLabelLength} characters
+          </span>
+        </>
+      )}
     </>
   );
 };
 Button.propTypes = {
   label: PropTypes.string.isRequired,
+  onClick: PropTypes.func.isRequired,
   variant: PropTypes.oneOf(Object.values(ButtonVariants)).isRequired,
-  className: PropTypes.string,
+  classNames: PropTypes.string,
+  isDisabled: PropTypes.bool,
 };
-
-export { Button };

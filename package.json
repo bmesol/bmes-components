@@ -1,15 +1,13 @@
 {
-  "name": "bmes-react-ui-library",
+  "name": "bmes-components",
   "version": "1.0.0",
   "description": "BM e-Solutions React UI Library",
   "main": "dist/index.js",
   "module": "dist/index.es.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "sass": "sass ./src/styles/sass/main.sass ./src/styles/css/main.css --watch",
-    "build-lib": "rollup -c"
+    "build": "rollup -c"
   },
   "repository": {
     "type": "git",
@@ -41,12 +39,11 @@
     "rollup-plugin-peer-deps-external": "^2.2.4",
     "rollup-plugin-postcss": "^4.0.2",
     "rollup-plugin-terser": "^7.0.2",
-    "sass": "^1.69.5",
     "storybook": "^7.5.2"
   },
   "peerDependencies": {
+    "prop-types": "^15.8.1",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "prop-types": "^15.8.1"
+    "react-dom": "^18.2.0"
   }
 }
