@@ -1,5 +1,5 @@
 {
-  "name": "bmes-components",
+  "name": "@bmesol/bmes-components",
   "version": "1.0.0",
   "description": "BM e-Solutions React UI Library",
   "main": "dist/index.js",
