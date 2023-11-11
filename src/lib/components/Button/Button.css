@@ -1,0 +1,38 @@
+@import url(../../../styles/global.css);
+
+.button {
+  font-family: var(--font-family);
+  font-size: var(--font-size);
+  line-height: var(--line-height);
+  letter-spacing: var(--letter-spacing);
+  word-spacing: var(--word-spacing);
+  border: var(--border);
+  border-radius: var(--radius);
+  cursor: pointer;
+  padding: var(--button-padding);
+}
+
+.disabled-button {
+  opacity: var(--disable-button);
+}
+
+.primary {
+  background-color: var(--primary-color);
+  color: var(--primary-text-color);
+}
+.secondary {
+  background-color: var(--secondary-color);
+  color: var(--secondary-text-color);
+}
+.success {
+  background-color: var(--success-color);
+  color: var(--success-text-color);
+}
+.warning {
+  background-color: var(--warning-color);
+  color: var(--warning-text-color);
+}
+.danger {
+  background-color: var(--danger-color);
+  color: var(--danger-text-color);
+}

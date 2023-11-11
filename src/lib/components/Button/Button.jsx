@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import "./../styles/global.css";
+import "./Button.css";
 
 export const ButtonVariants = {
   PRIMARY: "primary",

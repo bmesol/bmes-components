@@ -1,4 +1,4 @@
-import { Button, ButtonVariants } from "./../../lib/Button";
+import { Button, ButtonVariants } from "../../lib/components/Button/Button";
 import ButtonDoc from "./ButtonDoc.md";
 
 export default {
