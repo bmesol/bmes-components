@@ -1,19 +1,23 @@
 @import url(../../../styles/global.css);
 
 .button {
+  padding: var(--button-padding);
+  border-radius: var(--border-radius);
+  font-weight: var(--font-weight);
+  height: var(--button-height);
+  box-shadow: var(--box-shadow);
+  border: none;
   font-family: var(--font-family);
   font-size: var(--font-size);
+  font-style: var(--font-style);
   line-height: var(--line-height);
   letter-spacing: var(--letter-spacing);
-  word-spacing: var(--word-spacing);
-  border: var(--border);
-  border-radius: var(--radius);
-  cursor: pointer;
-  padding: var(--button-padding);
+  white-space: nowrap;
 }
 
 .disabled-button {
-  opacity: var(--disable-button);
+  opacity: var(--disable-button-opacity);
+  cursor: not-allowed;
 }
 
 .primary {
