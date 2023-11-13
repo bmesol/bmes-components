@@ -17,6 +17,6 @@
   --line-height: normal;
   --letter-spacing: 0.5px;
   --word-spacing: normal;
-  --radius: 0.5rem;
-  --button-padding: 8px 13px;
+  --radius: 24px;
+  --button-padding: 8px 32px;
 }
