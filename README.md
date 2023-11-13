@@ -5,20 +5,20 @@
 ## Installation
 
 ```
-npm install @bmesol/bmes-components --save
+npm install @bmesol/bmes-components@0.0.6-beta
 ```
 
 Example usage
 
 ```jsx
-import { Button } from "@bmesol/bmes-components";
+import { Button, ButtonVariants } from "@bmesol/bmes-components";
 
 function App() {
   const handleClick = () => {
     alert("You clicked on Primary Button");
   };
   return (
-    <Button label={"My Button"} variant={"primary"} onClick={handleClick} />
+    <Button label={"My Button"} variant={ButtonVariants.PRIMARY} onClick={handleClick} />
   );
 }
 ```
