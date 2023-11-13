@@ -40,3 +40,53 @@
   background-color: var(--danger-color);
   color: var(--danger-text-color);
 }
+
+.outline-primary {
+  border: 2px solid var(--primary-color);
+  color: var(--primary-color);
+  background-color: white;
+}
+.outline-primary:hover {
+  background-color: var(--primary-color);
+  color: var(--primary-text-color);
+}
+
+.outline-secondary {
+  border: 2px solid var(--secondary-color);
+  color: var(--secondary-color);
+  background-color: white;
+}
+.outline-secondary:hover {
+  background-color: var(--secondary-color);
+  color: var(--secondary-text-color);
+}
+
+.outline-success {
+  border: 2px solid var(--success-color);
+  color: var(--success-color);
+  background-color: white;
+}
+.outline-success:hover {
+  background-color: var(--success-color);
+  color: var(--success-text-color);
+}
+
+.outline-warning {
+  border: 2px solid var(--warning-color);
+  color: var(--warning-color);
+  background-color: white;
+}
+.outline-warning:hover {
+  background-color: var(--warning-color);
+  color: var(--warning-text-color);
+}
+
+.outline-danger {
+  border: 2px solid var(--danger-color);
+  color: var(--danger-color);
+  background-color: white;
+}
+.outline-danger:hover {
+  background-color: var(--danger-color);
+  color: var(--danger-text-color);
+}

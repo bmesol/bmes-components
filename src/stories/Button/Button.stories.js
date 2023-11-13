@@ -65,3 +65,53 @@ Danger.args = {
   },
   isDisabled: false,
 };
+
+export const Outline_Primary = Template.bind({});
+Outline_Primary.args = {
+  label: "Out Primary",
+  variant: ButtonVariants.OUTLINE_PRIMARY,
+  onClick: () => {
+    alert("You clicked on Outline Primary Button");
+  },
+  isDisabled: false,
+};
+
+export const Outline_Secondary = Template.bind({});
+Outline_Secondary.args = {
+  label: "Out Secondary",
+  variant: ButtonVariants.OUTLINE_SECONDARY,
+  onClick: () => {
+    alert("You clicked on Outline Secondary Button");
+  },
+  isDisabled: false,
+};
+
+export const Outline_Success = Template.bind({});
+Outline_Success.args = {
+  label: "Out Success",
+  variant: ButtonVariants.OUTLINE_SUCCESS,
+  onClick: () => {
+    alert("You clicked on Outline Success Button");
+  },
+  isDisabled: false,
+};
+
+export const Outline_Warning = Template.bind({});
+Outline_Warning.args = {
+  label: "Out Warning",
+  variant: ButtonVariants.OUTLINE_WARNING,
+  onClick: () => {
+    alert("You clicked on Outline Warning Button");
+  },
+  isDisabled: false,
+};
+
+export const Outline_Danger = Template.bind({});
+Outline_Danger.args = {
+  label: "Out Danger",
+  variant: ButtonVariants.OUTLINE_DANGER,
+  onClick: () => {
+    alert("You clicked on Outline Danger Button");
+  },
+  isDisabled: false,
+};
