@@ -19,5 +19,5 @@ interface ButtonProps {
     classNames?: string;
     isDisabled?: boolean;
 }
-declare const Button: React.FC<ButtonProps>;
-export default Button;
+export declare const Button: React.FC<ButtonProps>;
+export {};

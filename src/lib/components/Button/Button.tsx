@@ -23,7 +23,7 @@ interface ButtonProps {
   isDisabled?: boolean;
 }
 
-const Button: React.FC<ButtonProps> = ({
+export const Button: React.FC<ButtonProps> = ({
   label,
   onClick,
   variant,
@@ -36,9 +36,8 @@ const Button: React.FC<ButtonProps> = ({
   return (
     <>
       <button
-        className={`button ${variant} ${classNames} ${
-          isDisabled ? "disabled-button" : ""
-        }`}
+        className={`button ${variant} ${classNames} ${isDisabled ? "disabled-button" : ""
+          }`}
         onClick={onClick}
         disabled={isDisabled}
       >
@@ -63,5 +62,3 @@ Button.propTypes = {
   classNames: PropTypes.string,
   isDisabled: PropTypes.bool,
 };
-
-export default Button;
