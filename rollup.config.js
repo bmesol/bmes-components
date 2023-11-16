@@ -1,35 +1,31 @@
-import babel from "rollup-plugin-babel";
-import resolve from "@rollup/plugin-node-resolve";
-import external from "rollup-plugin-peer-deps-external";
-import postcss from "rollup-plugin-postcss";
-import { terser } from "rollup-plugin-terser";
+import { terser } from 'rollup-plugin-terser';
+import typescript from '@rollup/plugin-typescript';
+import resolve from '@rollup/plugin-node-resolve';
+import commonjs from '@rollup/plugin-commonjs';
+import peerDepsExternal from 'rollup-plugin-peer-deps-external';
+import postcss from 'rollup-plugin-postcss';
 
-export default [
-  {
-    input: "./src/index.js",
-    output: [
-      {
-        file: "dist/index.js",
-        format: "cjs",
-      },
-      {
-        file: "dist/index.es.js",
-        format: "es",
-        exports: "named",
-      },
-    ],
-    plugins: [
-      postcss({
-        plugins: [],
-        minimize: true,
-      }),
-      babel({
-        exclude: "node_modules/**",
-        presets: ["@babel/preset-react"],
-      }),
-      external(),
-      resolve(),
-      terser(),
-    ],
-  },
-];
+export default {
+  input: 'src/index.ts', // Entry point of your library
+  output: [
+    {
+      file: 'dist/bundle.cjs.js',
+      format: 'cjs', // CommonJS format
+      sourcemap: true,
+    },
+    {
+      file: 'dist/bundle.esm.js',
+      format: 'esm', // ES Module format
+      sourcemap: true,
+    },
+  ],
+  plugins: [
+    peerDepsExternal(), // Exclude peer dependencies from the bundle
+    resolve(), // Resolve node_modules
+    commonjs(), // Convert CommonJS modules to ES6
+    typescript(), // Handle TypeScript files
+    postcss(), // Process CSS files
+    terser(), // Minify output
+  ],
+  external: ['react', 'react-dom'], // Specify external dependencies
+};

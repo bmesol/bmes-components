@@ -5,7 +5,7 @@
 ## Installation
 
 ```
-npm install @bmesol/bmes-components@0.0.9-beta
+npm install @bmesol/bmes-components@0.0.10-beta
 ```
 
 Example usage

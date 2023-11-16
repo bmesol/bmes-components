@@ -2,27 +2,36 @@ import React from "react";
 import PropTypes from "prop-types";
 import "./Button.css";
 
-export const ButtonVariants = {
-  PRIMARY: "primary",
-  SECONDARY: "secondary",
-  SUCCESS: "success",
-  WARNING: "warning",
-  DANGER: "danger",
-  OUTLINE_PRIMARY: "outline-primary",
-  OUTLINE_SECONDARY: "outline-secondary",
-  OUTLINE_SUCCESS: "outline-success",
-  OUTLINE_WARNING: "outline-warning",
-  OUTLINE_DANGER: "outline-danger",
-};
-export const Button = ({
+export enum ButtonVariants {
+  PRIMARY = "primary",
+  SECONDARY = "secondary",
+  SUCCESS = "success",
+  WARNING = "warning",
+  DANGER = "danger",
+  OUTLINE_PRIMARY = "outline-primary",
+  OUTLINE_SECONDARY = "outline-secondary",
+  OUTLINE_SUCCESS = "outline-success",
+  OUTLINE_WARNING = "outline-warning",
+  OUTLINE_DANGER = "outline-danger",
+}
+
+interface ButtonProps {
+  label: string;
+  onClick: () => void;
+  variant: ButtonVariants;
+  classNames?: string;
+  isDisabled?: boolean;
+}
+
+const Button: React.FC<ButtonProps> = ({
   label,
   onClick,
   variant,
   classNames = "",
   isDisabled = false,
 }) => {
-  const maxLabelLength = 13;
-  const isValidLabel = label.length <= maxLabelLength ? true : false;
+  const maxLabelLength: number = 13;
+  const isValidLabel: boolean = label.length <= maxLabelLength ? true : false;
   if (!isValidLabel) isDisabled = true;
   return (
     <>
@@ -46,6 +55,7 @@ export const Button = ({
     </>
   );
 };
+
 Button.propTypes = {
   label: PropTypes.string.isRequired,
   onClick: PropTypes.func.isRequired,
@@ -53,3 +63,5 @@ Button.propTypes = {
   classNames: PropTypes.string,
   isDisabled: PropTypes.bool,
 };
+
+export default Button;
