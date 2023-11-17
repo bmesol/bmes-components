@@ -12,12 +12,11 @@ export declare enum ButtonVariants {
     OUTLINE_WARNING = "outline-warning",
     OUTLINE_DANGER = "outline-danger"
 }
-interface ButtonProps {
+export interface ButtonProps {
     label: string;
     onClick: () => void;
     variant: ButtonVariants;
     classNames?: string;
     isDisabled?: boolean;
 }
-export declare const Button: React.FC<ButtonProps>;
-export {};
+export declare const Button: ({ label, onClick, variant, classNames, isDisabled, }: ButtonProps) => React.JSX.Element;

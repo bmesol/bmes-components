@@ -1,5 +1,4 @@
 import React from "react";
-import PropTypes from "prop-types";
 import "./Button.css";
 
 export enum ButtonVariants {
@@ -15,7 +14,7 @@ export enum ButtonVariants {
   OUTLINE_DANGER = "outline-danger",
 }
 
-interface ButtonProps {
+export interface ButtonProps {
   label: string;
   onClick: () => void;
   variant: ButtonVariants;
@@ -23,13 +22,13 @@ interface ButtonProps {
   isDisabled?: boolean;
 }
 
-export const Button: React.FC<ButtonProps> = ({
+export const Button= ({
   label,
   onClick,
   variant,
   classNames = "",
   isDisabled = false,
-}) => {
+}:ButtonProps ) => {
   const maxLabelLength: number = 13;
   const isValidLabel: boolean = label.length <= maxLabelLength ? true : false;
   if (!isValidLabel) isDisabled = true;
@@ -53,12 +52,4 @@ export const Button: React.FC<ButtonProps> = ({
       )}
     </>
   );
-};
-
-Button.propTypes = {
-  label: PropTypes.string.isRequired,
-  onClick: PropTypes.func.isRequired,
-  variant: PropTypes.oneOf(Object.values(ButtonVariants)).isRequired,
-  classNames: PropTypes.string,
-  isDisabled: PropTypes.bool,
 };

@@ -1,6 +1,6 @@
 {
   "name": "@bmesol/bmes-components",
-  "version": "0.0.11-beta",
+  "version": "0.0.12-beta",
   "description": "BM e-Solutions React UI Library",
   "main": "dist/index.js",
   "module": "dist/index.es.js",
@@ -33,6 +33,7 @@
     "@storybook/addon-links": "^7.5.3",
     "@storybook/addon-onboarding": "^1.0.8",
     "@storybook/blocks": "^7.5.3",
+    "@storybook/preset-create-react-app": "^7.5.3",
     "@storybook/react": "^7.5.3",
     "@storybook/react-webpack5": "^7.5.3",
     "@storybook/testing-library": "^0.2.2",
