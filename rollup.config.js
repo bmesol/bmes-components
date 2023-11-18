@@ -9,13 +9,13 @@ export default {
   input: 'src/index.ts', // Entry point of your library
   output: [
     {
-      file: 'dist/bundle.cjs.js',
+      file: 'dist/bundle.js',
       format: 'cjs', // CommonJS format
       sourcemap: true,
     },
     {
-      file: 'dist/bundle.esm.js',
-      format: 'esm', // ES Module format
+      file: 'dist/bundle.mjs',
+      format: 'es', // ES Module format
       sourcemap: true,
     },
   ],
