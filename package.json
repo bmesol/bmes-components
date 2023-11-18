@@ -1,13 +1,14 @@
 {
   "name": "@bmesol/bmes-components",
-  "version": "0.0.16-beta",
+  "version": "0.0.17-beta",
   "description": "BM e-Solutions React UI Library",
   "main": "dist/bundle.js",
   "module": "dist/bundle.mjs",
+  "typings": "dist/index.d.ts",
   "scripts": {
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "build": "rollup -c && rm -rf dist && babel src/lib --out-dir dist --copy-files"
+    "build": "rollup -c"
   },
   "repository": {
     "type": "git",
