@@ -1,6 +1,6 @@
 {
   "name": "@bmesol/bmes-components",
-  "version": "0.0.13-beta",
+  "version": "0.0.14-beta",
   "description": "BM e-Solutions React UI Library",
   "main": "dist/index.js",
   "module": "dist/index.es.js",
