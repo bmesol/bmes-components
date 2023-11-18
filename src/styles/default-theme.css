@@ -1,0 +1,25 @@
+:root {
+    --primary-color: rgb(19, 122, 160);
+    --primary-text-color: rgb(255, 255, 255);
+    --secondary-color: rgb(109, 118, 126);
+    --secondary-text-color: rgb(255, 255, 255);
+    --success-color: rgb(25, 134, 83);
+    --success-text-color: rgb(255, 255, 255);
+    --warning-color: rgb(255, 193, 7);
+    --warning-text-color: rgb(255, 255, 255);
+    --danger-color: rgb(220, 56, 72);
+    --danger-text-color: rgb(255, 255, 255);
+  
+    --disable-button-opacity: 0.5;
+  
+    --button-padding: 8px 32px;
+    --border-radius: 24px;
+    --font-weight: 700;
+    --button-height: 50px;
+    --box-shadow: 0px 4px 4px 0px #00000040;
+    --font-family: "Inter", sans-serif;
+    --font-size: 18px;
+    --font-style: normal;
+    --line-height: normal;
+    --letter-spacing: 0em;
+  }

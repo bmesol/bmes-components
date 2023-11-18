@@ -1,9 +1,9 @@
 {
   "name": "@bmesol/bmes-components",
-  "version": "0.0.14-beta",
+  "version": "0.0.15-beta",
   "description": "BM e-Solutions React UI Library",
-  "main": "dist/index.js",
-  "module": "dist/index.es.js",
+  "main": "dist/bundle.cjs.js",
+  "module": "dist/bundle.esm.js",
   "scripts": {
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
