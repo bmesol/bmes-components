@@ -1,0 +1,24 @@
+@import url("./../../../styles/global.css");
+
+.text-box {
+  width: var(--textbox-width);
+  height: var(--textbox-height);
+  padding: var(--textbox-padding);
+  outline: var(--textbox-outline);
+  border-radius: var(--border-radius);
+  border: var(--textbox-border);
+  font-size: var(--textbox-fs);
+  font-family: var(--font-family);
+}
+
+.text-box::placeholder {
+  font-size: var(--textbox-label-fs);
+}
+
+/* --- Removing the scroll bar for type="number" component--- */
+.number::-webkit-outer-spin-button,
+.number::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: textfield;
+  margin: 0;
+}
