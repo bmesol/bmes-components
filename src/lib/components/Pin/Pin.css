@@ -1,9 +1,9 @@
 /* --- Global Styles --- */
 @import url(./../../../styles/global.css);
 
-/* --- The properties of the TextBox component and its associated styling variables --- */
+/* --- The properties of the Pin component and its associated styling variables --- */
 
-.textbox {
+.pin {
   line-height: var(--l-unit);
   color: var(--gray-color);
   font-size: var(--m-unit);
@@ -19,5 +19,13 @@
   > input:focus {
     border: 1px solid var(--primary-color);
     outline: none;
+  }
+}
+
+.pin {
+  > input {
+    width: 56px;
+    height: 40px;
+    margin-right: 15px;
   }
 }

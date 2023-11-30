@@ -1,45 +1,51 @@
+/* --- Global Styles --- */
 @import url(../../../styles/global.css);
 
+/* --- The properties of the Button component and its associated styling variables --- */
+
+/* --- Styles for the Default Button --- */
 .button {
-  padding: var(--button-padding);
-  border-radius: var(--border-radius);
-  font-weight: var(--font-weight);
-  height: var(--button-height);
-  box-shadow: var(--box-shadow);
-  border: none;
-  font-family: var(--font-family);
-  font-size: var(--font-size);
-  font-style: var(--font-style);
+  /* --- Font properties --- */
+  font-weight: var(--button-fw);
   line-height: var(--line-height);
-  letter-spacing: var(--letter-spacing);
-  white-space: nowrap;
+
+  /* --- Button layout and appearance --- */
+  padding: var(--button-padding);
+  border: none;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
 }
 
+/* --- Styles for the disabled state of the Button --- */
 .disabled-button {
-  opacity: var(--disable-button-opacity);
+  opacity: 0.5;
   cursor: not-allowed;
 }
 
+/* --- Styles for Default Button Variants --- */
+
 .primary {
   background-color: var(--primary-color);
-  color: var(--primary-text-color);
+  color: var(--primary-bg-text-color);
 }
 .secondary {
   background-color: var(--secondary-color);
-  color: var(--secondary-text-color);
+  color: var(--secondary-bg-text-color);
 }
 .success {
   background-color: var(--success-color);
-  color: var(--success-text-color);
+  color: var(--success-bg-text-color);
 }
 .warning {
   background-color: var(--warning-color);
-  color: var(--warning-text-color);
+  color: var(--warning-bg-text-color);
 }
 .danger {
   background-color: var(--danger-color);
-  color: var(--danger-text-color);
+  color: var(--danger-bg-text-color);
 }
+
+/* --- Styles for Outline Button Variants --- */
 
 .outline-primary {
   border: 2px solid var(--primary-color);
@@ -48,7 +54,7 @@
 }
 .outline-primary:hover {
   background-color: var(--primary-color);
-  color: var(--primary-text-color);
+  color: var(--primary-bg-text-color);
 }
 
 .outline-secondary {
@@ -58,7 +64,7 @@
 }
 .outline-secondary:hover {
   background-color: var(--secondary-color);
-  color: var(--secondary-text-color);
+  color: var(--secondary-bg-text-color);
 }
 
 .outline-success {
@@ -68,7 +74,7 @@
 }
 .outline-success:hover {
   background-color: var(--success-color);
-  color: var(--success-text-color);
+  color: var(--success-bg-text-color);
 }
 
 .outline-warning {
@@ -78,7 +84,7 @@
 }
 .outline-warning:hover {
   background-color: var(--warning-color);
-  color: var(--warning-text-color);
+  color: var(--warning-bg-text-color);
 }
 
 .outline-danger {
@@ -88,5 +94,5 @@
 }
 .outline-danger:hover {
   background-color: var(--danger-color);
-  color: var(--danger-text-color);
+  color: var(--danger-bg-text-color);
 }

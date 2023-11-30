@@ -16,7 +16,7 @@ This story showcases the "Button" component with ten variants:
 
 8. **Outline Success Button**: This button is styled as the outline success action button.
 
-9. **Outline Warning Button**: This button is styled as the outline warning action button.
+9.  **Outline Warning Button**: This button is styled as the outline warning action button.
 
 10. **Outline Danger Button**: This button is styled as the outline danger action button.
 

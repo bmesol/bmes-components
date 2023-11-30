@@ -1,5 +1,6 @@
 import { useEffect, useGlobals } from "@storybook/addons";
 
+// --- Custom hook for setting the theme in Storybook ---
 export const useTheme = (StoryFn: any) => {
   const [{ theme }] = useGlobals();
 

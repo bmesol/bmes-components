@@ -1,8 +1,8 @@
 {
-  "sourceType": "unambiguous",
+  "sourceType": "unambiguous", // Specifies the source type to be unambiguous, allowing Babel to determine the source type automatically
   "presets": [
     [
-      "@babel/preset-env",
+      "@babel/preset-env", // Babel preset for transforming JavaScript for specific environments
       {
         "targets": {
           "chrome": 100,
@@ -11,7 +11,7 @@
         }
       }
     ],
-    "@babel/preset-react"
+    "@babel/preset-react" // Babel preset for transforming JSX and React specific syntax
   ],
-  "plugins": []
+  "plugins": [] // Additional Babel plugins can be added here, currently empty
 }

@@ -1,25 +1,30 @@
 import React from "react";
+import { TextBoxProps } from "./DTOs";
+import { useTextBox } from "./Hooks";
 import "./TextBox.css";
 
-export enum TextBoxVariants {
-  TEXT = "text",
-  NUMBER = "number",
-  EMAIL = "email",
-  PIN = "password",
-}
+const TextBox = (prop: TextBoxProps) => {
+  const { inputValue, handleOnChange } = useTextBox(prop);
+  const {
+    label = "",
+    required = false,
+    placeholder = "",
+    classNames = "",
+  } = prop;
 
-export interface TextBoxProps {
-  label: string;
-  type: TextBoxVariants;
-  className?: string;
-}
-
-export const TextBox = ({ label, type, className }: TextBoxProps) => {
   return (
-    <input
-      type={`${type}`}
-      placeholder={`${label}`}
-      className={`text-box ${type} ${className}`}
-    />
+    <div className="textbox">
+      {label && <div className="mb-2 label">{label}</div>}
+      <input
+        type={"text"}
+        placeholder={`${placeholder}`}
+        className={`${classNames}`}
+        required={required}
+        value={inputValue}
+        onChange={handleOnChange}
+      />
+    </div>
   );
 };
+
+export { TextBox };

@@ -1,47 +1,37 @@
 import React from "react";
+import { ButtonProps } from "./DTOs";
 import "./Button.css";
 
-export enum ButtonVariants {
-  PRIMARY = "primary",
-  SECONDARY = "secondary",
-  SUCCESS = "success",
-  WARNING = "warning",
-  DANGER = "danger",
-  OUTLINE_PRIMARY = "outline-primary",
-  OUTLINE_SECONDARY = "outline-secondary",
-  OUTLINE_SUCCESS = "outline-success",
-  OUTLINE_WARNING = "outline-warning",
-  OUTLINE_DANGER = "outline-danger",
-}
-
-export interface ButtonProps {
-  label: string;
-  onClick: () => void;
-  variant: ButtonVariants;
-  classNames?: string;
-  isDisabled?: boolean;
-}
-
-export const Button= ({
+// --- Button component ---
+const Button = ({
   label,
   onClick,
   variant,
-  classNames = "",
+  className,
   isDisabled = false,
-}:ButtonProps ) => {
+}: ButtonProps) => {
+  // --- Maximum allowed characters for the button label ---
   const maxLabelLength: number = 13;
+
+  // --- Check if label length exceeds the maximum allowed length ---
   const isValidLabel: boolean = label.length <= maxLabelLength ? true : false;
+
+  // --- Disable button if the label is invalid ---
   if (!isValidLabel) isDisabled = true;
+
   return (
     <>
       <button
-        className={`button ${variant} ${classNames} ${isDisabled ? "disabled-button" : ""
-          }`}
+        className={`button ${variant} ${className} ${
+          isDisabled ? "disabled-button" : ""
+        }`}
         onClick={onClick}
         disabled={isDisabled}
       >
         <span>{label.slice(0, maxLabelLength)}</span>
       </button>
+
+      {/* --- Error message if the label exceeds the maximum length --- */}
       {!isValidLabel && (
         <>
           <br />
@@ -53,3 +43,5 @@ export const Button= ({
     </>
   );
 };
+
+export { Button };

@@ -1,7 +1,9 @@
-import { Button, ButtonVariants } from "../../lib/components/Button/Button";
-import ButtonDoc from "./ButtonDoc.md";
 import type { Meta, StoryObj } from "@storybook/react";
+import { Button } from "../../lib/components/Button/Button";
+import { ButtonVariants } from "../../lib/components/Button/DTOs";
+import ButtonDoc from "./ButtonDoc.md";
 
+// --- Metadata for the Storybook story ---
 const meta = {
   title: "Components/Button",
   tags: ["autodocs"],
@@ -10,14 +12,17 @@ const meta = {
     layout: "centered",
     docs: {
       description: {
-        component: ButtonDoc,
+        component: ButtonDoc, // Description for the component from ButtonDoc.md
       },
     },
   },
-} satisfies Meta<typeof Button>;
+} satisfies Meta<typeof Button>; // Metadata type definition
 
 export default meta;
-type Story = StoryObj<typeof meta>;
+
+type Story = StoryObj<typeof meta>; // Typing for the Story
+
+/* --- Stories for Default Button Variants --- */
 
 export const Primary: Story = {
   args: {
@@ -73,6 +78,8 @@ export const Danger: Story = {
     isDisabled: false,
   },
 };
+
+/* --- Stories for Outline Button Variants --- */
 
 export const Outline_Primary: Story = {
   args: {

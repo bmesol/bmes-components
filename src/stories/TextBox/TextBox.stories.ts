@@ -1,7 +1,8 @@
-import { TextBox, TextBoxVariants } from "../../lib/components/TextBox/TextBox";
-import TextBoxDoc from "./TextBoxDoc.md";
 import type { Meta, StoryObj } from "@storybook/react";
+import { TextBox } from "../../lib/components/TextBox/TextBox";
+import TextBoxDoc from "./TextBoxDoc.md";
 
+// --- Metadata for the Storybook story ---
 const meta = {
   title: "Components/TextBox",
   tags: ["autodocs"],
@@ -10,37 +11,21 @@ const meta = {
     layout: "centered",
     docs: {
       description: {
-        component: TextBoxDoc,
+        component: TextBoxDoc, // Description for the component from ButtonDoc.md
       },
     },
   },
-} satisfies Meta<typeof TextBox>;
+} satisfies Meta<typeof TextBox>; // Metadata type definition
 
 export default meta;
-type Story = StoryObj<typeof TextBox>;
+
+type Story = StoryObj<typeof TextBox>; // Typing for the Story
+
+/* --- Stories for TextBox --- */
 
 export const Text: Story = {
   args: {
-    label: "Enter your name",
-    type: TextBoxVariants.TEXT,
-  },
-};
-
-export const Number: Story = {
-  args: {
-    label: "Enter your phone number",
-    type: TextBoxVariants.NUMBER,
-  },
-};
-export const Email: Story = {
-  args: {
-    label: "Enter your email",
-    type: TextBoxVariants.EMAIL,
-  },
-};
-export const Password: Story = {
-  args: {
-    label: "Enter your pin",
-    type: TextBoxVariants.PIN,
+    label: "Label",
+    placeholder: "Placeholder",
   },
 };

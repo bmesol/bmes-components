@@ -1,13 +1,15 @@
-This story showcases the "TextBox" component with Four variants:
+The `TextBox` component represents an input field for text entry.
 
-1. **TEXT**: This TextBox is styled as the text action TextBox.
+## Usage
 
-2. **NUMBER**: This TextBox is styled as the number action TextBox.
+The `TextBox` component is used to collect textual input from users within forms or interfaces.
 
-3. **EMAIL**: This TextBox is styled as the email action TextBox.
+### Props
 
-4. **PIN**: This TextBox is styled as the pin and password action TextBox.
+#### `label` (string, optional)
 
-Each TextBox variant is demonstrated using the "Template" component, which takes props like "label", "variant" (using constants from "TextBoxVariants").
+The `label` prop provides a label or title for the `TextBox` component, describing the input field's purpose or expected content.
 
-This story provides a visual representation of the "TextBox" component in TEXT, NUMBER, EMAIL, PIN variants, illustrating their usage and functionality.
+#### `placeholder` (string, optional)
+
+The `placeholder` prop defines placeholder text displayed within the input field when it is empty, offering guidance or context to users about the expected input.
