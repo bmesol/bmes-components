@@ -1,22 +1,22 @@
 /* --- Global Styles --- */
-@import url(./../../../styles/global.css);
+@import "./../../../styles/global.scss";
 
 /* --- The properties of the TextBox component and its associated styling variables --- */
 
 .textbox {
-  line-height: var(--l-unit);
+  line-height: var(--lg-unit);
   color: var(--gray-color);
-  font-size: var(--m-unit);
+  font-size: var(--md-unit);
   .label {
     color: black;
   }
-  > input {
+  input {
     padding: var(--textbox-padding);
     border: var(--textbox-border);
     border-radius: var(--border-radius);
     background: white;
   }
-  > input:focus {
+  input:focus {
     border: 1px solid var(--primary-color);
     outline: none;
   }

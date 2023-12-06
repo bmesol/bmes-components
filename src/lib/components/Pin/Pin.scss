@@ -1,0 +1,16 @@
+/* --- Global Styles --- */
+@import "./../../../styles/global.scss";
+
+/* --- The properties of the Pin component and its associated styling variables --- */
+
+.pin-component {
+  font-size: var(--md-unit);
+  .pin-input {
+    display: flex;
+  }
+  .pin-input-field {
+    width: 56px;
+    height: 40px;
+    margin-right: 15px;
+  }
+}

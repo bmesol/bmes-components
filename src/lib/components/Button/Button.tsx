@@ -1,6 +1,6 @@
 import React from "react";
 import { ButtonProps } from "./DTOs";
-import "./Button.css";
+import "./Button.scss";
 
 // --- Button component ---
 const Button = ({

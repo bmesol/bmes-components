@@ -1,24 +1,20 @@
-import { useState } from "react";
+import { useState, useRef, ChangeEvent } from "react";
+import { PinProps } from "./DTOs";
 
-const usePins = () => {
-  const [inputValue, setInputValue] = useState("");
+const usePinInput = ({ length }: PinProps) => {
+  const [pinValues, setPinValues] = useState<string[]>(Array(length).fill(""));
+  const elemRefs = pinValues.map(() => useRef<HTMLInputElement>(null));
 
-  const handleOnChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const userInputValue = e.target.value;
-
-    // Check if the input matches the regex pattern
-    let pinRegex = /^\d*$/;
-    const isValidInput = pinRegex.test(userInputValue);
-
-    if (isValidInput) {
-      setInputValue(userInputValue);
-    }
+  const handleInputChange = (
+    e: ChangeEvent<HTMLInputElement>,
+    index: number
+  ) => {
+    const newPinValues = [...pinValues];
+    newPinValues[index] = e.target.value;
+    setPinValues(newPinValues);
   };
 
-  return {
-    inputValue,
-    handleOnChange,
-  };
+  return { pinValues, elemRefs, handleInputChange };
 };
 
-export { usePins };
+export { usePinInput };

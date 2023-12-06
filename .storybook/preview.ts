@@ -1,7 +1,7 @@
 import type { Preview } from "@storybook/react";
 import { useTheme } from "./useTheme";
 import "bootstrap/dist/css/bootstrap.css";
-import "./../src/styles/global.css";
+import "./../src/styles/global.scss";
 
 // --- Preview configuration for Storybook ---
 export const preview: Preview = {

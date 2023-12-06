@@ -25,8 +25,6 @@ type Story = StoryObj<typeof Pin>; // Typing for the Story
 
 export const Text: Story = {
   args: {
-    label: "Pin",
     length: 4,
-    placeholder: "*",
   },
 };
