@@ -3,7 +3,6 @@ import { Button } from "../../lib/components/Button/Button";
 import { ButtonVariants } from "../../lib/components/Button/DTOs";
 import ButtonDoc from "./ButtonDoc.md";
 
-// --- Metadata for the Storybook story ---
 const meta = {
   title: "Components/Button",
   tags: ["autodocs"],
@@ -12,15 +11,15 @@ const meta = {
     layout: "centered",
     docs: {
       description: {
-        component: ButtonDoc, // Description for the component from ButtonDoc.md
+        component: ButtonDoc,
       },
     },
   },
-} satisfies Meta<typeof Button>; // Metadata type definition
+} satisfies Meta<typeof Button>;
 
 export default meta;
 
-type Story = StoryObj<typeof meta>; // Typing for the Story
+type Story = StoryObj<typeof meta>; 
 
 /* --- Stories for Default Button Variants --- */
 

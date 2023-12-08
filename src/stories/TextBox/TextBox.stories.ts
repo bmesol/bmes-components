@@ -2,7 +2,6 @@ import type { Meta, StoryObj } from "@storybook/react";
 import { TextBox } from "../../lib/components/TextBox/TextBox";
 import TextBoxDoc from "./TextBoxDoc.md";
 
-// --- Metadata for the Storybook story ---
 const meta = {
   title: "Components/TextBox",
   tags: ["autodocs"],
@@ -11,17 +10,15 @@ const meta = {
     layout: "centered",
     docs: {
       description: {
-        component: TextBoxDoc, // Description for the component from ButtonDoc.md
+        component: TextBoxDoc,
       },
     },
   },
-} satisfies Meta<typeof TextBox>; // Metadata type definition
+} satisfies Meta<typeof TextBox>;
 
 export default meta;
 
-type Story = StoryObj<typeof TextBox>; // Typing for the Story
-
-/* --- Stories for TextBox --- */
+type Story = StoryObj<typeof TextBox>;
 
 export const Text: Story = {
   args: {

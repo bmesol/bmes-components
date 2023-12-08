@@ -2,28 +2,25 @@ import { useState } from "react";
 import { TextBoxProps } from "./DTOs";
 
 const useTextBox = (prop: TextBoxProps) => {
-  const { regex = "", length = 0 } = prop;
-  const [inputValue, setInputValue] = useState("");
+  const { regex = "", length = 0, value = "", onChange } = prop;
+  const [input, setInput] = useState<string>(value);
 
   const handleOnChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const userInputValue = e.target.value;
+    const inputValue = e.target.value;
 
-    // Check if the input matches the regex pattern
     let regexObj = new RegExp(regex);
-    const isValidInput = regexObj.test(userInputValue);
+    const isValidInput = regexObj.test(inputValue);
 
-    // Update the state with the input value and validation result
-    const validateLength = length != 0 ? length >= userInputValue.length : true;
+    const validateLength = length != 0 ? length >= inputValue.length : true;
 
     if (isValidInput && validateLength) {
-      setInputValue(userInputValue);
+      setInput(inputValue);
     }
+
+    onChange(input);
   };
 
-  return {
-    inputValue,
-    handleOnChange,
-  };
+  return { input, handleOnChange };
 };
 
 export { useTextBox };

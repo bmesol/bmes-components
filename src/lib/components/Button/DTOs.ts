@@ -1,4 +1,3 @@
-// --- Enum defining different variants of the Button ---
 enum ButtonVariants {
   PRIMARY = "primary",
   SECONDARY = "secondary",
@@ -12,12 +11,11 @@ enum ButtonVariants {
   OUTLINE_DANGER = "outline-danger",
 }
 
-// --- Props interface for the Button component ---
 interface ButtonProps {
   label: string;
   onClick: () => void;
   variant: ButtonVariants;
-  className?: string;
+  classNames?: string;
   isDisabled?: boolean;
 }
 

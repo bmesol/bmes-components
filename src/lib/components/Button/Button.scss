@@ -1,66 +1,32 @@
-/* --- Global Styles --- */
 @import "./../../../styles/global.scss";
 
-/* --- The properties of the Button component and its associated styling variables --- */
-
-/* --- Styles for the Default Button --- */
-.button {
-  /* --- Font properties --- */
+@mixin button($background-color, $text-color) {
   font-weight: var(--button-fw);
-  line-height: var(--line-height);
-
-  /* --- Button layout and appearance --- */
   padding: var(--button-padding);
   border: none;
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
-
-  /* --- Styles for the disabled state of the Button --- */
-  &.disabled-button {
-    opacity: 0.5;
-    cursor: not-allowed;
-  }
+  background-color: $background-color;
+  color: $text-color;
 }
 
-/* --- Styles for Button variants --- */
-
-$button-themes: (
-  primary: (
-    background-color: var(--primary-color),
-    color: var(--primary-bg-text-color)
-  ),
-  secondary: (
-    background-color: var(--secondary-color),
-    color: var(--secondary-bg-text-color)
-  ),
-  success: (
-    background-color: var(--success-color),
-    color: var(--success-bg-text-color)
-  ),
-  warning: (
-    background-color: var(--warning-color),
-    color: var(--warning-bg-text-color)
-  ),
-  danger: (
-    background-color: var(--danger-color),
-    color: var(--danger-bg-text-color)
-  )
+$button-variants: (
+  primary: var(--primary-color) var(--primary-bg-text-color),
+  secondary: var(--secondary-color) var(--secondary-bg-text-color),
+  success: var(--success-color) var(--success-bg-text-color),
+  warning: var(--warning-color) var(--warning-bg-text-color),
+  danger: var(--danger-color) var(--danger-bg-text-color),
 );
 
-@each $theme, $properties in $button-themes {
-  .#{$theme} {
-    background-color: map-get($properties, background-color);
-    color: map-get($properties, color);
+@each $variant, $colors in $button-variants {
+  .#{$variant} {
+    @include button(nth($colors, 1), nth($colors, 2));
   }
-
-  .outline-#{$theme} {
-    border: 2px solid map-get($properties, background-color);
-    color: map-get($properties, background-color);
-    background-color: white;
-
-    &:hover {
-      background-color: map-get($properties, background-color);
-      color: map-get($properties, color);
-    }
+  .outline-#{$variant} {
+    @include button(white, nth($colors, 1));
+    border: 2px solid nth($colors, 1);
+  }
+  .outline-#{$variant}:hover {
+    @include button(nth($colors, 1), nth($colors, 2));
   }
 }

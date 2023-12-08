@@ -1,12 +1,12 @@
-import { InputHTMLAttributes, ForwardedRef } from "react";
-interface TextBoxProps extends InputHTMLAttributes<HTMLInputElement> {
+interface TextBoxProps {
   label?: string;
   regex?: string;
   length?: number;
   required?: boolean;
   placeholder?: string;
   classNames?: string;
-  ref?: ForwardedRef<HTMLInputElement>;
+  value: string;
+  onChange: (newValue: string) => void;
 }
 
 export { TextBoxProps };
