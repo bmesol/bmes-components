@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { TextBoxProps } from "./DTOs";
 
-const useTextBox = (prop: TextBoxProps) => {
-  const { regex = "", length = 0, value = "", onChange } = prop;
+const useTextBox = (props: TextBoxProps) => {
+  const { regex = "", length = 0, value = "", onChange } = props;
   const [input, setInput] = useState<string>(value);
 
   const handleOnChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -17,7 +17,7 @@ const useTextBox = (prop: TextBoxProps) => {
       setInput(inputValue);
     }
 
-    onChange(input);
+    () => onChange(input);
   };
 
   return { input, handleOnChange };

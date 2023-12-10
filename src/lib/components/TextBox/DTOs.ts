@@ -1,5 +1,11 @@
+enum TextBoxType {
+  TEXT = "text",
+  PASSWORD = "password",
+}
+
 interface TextBoxProps {
   label?: string;
+  type?: TextBoxType;
   regex?: string;
   length?: number;
   required?: boolean;
@@ -9,4 +15,4 @@ interface TextBoxProps {
   onChange: (newValue: string) => void;
 }
 
-export { TextBoxProps };
+export { TextBoxType, TextBoxProps };
