@@ -3,15 +3,15 @@ import { TextBoxProps } from "./DTOs";
 import { useTextBox } from "./Hooks";
 import "./TextBox.scss";
 
-const TextBox = (props: TextBoxProps) => {
-  const { input, handleOnChange } = useTextBox(props);
-  const { label = "", required = false, placeholder = "", classNames = "", type="text"} = props;
+const TextBox = (prop: TextBoxProps) => {
+  const { input, handleOnChange } = useTextBox(prop);
+  const { label = "", required = false, placeholder = "", classNames = "",} = prop;
 
   return (
     <div className="textbox">
       {label && <div className="mb-2 label">{label}</div>}
       <input
-        type={type}
+        type={"text"}
         placeholder={`${placeholder}`}
         className={`${classNames}`}
         required={required}
