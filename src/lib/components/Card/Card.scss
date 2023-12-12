@@ -1,6 +1,13 @@
-@import "./../../../styles/global.scss";
 
-.card{
-    background-color: White;
-    font-size: 16px;
-}
+@import "../../../styles/global.scss";
+
+.card { 
+
+  padding: var(--card-padding) ;
+  background-color: white;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  border: none;
+  width: 432px;
+
+} 
