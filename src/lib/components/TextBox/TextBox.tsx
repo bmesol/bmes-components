@@ -13,7 +13,7 @@ const TextBox = (props: TextBoxProps) => {
       <input
         type={type}
         placeholder={`${placeholder}`}
-        className={`${classNames}`}
+        className={`textbox ${classNames}`}
         required={required}
         value={input}
         onChange={handleOnChange}

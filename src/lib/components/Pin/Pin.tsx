@@ -10,14 +10,14 @@ const Pin = (props: PinProps) => {
   const { pin, handleTextBoxChange } = usePin(props);
   return (
     <>
-      <div className="mb-2 label">{label}</div>
-      <div className="d-flex">
+      {label && <div className="mb-2 label">{label}</div>}
+      <div className="d-flex pin">
         {Array.from({ length }, (_, index) => (
           <TextBox
             key={index}
             type={TextBoxType.PASSWORD}
             value={pin[index]}
-            classNames="pin-input-field text-center"
+            classNames="text-center"
             onChange={handleTextBoxChange(index)}
             placeholder="*"
             length={1}
