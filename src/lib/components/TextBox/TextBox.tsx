@@ -1,5 +1,5 @@
 import React from "react";
-import { TextBoxProps } from "./DTOs";
+import { TextBoxType, TextBoxProps } from "./DTOs";
 import { useTextBox } from "./Hooks";
 import "./TextBox.scss";
 
@@ -22,4 +22,4 @@ const TextBox = (props: TextBoxProps) => {
   );
 };
 
-export { TextBox };
+export { TextBox, TextBoxType};

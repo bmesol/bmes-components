@@ -1,5 +1,5 @@
 import React from "react";
-import { ButtonProps } from "./DTOs";
+import { ButtonVariants, ButtonProps } from "./DTOs";
 import "./Button.scss";
 
 const Button = (props: ButtonProps) => {
@@ -26,4 +26,4 @@ const Button = (props: ButtonProps) => {
   );
 };
 
-export { Button };
+export { Button, ButtonVariants };
