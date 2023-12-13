@@ -1,6 +1,7 @@
-import { Button, ButtonVariants } from "../../lib/components/Button/Button";
-import ButtonDoc from "./ButtonDoc.md";
 import type { Meta, StoryObj } from "@storybook/react";
+import { Button } from "../../lib/components/Button/Button";
+import { ButtonVariants } from "../../lib/components/Button/DTOs";
+import ButtonDoc from "./ButtonDoc.md";
 
 const meta = {
   title: "Components/Button",
@@ -17,7 +18,10 @@ const meta = {
 } satisfies Meta<typeof Button>;
 
 export default meta;
-type Story = StoryObj<typeof meta>;
+
+type Story = StoryObj<typeof meta>; 
+
+/* --- Stories for Default Button Variants --- */
 
 export const Primary: Story = {
   args: {
@@ -73,6 +77,8 @@ export const Danger: Story = {
     isDisabled: false,
   },
 };
+
+/* --- Stories for Outline Button Variants --- */
 
 export const Outline_Primary: Story = {
   args: {

@@ -1,7 +1,7 @@
-import "bootstrap/dist/css/bootstrap.css";
-import "./../src/styles/global.css";
-import { useTheme } from "./useTheme";
 import type { Preview } from "@storybook/react";
+import { useTheme } from "./useTheme";
+import "bootstrap/dist/css/bootstrap.css";
+import "./../src/styles/global.scss";
 
 export const preview: Preview = {
   parameters: {

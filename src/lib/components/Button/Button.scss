@@ -1,0 +1,32 @@
+@import "./../../../styles/global.scss";
+
+@mixin button($background-color, $text-color) {
+  font-weight: var(--button-fw);
+  padding: var(--button-padding);
+  border: none;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  background-color: $background-color;
+  color: $text-color;
+}
+
+$button-variants: (
+  primary: var(--primary-color) var(--primary-bg-text-color),
+  secondary: var(--secondary-color) var(--secondary-bg-text-color),
+  success: var(--success-color) var(--success-bg-text-color),
+  warning: var(--warning-color) var(--warning-bg-text-color),
+  danger: var(--danger-color) var(--danger-bg-text-color),
+);
+
+@each $variant, $colors in $button-variants {
+  .#{$variant} {
+    @include button(nth($colors, 1), nth($colors, 2));
+  }
+  .outline-#{$variant} {
+    @include button(white, nth($colors, 1));
+    border: 2px solid nth($colors, 1);
+  }
+  .outline-#{$variant}:hover {
+    @include button(nth($colors, 1), nth($colors, 2));
+  }
+}
