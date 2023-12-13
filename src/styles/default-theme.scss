@@ -32,12 +32,20 @@
     cursor: not-allowed;
   }
 
+  /* --- Button Component Styles --- */
+  --button-padding: var(--base-unit) var(--xl-unit);
+
+  /* --- TextBox Component Styles --- */
+  --textbox-text-line-height: normal;
+  --textbox-padding: var(--base-unit) var(--md-unit);
+  --textbox-border: 1px solid var(--gray-color);
+
   /* --- Card Component Styles --- */
   --card-padding: var(--xl-unit);
 
   /* --- Common Theme Font Styles ---- */
   font-family: "Roboto";
-  font-size: var(--md-unit);
+  font-size: var(--lg-unit);
   font-weight: 400;
   font-style: normal;
   line-height: normal;

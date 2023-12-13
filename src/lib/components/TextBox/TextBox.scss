@@ -1,0 +1,20 @@
+@import "./../../../styles/global.scss";
+
+.textbox {
+  line-height: var(--lg-unit);
+  color: var(--gray-color);
+  font-size: var(--md-unit);
+  .label {
+    color: black;
+  }
+  input {
+    padding: var(--textbox-padding);
+    border: var(--textbox-border);
+    border-radius: var(--border-radius);
+    background: white;
+  }
+  input:focus {
+    border: 1px solid var(--primary-color);
+    outline: none;
+  }
+}

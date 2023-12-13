@@ -1,6 +1,6 @@
 {
   "name": "@bmesol/bmes-components",
-  "version": "0.0.17-beta",
+  "version": "0.0.20-beta",
   "description": "BM e-Solutions React UI Library",
   "main": "dist/bundle.js",
   "module": "dist/bundle.mjs",
@@ -28,16 +28,15 @@
     "@rollup/plugin-commonjs": "^25.0.7",
     "@rollup/plugin-node-resolve": "^15.2.3",
     "@rollup/plugin-typescript": "^11.1.5",
-    "@storybook/addon-essentials": "^7.5.3",
-    "@storybook/addon-interactions": "^7.5.3",
-    "@storybook/addon-links": "^7.5.3",
-    "@storybook/addon-onboarding": "^1.0.8",
-    "@storybook/addon-toolbars": "^7.5.3",
-    "@storybook/addons": "^7.5.3",
-    "@storybook/blocks": "^7.5.3",
-    "@storybook/preset-create-react-app": "^7.5.3",
-    "@storybook/react": "^7.5.3",
-    "@storybook/react-webpack5": "^7.5.3",
+    "@storybook/addon-essentials": "^7.6.4",
+    "@storybook/addon-interactions": "^7.6.4",
+    "@storybook/addon-links": "^7.6.4",
+    "@storybook/addon-toolbars": "^7.6.4",
+    "@storybook/addons": "^7.6.4",
+    "@storybook/blocks": "^7.6.4",
+    "@storybook/preset-create-react-app": "^7.6.4",
+    "@storybook/react": "^7.6.4",
+    "@storybook/react-webpack5": "^7.6.4",
     "@storybook/testing-library": "^0.2.2",
     "babel-cli": "^6.26.0",
     "bootstrap": "^5.3.2",
@@ -49,12 +48,13 @@
     "rollup-plugin-postcss": "^4.0.2",
     "rollup-plugin-terser": "^7.0.2",
     "sass": "^1.69.5",
-    "storybook": "^7.5.3"
+    "storybook": "^7.6.4"
   },
   "peerDependencies": {
     "bootstrap": "^5.3.2",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "sass": "^1.69.5"
   },
   "publishConfig": {
     "registry": "https://npm.pkg.github.com"

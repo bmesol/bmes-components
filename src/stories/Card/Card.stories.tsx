@@ -21,7 +21,7 @@ export default meta;
 
 type Story = StoryObj<typeof Card>;
 
-export const Sample: Story = {
+export const Card_Sample: Story = {
   render: (children) => (
     <Card>
       <h3>Card Title</h3>
