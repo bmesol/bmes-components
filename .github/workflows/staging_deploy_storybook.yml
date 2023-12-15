@@ -1,0 +1,21 @@
+name: Deploy Storybook to Netlify
+
+on:
+  push:
+    branches: [ staging ]
+
+jobs:
+  build_and_deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Install dependencies
+        run: npm install
+      - name: Build Storybook
+        run: npm run build-storybook
+      - name: Deploy Storybook to Netlify
+        uses: netlify/actions/cli@20
+        with:
+          args: deploy --prod
+          site_id: ${{ secrets.NETLIFY_SITE_ID }}
+          access_token: ${{ secrets.NETLIFY_ACCESS_TOKEN }}
