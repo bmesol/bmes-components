@@ -1,0 +1,31 @@
+@import "../../../styles/global.scss";
+
+@mixin Label($text-color) {
+  height: var(--lg-unit);
+  line-height: var(--lg-unit);
+  color: $text-color;
+}
+
+$label-colors: (
+  default: var(--gray-color),
+  primary: var(--primary-color),
+  secondary: var(--secondary-color),
+  danger: var(--danger-color),
+  success: var(--success-color),
+  warning: var(--warning-color)
+);
+
+@each $variant, $color in $label-colors {
+  label {
+    &.#{$variant} {
+      a {
+        @include Label($color);
+        text-decoration: underline;
+      }
+
+      span {
+        @include Label($color);
+      }
+    }
+  }
+}
