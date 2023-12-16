@@ -1,6 +1,7 @@
 # Workflow name
 name: Build and Publish Storybook to GitHub Pages
 
+
 on:
   # Event for the workflow to run on
   push:
@@ -15,9 +16,11 @@ permissions:
 # List of jobs
 jobs:
   deploy:
+    
     runs-on: ubuntu-latest
     # Job steps
     steps:
+          
       # Manual Checkout
       - uses: actions/checkout@v3
 
@@ -25,8 +28,23 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 16
+          
+      - name: 'Build'
+        shell: bash
+        run: |
+          echo "::group::Build"
+          npm ci
+          npm run build-storybook
+          echo "::endgroup::"
 
-      #👇 Add Storybook build and deploy to GitHub Pages as a step in the workflow
-      - uses: bitovi/github-actions-storybook-to-github-pages@v1.0.1
-        with:
+      - name: 'upload'
+        uses: actions/upload-artifact@v3
+        with: 
           path: storybook-static
+
+      - id: deploy
+        name: Deploy to GitHub Pages
+        uses: actions/deploy-pages@v1
+        with:
+          token: ${{ github.token }}
+          
