@@ -24,8 +24,9 @@ jobs:
       # Set up Node
       - uses: actions/setup-node@v3
         with:
-          path: storybook-static
           node-version: 16
 
       #👇 Add Storybook build and deploy to GitHub Pages as a step in the workflow
       - uses: bitovi/github-actions-storybook-to-github-pages@v1.0.1
+        with:
+          path: storybook-static
