@@ -38,9 +38,10 @@ jobs:
           echo "::endgroup::"
 
       - name: 'upload'
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-pages-artifact@v2
         with: 
           path: storybook-static
+          name: artifact
 
       - id: deploy
         name: Deploy to GitHub Pages
