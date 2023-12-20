@@ -16,8 +16,9 @@ const useTextBox = (props: TextBoxProps) => {
     if (isValidInput && validateLength) {
       setInput(inputValue);
     }
-
-    () => onChange(input);
+    if (onChange) {
+      onChange(e);
+    }
   };
 
   return { input, handleOnChange };
