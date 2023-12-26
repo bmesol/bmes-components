@@ -6,7 +6,7 @@ const Label = (props: LabelProps) => {
   const { type = "", variant, classNames = "", href = "", label = "" } = props;
 
   return (
-    <label className={`label ${variant} ${type} ${classNames}`}>
+    <label className={`${variant} ${type} ${classNames}`}>
       {type === "link" ? <a href={href}>{label}</a> : <span>{label}</span>}
     </label>
   );
