@@ -11,7 +11,7 @@ const Pin = (props: PinProps) => {
   return (
     <>
       {label && <div className="mb-2 label">{label}</div>}
-      <div className="d-flex pin">
+      <div className="d-flex justify-content-between pin">
         {Array.from({ length }, (_, index) => (
           <TextBox
             key={index}
