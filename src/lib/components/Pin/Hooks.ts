@@ -1,18 +1,21 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { PinProps } from "./DTOs";
 
 const usePin = (props: PinProps) => {
-  const { value = new Array(length).fill(""), onChange } = props;
-  const [pin, setPin] = useState<string[]>(value);
+  const { value = "", onChange } = props;
+  const [pin, setPin] = useState<string>(value);
 
-  const handleTextBoxChange = (index: number) => (e: React.ChangeEvent<HTMLInputElement>) => {
-      const newPin = [...pin];
-      newPin[index] = e.target.value;
-      setPin(newPin);
-      if (onChange) {
-        onChange(e, index);
-      }
-    };
+  useEffect(() => {
+    if (onChange) {
+      onChange(pin);
+    }
+  }, [pin]);
+
+  const handleTextBoxChange = (index: number) => (value: string) => {
+    const newPin = pin.split("");
+    newPin[index] = value;
+    setPin(newPin.join(""));
+  };
   return { pin, handleTextBoxChange };
 };
 

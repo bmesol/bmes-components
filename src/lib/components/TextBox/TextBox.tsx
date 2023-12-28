@@ -5,7 +5,7 @@ import "./TextBox.scss";
 
 const TextBox = (props: TextBoxProps) => {
   const { input, handleOnChange } = useTextBox(props);
-  const { label = "", required = false, placeholder = "", classNames = "", type="text"} = props;
+  const { label = "", required = false, placeholder = "", classNames = "", type = "text" } = props;
 
   return (
     <div className="textbox">
@@ -22,4 +22,4 @@ const TextBox = (props: TextBoxProps) => {
   );
 };
 
-export { TextBox, TextBoxType};
+export { TextBox, TextBoxType };

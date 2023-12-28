@@ -1,9 +1,15 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { TextBoxProps } from "./DTOs";
 
 const useTextBox = (props: TextBoxProps) => {
   const { regex = "", length = 0, value = "", onChange } = props;
   const [input, setInput] = useState<string>(value);
+
+  useEffect(() => {
+    if (onChange) {
+      onChange(input);
+    }
+  }, [input]);
 
   const handleOnChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const inputValue = e.target.value;
@@ -15,9 +21,6 @@ const useTextBox = (props: TextBoxProps) => {
 
     if (isValidInput && validateLength) {
       setInput(inputValue);
-    }
-    if (onChange) {
-      onChange(e);
     }
   };
 
