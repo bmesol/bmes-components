@@ -5,7 +5,7 @@ import "./TextBox.scss";
 
 const TextBox = (props: TextBoxProps) => {
   const { input, handleOnChange } = useTextBox(props);
-  const { label = "", required = false, placeholder = "", classNames = "", type = "text" } = props;
+  const { label = "", required = false, placeholder = "", classNames = "", type = "text", refs, onKeyDown } = props;
 
   return (
     <div className="textbox">
@@ -17,6 +17,8 @@ const TextBox = (props: TextBoxProps) => {
         required={required}
         value={input}
         onChange={handleOnChange}
+        onKeyDown={onKeyDown}
+        ref={refs}
       />
     </div>
   );

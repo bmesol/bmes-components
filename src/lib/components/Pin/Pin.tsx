@@ -7,7 +7,7 @@ import "./Pin.scss";
 
 const Pin = (props: PinProps) => {
   const { label = "", length = 0, required = false } = props;
-  const { pin, handleTextBoxChange } = usePin(props);
+  const { pin, handleTextBoxChange, handleBackspace, inputRefs } = usePin(props);
   return (
     <>
       {label && <div className="mb-2 label">{label}</div>}
@@ -15,10 +15,12 @@ const Pin = (props: PinProps) => {
         {Array.from({ length }, (_, index) => (
           <TextBox
             key={index}
+            refs={(ref: any) => (inputRefs.current[index] = ref)}
             type={TextBoxType.PASSWORD}
             value={pin[index]}
             classNames="text-center"
             onChange={handleTextBoxChange(index)}
+            onKeyDown={(e: React.KeyboardEvent<HTMLInputElement>) => handleBackspace(index, e)}
             placeholder="*"
             length={1}
             regex="^\d*$"

@@ -13,6 +13,8 @@ interface TextBoxProps {
   classNames?: string;
   value: string;
   onChange: Function;
+  refs?: any
+  onKeyDown?: any
 }
 
 export { TextBoxType, TextBoxProps };
