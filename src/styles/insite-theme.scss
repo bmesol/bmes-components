@@ -32,7 +32,6 @@
     cursor: not-allowed;
   }
 
-
   /* --- Button Component Styles --- */
   --button-padding: var(--base-unit) var(--xl-unit);
   --button-fw: 700;
@@ -46,7 +45,7 @@
 
   /* --- Common Theme Font Styles ---- */
   font-family: "Inter";
-  font-size: var(--lg-unit);
+  font-size: var(--md-unit);
   font-weight: 400;
   font-style: normal;
   line-height: normal;

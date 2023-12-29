@@ -1,5 +1,3 @@
-// --- Enum defining different variants of the Label ---
-
 enum LabelVariants {
   DEFAULT = "default",
   PRIMARY = "primary",
@@ -9,14 +7,13 @@ enum LabelVariants {
   WARNING = "warning",
 }
 
-// --- Props interface for the Label component ---
-
 interface LabelProps {
-  href?: string;
   type: "link" | "text";
   label: string;
   variant: LabelVariants;
+  href?: string;
   classNames?: string;
+  target?: string;
 }
 
 export { LabelVariants, LabelProps };

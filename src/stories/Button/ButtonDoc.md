@@ -24,6 +24,8 @@ The Button component is a versatile UI element that allows users to trigger vari
 
 5. **Outline Danger Button**: The outline danger button provides an outlined style for actions with potentially harmful consequences.
 
+## Usage
+
 The Button component is a powerful and flexible UI element designed to accommodate a wide range of actions within a web application. Its versatility is enhanced by the following set of props:
 
 #### 1. `label` (string)

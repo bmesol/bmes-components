@@ -1,9 +1,8 @@
 @import "./../../../styles/global.scss";
 
 .textbox {
-  line-height: var(--lg-unit);
   color: var(--gray-color);
-  font-size: var(--md-unit);
+  line-height: var(--lg-unit);
   .label {
     color: black;
   }

@@ -3,7 +3,7 @@ import { Button } from "../../lib/components/Button/Button";
 import { ButtonVariants } from "../../lib/components/Button/DTOs";
 import ButtonDoc from "./ButtonDoc.md";
 
-const meta = {
+const meta: Meta<typeof Button> = {
   title: "Components/Button",
   tags: ["autodocs"],
   component: Button,
@@ -15,7 +15,7 @@ const meta = {
       },
     },
   },
-} satisfies Meta<typeof Button>;
+};
 
 export default meta;
 

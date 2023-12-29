@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from "@storybook/react";
 import { Pin } from "../../lib/components/Pin/Pin";
 import PinDoc from "./PinDoc.md";
 
-const meta = {
+const meta: Meta<typeof Pin> = {
   title: "Components/Pin",
   tags: ["autodocs"],
   component: Pin,
@@ -14,7 +14,7 @@ const meta = {
       },
     },
   },
-} satisfies Meta<typeof Pin>;
+};
 
 export default meta;
 

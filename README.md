@@ -23,7 +23,7 @@ To install packages from GitHub Packages using npm, ensure that you have the fol
 
 ### 3. Configuring npm for GitHub Packages
 
-- **Create `.npmrc` File:** In your project's root directory, create an `.npmrc` file (or edit if it already exists). Add the following lines, replacing `USERNAME`, `TOKEN`, and `REGISTRY` with your GitHub username, Personal Access Token, and the GitHub Packages registry URL:
+- **Create `.npmrc` File:** In your project's root directory, create an `.npmrc` file (or edit if it already exists). Add the following lines, 
 
     ```ini
     //npm.pkg.github.com/:_authToken=TOKEN
@@ -34,7 +34,7 @@ To install packages from GitHub Packages using npm, ensure that you have the fol
 ## Installation
 
 ```
-npm install @bmesol/bmes-components@0.0.20-beta
+npm install @bmesol/bmes-components@0.0.21-beta
 ```
 
 Example usage
