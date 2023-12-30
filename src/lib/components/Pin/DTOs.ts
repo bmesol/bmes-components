@@ -1,8 +1,8 @@
 interface PinProps {
-  label?: string;
   length: number;
+  label?: string;
   required?: boolean;
-  value: string[];
+  value: string;
   onChange: Function;
 }
 
