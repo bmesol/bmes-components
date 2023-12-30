@@ -11,9 +11,8 @@ const useTextBox = (props: TextBoxProps) => {
     }
   }, [input]);
 
-  const handleOnChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const inputValue = e.target.value;
-
+  const handleOnChange = (inputValue: string) => {
+    
     let regexObj = new RegExp(regex);
     const isValidInput = regexObj.test(inputValue);
 

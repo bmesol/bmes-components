@@ -16,7 +16,7 @@ const TextBox = (props: TextBoxProps) => {
         className={`textbox ${classNames}`}
         required={required}
         value={input}
-        onChange={handleOnChange}
+        onChange={(e)=>handleOnChange(e.target.value)}
         onKeyDown={onKeyDown}
         ref={refs}
       />
