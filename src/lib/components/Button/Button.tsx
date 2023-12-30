@@ -10,10 +10,9 @@ const Button = (props: ButtonProps) => {
 
   return (
     <>
-      <button className={`button ${variant} ${classNames} ${isDisabled ? "disabled" : ""}`} onClick={onClick} disabled={isDisabled}>
+      <button className={`${variant} ${classNames} ${isDisabled ? "disabled" : ""}`} onClick={onClick} disabled={isDisabled}>
         <span>{label.slice(0, maxLabelLength)}</span>
       </button>
-
       {!isValidLabel && (
         <>
           <br />

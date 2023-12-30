@@ -12,7 +12,9 @@ interface TextBoxProps {
   placeholder?: string;
   classNames?: string;
   value: string;
-  onChange: (newValue: string) => void;
+  onChange: Function;
+  refs?: any
+  onKeyDown?: any
 }
 
 export { TextBoxType, TextBoxProps };
