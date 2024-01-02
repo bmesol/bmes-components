@@ -8,9 +8,9 @@ The TextBox component is used to collect textual input from users within forms o
 
 * The label prop provides a label or title for the TextBox component, describing the input field's purpose or expected content.
 
-#### 2. `type` (enum, optional)
+#### 2. `type` (TextBoxTypes, optional)
 
-* The type prop specifies the type of input for the TextBox. It can be either TextBoxType.TEXT for regular text or TextBoxType.PASSWORD for a password input field, obscuring the entered text.
+* The type prop specifies the type of input for the TextBox. It can be either TextBoxTypes.TEXT for regular text or TextBoxTypes.PASSWORD for a password input field, obscuring the entered text.
 
 #### 3. `regex` (string, optional)
 

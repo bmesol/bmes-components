@@ -2,7 +2,7 @@ import React from "react";
 import { TextBox } from "./../TextBox/TextBox";
 import { PinProps } from "./DTOs";
 import { usePin } from "./Hooks";
-import { TextBoxType } from "../TextBox/DTOs";
+import { TextBoxTypes } from "../TextBox/DTOs";
 import "./Pin.scss";
 
 const Pin = (props: PinProps) => {
@@ -16,7 +16,7 @@ const Pin = (props: PinProps) => {
           <TextBox
             key={index}
             refs={(ref: any) => (inputRefs.current[index] = ref)}
-            type={TextBoxType.PASSWORD}
+            type={TextBoxTypes.PASSWORD}
             value={pin[index]}
             classNames="text-center"
             onChange={handleTextBoxChange(index)}

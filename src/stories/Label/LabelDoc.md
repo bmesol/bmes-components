@@ -16,25 +16,25 @@ The Label component is a versatile UI element designed for displaying various ty
 
 ## Link Variants
 
-7. **Default link Label**: This label is styled as the default link label.
+1. **Default link Label**: This label is styled as the default link label.
 
-8. **Primary link Label**: This label is styled as the primary link label.
+2. **Primary link Label**: This label is styled as the primary link label.
 
-9.  **Secondary link Label**: This label is styled as the secondary link label.
+3.  **Secondary link Label**: This label is styled as the secondary link label.
 
-10. **Danger link Label**: This label is styled as the danger link label.
+4. **Danger link Label**: This label is styled as the danger link label.
 
-11. **Success link Label**: This label is styled as the success link label.
+5. **Success link Label**: This label is styled as the success link label.
 
-12. **Warning link Label**: This label is styled as the warning link label.
+6. **Warning link Label**: This label is styled as the warning link label.
 
 ## Usage
 
 The Card component is a powerful and flexible UI element designed to accommodate a wide range of actions within a web application. Its versatility is enhanced by the following set of props:
 
-#### 1. `type` (string)
+#### 1. `type` (LabelTypes)
 
-* The type of the label. It can be either "link" or "text".
+* The type of the label. e.g., LabelTypes.TEXT.
 
 #### 2. `label` (string)
 

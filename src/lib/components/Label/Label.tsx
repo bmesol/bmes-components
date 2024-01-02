@@ -1,9 +1,9 @@
 import React from "react";
-import { LabelVariants, LabelProps } from "./DTOs";
+import { LabelTypes, LabelVariants, LabelProps } from "./DTOs";
 import "./Label.scss";
 
 const Label = (props: LabelProps) => {
-  const { type = "", variant, classNames = "", href = "", label = "", target = "" } = props;
+  const { type, variant, classNames = "", href = "", label = "", target = "" } = props;
 
   return (
     <div className={`${variant} ${type} ${classNames}`}>
@@ -12,4 +12,4 @@ const Label = (props: LabelProps) => {
   );
 };
 
-export { Label, LabelVariants };
+export { Label, LabelTypes, LabelVariants };

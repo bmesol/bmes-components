@@ -1,11 +1,11 @@
-enum TextBoxType {
+enum TextBoxTypes {
   TEXT = "text",
   PASSWORD = "password",
 }
 
 interface TextBoxProps {
   label?: string;
-  type?: TextBoxType;
+  type?: TextBoxTypes;
   regex?: string;
   length?: number;
   required?: boolean;
@@ -13,8 +13,8 @@ interface TextBoxProps {
   classNames?: string;
   value: string;
   onChange: Function;
-  refs?: any
-  onKeyDown?: any
+  refs?: any;
+  onKeyDown?: any;
 }
 
-export { TextBoxType, TextBoxProps };
+export { TextBoxTypes, TextBoxProps };
