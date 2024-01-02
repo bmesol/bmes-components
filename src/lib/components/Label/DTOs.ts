@@ -1,3 +1,8 @@
+enum LabelTypes {
+  LINK = "link",
+  TEXT = "text",
+}
+
 enum LabelVariants {
   DEFAULT = "default",
   PRIMARY = "primary",
@@ -8,7 +13,7 @@ enum LabelVariants {
 }
 
 interface LabelProps {
-  type: "link" | "text";
+  type: LabelTypes;
   label: string;
   variant: LabelVariants;
   href?: string;
@@ -16,4 +21,4 @@ interface LabelProps {
   target?: string;
 }
 
-export { LabelVariants, LabelProps };
+export { LabelTypes, LabelVariants, LabelProps };

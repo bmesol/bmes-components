@@ -2,7 +2,7 @@ import React from "react";
 import type { Meta, StoryObj } from "@storybook/react";
 import { Card } from "./../../lib/components/Card/Card";
 import CardDoc from "./CardDoc.md";
-import { Button, ButtonVariants, Label, LabelVariants, Pin, TextBox } from "../../lib";
+import { Button, ButtonVariants, Label, LabelTypes, LabelVariants, Pin, TextBox } from "../../lib";
 
 const meta: Meta<typeof Card> = {
   title: "components/Card",
@@ -28,7 +28,7 @@ export const Card_Sample: Story = {
       <div style={{ width: "250px" }}>
         <Label
           label="User Login"
-          type="text"
+          type={LabelTypes.TEXT}
           variant={LabelVariants.SUCCESS}
           classNames="w-100 text-center mb-3 fs-5"
         />
@@ -43,7 +43,7 @@ export const Card_Sample: Story = {
         <Pin label="Pin" length={4} value="" onChange={() => {}} />
         <Label
           label="Forget pin?"
-          type="link"
+          type={LabelTypes.LINK}
           variant={LabelVariants.DEFAULT}
           classNames="mt-2"
           href=""
