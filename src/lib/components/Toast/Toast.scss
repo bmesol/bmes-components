@@ -1,0 +1,38 @@
+@import "./../../../styles/global.scss";
+
+@mixin toast($background-color, $text-color) {
+  .toast-heading {
+    font-weight: 700;
+  }
+  padding: var(--lg-unit);
+  background-color: $background-color;
+  color: $text-color;
+  transition: transform 0.6s ease-in-out;
+  animation: toast-in-right 0.7s;
+}
+
+$toast-variants: (
+  default: black white,
+  success: var(--success-color) var(--success-bg-text-color),
+  warning: var(--warning-color) var(--warning-bg-text-color),
+  danger: var(--danger-color) var(--danger-bg-text-color),
+);
+
+@each $variant, $colors in $toast-variants {
+  section {
+    .#{$variant} {
+      @include toast(nth($colors, 1), nth($colors, 2));
+    }
+  }
+}
+
+@keyframes toast-in-right {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
