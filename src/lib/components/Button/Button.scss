@@ -19,16 +19,27 @@ $button-variants: (
 );
 
 @each $variant, $colors in $button-variants {
-  button{
-   &.#{$variant} {
-    @include button(nth($colors, 1), nth($colors, 2));
+  button {
+    &.#{$variant} {
+      @include button(nth($colors, 1), nth($colors, 2));
+    }
+    &.outline-#{$variant} {
+      @include button(white, nth($colors, 1));
+      border: 2px solid nth($colors, 1);
+    }
+    &.outline-#{$variant}:hover {
+      @include button(nth($colors, 1), nth($colors, 2));
+    }
   }
-   &.outline-#{$variant} {
-    @include button(white, nth($colors, 1));
-    border: 2px solid nth($colors, 1);
-  }
-   &.outline-#{$variant}:hover {
-    @include button(nth($colors, 1), nth($colors, 2));
-  }
+  // For Toast Component
+  section {
+    .#{$variant} {
+      background-color: nth($colors, 1);
+      color: nth($colors, 2);
+    }
+    .default {
+      background-color: black;
+      color: white;
+    }
   }
 }

@@ -24,8 +24,6 @@ export const Toast_Sample: Story = {
   args: {
     variant: ToastVariants.DEFAULT,
     heading: "Heading text",
-    message: "Message text here",
-    showToast: true,
-    onClose: () => {},
+    message: "Message text here.",
   },
 };
