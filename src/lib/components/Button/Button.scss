@@ -31,15 +31,4 @@ $button-variants: (
       @include button(nth($colors, 1), nth($colors, 2));
     }
   }
-  // For Toast Component
-  section {
-    .#{$variant} {
-      background-color: nth($colors, 1);
-      color: nth($colors, 2);
-    }
-    .default {
-      background-color: black;
-      color: white;
-    }
-  }
 }
