@@ -4,6 +4,7 @@ import resolve from '@rollup/plugin-node-resolve';
 import commonjs from '@rollup/plugin-commonjs';
 import peerDepsExternal from 'rollup-plugin-peer-deps-external';
 import postcss from 'rollup-plugin-postcss';
+import svgr from '@svgr/rollup';
 
 export default {
   input: 'src/index.ts', // Entry point of your library
@@ -26,6 +27,7 @@ export default {
     typescript(), // Handle TypeScript files
     postcss(), // Process CSS files
     terser(), // Minify output
+    svgr(), // import SVG as React components.
   ],
   external: ['react', 'react-dom'], // Specify external dependencies
 };
