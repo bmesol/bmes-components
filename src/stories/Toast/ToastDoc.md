@@ -12,16 +12,12 @@ The Toast component is designed to display notifications with different variants
 
 ## Usage
 
-To use the Toast component, you need to import it into your React application and wrap your content with the `ToastProvider`. The ToastProvider manages the state and rendering of Toast messages.
+**1. To use the Toast component, you need to add `ToastProvider` in root of the application.**
 
-### Import
-
-```typescript
-import React from "react";
-import ReactDOM from "react-dom/client";
+```tsx
 import { ToastProvider } from "@bmesol/bmes-components";
-import App from "./App";
-
+```
+```tsx
 const root = ReactDOM.createRoot(document.getElementById("root") as HTMLElement);
 root.render(
     <ToastProvider>
@@ -29,28 +25,29 @@ root.render(
     </ToastProvider>
 );
 ```
+**2. The `useToast` hook returns a `toast` function that you can use to display a toast. It takes two parameters :**
 
-### Sample Toast
-```typescript
-import React from "react";
+1. **message** (string) : The main content or message of the Toast.
+1. **heading** (string - optional) : The text to be displayed as the heading of the Toast.
+
+### Example Code
+
+```tsx
 import { useToast } from "@bmesol/bmes-components";
-
-const App = () => {
+```
+```tsx
+export const App = () => {
   const toast = useToast();
   return (
-    <>
-      <button onClick={() => toast.info("Message text here.", "Heading text")}>Show Info Toast</button>
-    </>
+      <Button
+        variant={ButtonVariants.PRIMARY}
+        label="Toast Info"
+        onClick={() => 
+          toast.info(
+            "Message text here.",
+            "Heading text"
+          )}
+      />
   );
 };
-export default App;
 ```
-**Note :** The `useToast` hook provides a convenient way to display Toast messages in your React application. It returns an object with methods for different types of Toast messages, such as success, warning, and error messages. It takes two parameters:
-
-#### 1. `message` (string)
-
-* The main content or message of the Toast.
-
-#### 2. `heading` (string - optional)
-
-* The text to be displayed as the heading of the Toast.

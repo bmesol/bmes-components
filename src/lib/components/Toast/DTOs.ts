@@ -1,3 +1,10 @@
+enum ToastVariants {
+  DEFAULT = "default",
+  SUCCESS = "success",
+  WARNING = "warning",
+  DANGER = "danger",
+}
+
 interface ToastProps {
   heading?: string;
   message: string;
@@ -21,7 +28,7 @@ interface ToastType {
   heading?: string;
   message: string;
   id: number;
-  variant?: string;
+  variant?: ToastVariants;
 }
 
-export { ToastProps, ToastContextValues, ToastProviderProps, ToastType };
+export { ToastVariants, ToastProps, ToastContextValues, ToastProviderProps, ToastType };

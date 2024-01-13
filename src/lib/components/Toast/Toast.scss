@@ -1,6 +1,6 @@
 @import "./../../../styles/global.scss";
 
-#toast {
+@mixin toast {
   padding: var(--lg-unit);
   border-radius: var(--border-radius);
   transition: transform 0.6s ease-in-out;
@@ -40,6 +40,7 @@ $toast-variants: (
 @each $variant, $colors in $toast-variants {
   section {
     .#{$variant} {
+      @include toast;
       background-color: nth($colors, 1);
       color: nth($colors, 2);
     }

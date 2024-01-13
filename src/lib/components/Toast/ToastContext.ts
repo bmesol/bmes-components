@@ -10,6 +10,6 @@ const defaultToastContextValues: ToastContextValues = {
 };
 
 const ToastContext = createContext<ToastContextValues>(defaultToastContextValues);
-const useToast = () => useContext(ToastContext);
+const useToastContext = () => useContext(ToastContext);
 
-export { ToastContext, useToast };
+export { ToastContext, useToastContext };
