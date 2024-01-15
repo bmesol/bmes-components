@@ -1,6 +1,6 @@
 {
   "name": "@bmesol/bmes-components",
-  "version": "0.0.22-beta",
+  "version": "0.0.23-beta",
   "description": "BM e-Solutions React UI Library",
   "main": "dist/bundle.js",
   "module": "dist/bundle.mjs",
@@ -38,6 +38,7 @@
     "@storybook/react": "^7.6.6",
     "@storybook/react-webpack5": "^7.6.6",
     "@storybook/testing-library": "^0.2.2",
+    "@svgr/rollup": "^8.1.0",
     "babel-cli": "^6.26.0",
     "bootstrap": "^5.3.2",
     "react": "^18.2.0",
