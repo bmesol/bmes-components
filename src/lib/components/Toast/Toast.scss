@@ -1,5 +1,12 @@
 @import "./../../../styles/global.scss";
 
+$toast-variants: (
+  default: black white,
+  success: var(--success-color) var(--success-bg-text-color),
+  warning: var(--warning-color) var(--warning-bg-text-color),
+  danger: var(--danger-color) var(--danger-bg-text-color),
+);
+
 @mixin toast {
   padding: var(--lg-unit);
   border-radius: var(--border-radius);
@@ -10,39 +17,26 @@
     from { transform: translateX(100%); opacity: 0; }
     to { transform: translateX(0); opacity: 1; }
   }
-
-  .toast-content {
-    gap: var(--border-radius);
-  }
-  .toast-heading {
-    font-weight: bold;
-  }
 }
 
 .toasts{
   display: flex;
+  gap: var(--md-unit);
   flex-direction: column;
-  gap: 0.5rem;
   position: fixed;
   z-index: 999999;
 
   @media (max-width: 576px) { top: 1.125rem; right: 1rem; left: 1rem; }
   @media (min-width: 577px) { bottom: 1.5rem; right: 1.5rem; }
-}
 
-$toast-variants: (
-  default: black white,
-  success: var(--success-color) var(--success-bg-text-color),
-  warning: var(--warning-color) var(--warning-bg-text-color),
-  danger: var(--danger-color) var(--danger-bg-text-color),
-);
-
-@each $variant, $colors in $toast-variants {
-  section {
+  @each $variant, $colors in $toast-variants {
     .#{$variant} {
       @include toast;
       background-color: nth($colors, 1);
       color: nth($colors, 2);
+      > div {
+        gap: var(--lg-unit);
+      }
     }
   }
 }

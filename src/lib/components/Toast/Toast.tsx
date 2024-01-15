@@ -11,19 +11,17 @@ const Toast = (props: ToastProps) => {
   const { useToastAutoClose } = useToast()
   useToastAutoClose(() => { close() });
   return (
-    <section>
-      <div className={`${variant}`}>
-        <div className={`toast-content d-flex justify-content-between align-items-center`}>
-          <div>
-            <p className="toast-heading p-0 m-0">{heading}</p>
-            <p className="toast-message p-0 m-0">{message}</p>
-          </div>
-          <button className="bg-transparent border-0 p-0 m-0" onClick={close}>
-            <img src={closeIcon} alt="X" />
-          </button>
+    <div className={`${variant}`}>
+      <div className={`d-flex justify-content-between align-items-center`}>
+        <div>
+          <div className="fw-bold">{heading}</div>
+          <span>{message}</span>
         </div>
+        <button className="bg-transparent border-0 p-0 m-0" onClick={close}>
+          <img src={closeIcon} alt="X" />
+        </button>
       </div>
-    </section>
+    </div>
   );
 };
 
