@@ -1,6 +1,6 @@
 {
   "name": "@bmesol/bmes-components",
-  "version": "0.0.23-beta",
+  "version": "0.0.24-beta",
   "description": "BM e-Solutions React UI Library",
   "main": "dist/bundle.js",
   "module": "dist/bundle.mjs",
@@ -26,6 +26,7 @@
     "@babel/preset-react": "^7.23.3",
     "@babel/preset-typescript": "^7.23.3",
     "@rollup/plugin-commonjs": "^25.0.7",
+    "@rollup/plugin-image": "^3.0.3",
     "@rollup/plugin-node-resolve": "^15.2.3",
     "@rollup/plugin-typescript": "^11.1.5",
     "@storybook/addon-essentials": "^7.6.6",
