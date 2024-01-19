@@ -37,6 +37,9 @@ $toast-variants: (
       > div {
         gap: var(--lg-unit);
       }
+      > span {
+        color: nth($colors, 2) !important;
+      }
     }
   }
 }
