@@ -19,7 +19,7 @@ $toast-variants: (
   }
 }
 
-.toasts{
+div .toasts{
   display: flex;
   gap: var(--md-unit);
   flex-direction: column;

@@ -16,14 +16,14 @@ $label-colors: (
 );
 
 @each $variant, $color in $label-colors {
-  div {
+  div .label {
     &.#{$variant} {
       a {
         @include Label($color);
         text-decoration: underline;
         text-underline-offset: var(--sm-unit);
       }
-      span {
+      > span {
         @include Label($color);
       }
     }
