@@ -8,7 +8,7 @@
   "scripts": {
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "build": "rollup -c"
+    "build": "(rollup -c) && (rmdir /s /q dist\\stories) && (del dist\\bundle.js.map dist\\bundle.mjs.map) && (rmdir /s /q bmes-components\\.github bmes-components\\.storybook bmes-components\\src) && (del bmes-components\\.babelrc.json bmes-components\\.gitignore bmes-components\\babel.config.json bmes-components\\declaration.d.ts bmes-components\\package-lock.json bmes-components\\rollup.config.js bmes-components\\tsconfig.json)"
   },
   "repository": {
     "type": "git",
