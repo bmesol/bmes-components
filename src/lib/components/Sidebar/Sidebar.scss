@@ -1,0 +1,12 @@
+@import "./../../../styles/global.scss";
+
+.sidebar {
+  padding: var(--lg-unit) 0px;
+  border-radius: var(--lg-unit) 0px 0px var(--lg-unit);
+  box-shadow: -4px 0px 4px 0px rgba(0, 0, 0, 0.25);
+  background: white;
+
+  .close-icon {
+    color: #827e7d !important;
+  }
+}

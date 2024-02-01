@@ -1,7 +1,7 @@
 import React from "react";
-import closeIcon from "./../../../assets/Images/close-icon.svg";
+import { ReactComponent as CloseIcon } from "./../../../assets/Images/close-icon.svg";
 import { useToastContext } from "./ToastContext";
-import { ToastProvider } from "./ToastProvider"
+import { ToastProvider } from "./ToastProvider";
 import { useToast } from "./useToast";
 import { ToastProps } from "./DTOs";
 import "./Toast.scss";
@@ -17,8 +17,8 @@ const Toast = (props: ToastProps) => {
           <div className="fw-bold">{heading}</div>
           <span>{message}</span>
         </div>
-        <button className="bg-transparent border-0 p-0 m-0" onClick={close}>
-          <img src={closeIcon} alt="X" />
+        <button className="bg-transparent border-0 p-0 m-0 text-white" onClick={close}>
+          <CloseIcon />
         </button>
       </div>
     </div>
