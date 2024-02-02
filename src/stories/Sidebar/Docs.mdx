@@ -10,10 +10,12 @@ The Sidebar component is designed to create a collapsible menu interface for nav
 ## Props
 
 1. **Sidebar**: The content of the sidebar.
+        1. **`id`** : This id serves as a unique identifier for the Sidebar.
 2. **SidebarTrigger**: The trigger element to open the sidebar.
+        1. **`sidebarId`** : This sidebarId specifies the id of the sidebar that the trigger is associated with. It helps in identifying which sidebar should be opened or closed when the trigger is activated.
 3. **SidebarHeader**: Content displayed at the top of the sidebar.
 4. **SidebarMenuItems**: The list of menu items displayed in the sidebar.
-5. **SidebarMenuItem**: 
+5. **SidebarMenuItem**: Represents an item in the sidebar menu.
         1. **`href`**: The URL to navigate to when the menu item is clicked. 
         2. **`icon`**: An optional icon to display alongside the menu item. 
         3. **`target`**: Optional target attribute for the link.
@@ -31,11 +33,11 @@ import { Sidebar, SidebarTrigger, SidebarHeader, SidebarMenuItems, SidebarMenuIt
 export const SampleMenu = () => {
   return (
     <>
-        <SidebarTrigger>
+        <SidebarTrigger sidebarId="navMenu">
             <button>Open Sidebar<button/>
         </SidebarTrigger>
 
-        <Sidebar>
+        <Sidebar id="navMenu">
             <SidebarHeader>
                 <div>Sidebar Header</div>
             </SidebarHeader>
@@ -72,11 +74,11 @@ import { Button, ButtonVariants } from "@bmesol/bmes-components"
 export const SampleMenu = () => {
   return (
     <>
-        <SidebarTrigger>
+        <SidebarTrigger sidebarId="menu">
           <Button variant={ButtonVariants.SUCCESS} label="Open Menu" classNames="my-3" onClick={() => {}} />
         </SidebarTrigger>
 
-        <Sidebar>
+        <Sidebar id="menu">
           <SidebarHeader>
             <div className="d-flex flex-column justify-content-center align-items-center text-secondary my-3">
               <ProfileIcon />

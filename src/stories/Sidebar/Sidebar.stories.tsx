@@ -23,11 +23,11 @@ export const Menu = {
   render: (children: React.ReactElement) => {
     return (
       <>
-        <SidebarTrigger>
+        <SidebarTrigger sidebarId="menu">
           <Button variant={ButtonVariants.SUCCESS} label="Open Menu" classNames="my-3" onClick={() => {}} />
         </SidebarTrigger>
 
-        <Sidebar>
+        <Sidebar id="menu">
           <SidebarHeader>
             <div className="d-flex flex-column justify-content-center align-items-center text-secondary mt-4 mb-3">
               <ProfileIcon />

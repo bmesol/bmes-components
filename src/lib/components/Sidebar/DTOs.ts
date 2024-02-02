@@ -1,4 +1,14 @@
 interface SidebarProps {
+  id: string;
+  children: React.ReactNode;
+}
+
+interface SidebarChildProps {
+  children: React.ReactNode;
+}
+
+interface SidebarTriggerProps {
+  sidebarId: string;
   children: React.ReactNode;
 }
 
@@ -9,4 +19,4 @@ interface SidebarMenuItemProps {
   children: React.ReactNode;
 }
 
-export { SidebarProps, SidebarMenuItemProps };
+export { SidebarProps, SidebarChildProps, SidebarTriggerProps, SidebarMenuItemProps };

@@ -1,21 +1,21 @@
 import React from "react";
-import { SidebarProps, SidebarMenuItemProps } from "./DTOs";
+import { SidebarProps, SidebarChildProps, SidebarTriggerProps, SidebarMenuItemProps } from "./DTOs";
 import { ReactComponent as CloseIcon } from "./../../../assets/Images/close-icon.svg";
 import "./Sidebar.scss";
 
-const SidebarTrigger = ({ children }: SidebarProps) => {
+const SidebarTrigger = ({ sidebarId, children }: SidebarTriggerProps) => {
   return (
-    <div data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+    <div data-bs-toggle="offcanvas" data-bs-target={`#${sidebarId}`} aria-controls="offcanvasRight">
       {children}
     </div>
   );
 };
 
-const SidebarHeader = ({ children }: SidebarProps) => {
+const SidebarHeader = ({ children }: SidebarChildProps) => {
   return <>{children}</>;
 };
 
-const SidebarMenuItems = ({ children }: SidebarProps) => {
+const SidebarMenuItems = ({ children }: SidebarChildProps) => {
   return <div className="sidebar-menu-items">{children}</div>;
 };
 
@@ -30,15 +30,15 @@ const SidebarMenuItem = ({ href, target, icon, children }: SidebarMenuItemProps)
   );
 };
 
-const SidebarFooter = ({ children }: SidebarProps) => {
+const SidebarFooter = ({ children }: SidebarChildProps) => {
   return <div className="sidebar-footer">{children}</div>;
 };
 
-const Sidebar = ({ children }: SidebarProps) => {
+const Sidebar = ({ id, children }: SidebarProps) => {
   const [header, menuItem, footer] = React.Children.toArray(children);
   return (
     <>
-      <div className="offcanvas offcanvas-end sidebar" id="offcanvasRight">
+      <div className="offcanvas offcanvas-end sidebar" id={id}>
         <div className="text-end px-3">
           <button className="border border-0 bg-transparent close-icon" data-bs-dismiss="offcanvas">
             <CloseIcon />
