@@ -1,9 +1,9 @@
-import React from "react";
-import { ReactComponent as CloseIcon } from "./../../../assets/Images/close-icon.svg";
+import { CloseIcon } from "../Icons/CloseIcon/CloseIcon";
 import { useToastContext } from "./ToastContext";
 import { ToastProvider } from "./ToastProvider";
 import { useToast } from "./useToast";
 import { ToastProps } from "./DTOs";
+import React from "react";
 import "./Toast.scss";
 
 const Toast = (props: ToastProps) => {

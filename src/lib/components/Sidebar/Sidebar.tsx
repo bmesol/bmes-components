@@ -1,6 +1,6 @@
-import React from "react";
 import { SidebarProps, SidebarChildProps, SidebarTriggerProps, SidebarMenuItemProps } from "./DTOs";
-import { ReactComponent as CloseIcon } from "./../../../assets/Images/close-icon.svg";
+import { CloseIcon } from "../Icons/CloseIcon/CloseIcon";
+import React from "react";
 import "./Sidebar.scss";
 
 const SidebarTrigger = ({ sidebarId, children }: SidebarTriggerProps) => {

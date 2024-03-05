@@ -1,13 +1,12 @@
-import React from "react";
-import { Button, ButtonVariants } from "./../../lib/components/Button/Button";
 import { Sidebar, SidebarTrigger, SidebarHeader, SidebarMenuItems, SidebarMenuItem, SidebarFooter } from "../../lib/components/Sidebar/Sidebar";
-import { ReactComponent as ProfileIcon } from "./../../assets/Images/profile-icon.svg";
-import { ReactComponent as UserIcon } from "./../../assets/Images/users-icon.svg";
-import { ReactComponent as ContactsIcon } from "./../../assets/Images/contacts-icon.svg";
-import { ReactComponent as ClientsIcon } from "./../../assets/Images/clients-icon.svg";
-import { ReactComponent as SitesIcon } from "./../../assets/Images/sites-icon.svg";
-import { ReactComponent as WorkersIcon } from "./../../assets/Images/workers-icon.svg";
-import { ReactComponent as SuppliersIcon } from "./../../assets/Images/suppliers-icon.svg";
+import { SuppliersIcon } from "../../lib/components/Icons/SuppliersIcon/SuppliersIcon";
+import { ContactsIcon } from "../../lib/components/Icons/ContactsIcon/ContactsIcon";
+import { ClientsIcon } from "../../lib/components/Icons/ClientsIcon/ClientsIcon";
+import { WorkerIcon } from "../../lib/components/Icons/WorkerIcon/WorkersIcon";
+import { Button, ButtonVariants } from "./../../lib/components/Button/Button";
+import { UsersIcon } from "../../lib/components/Icons/UsersIcon/UsersIcon";
+import { SitesIcon } from "../../lib/components/Icons/SitesIcon/SitesIcon";
+import React from "react";
 
 const meta = {
   title: "Components/Sidebar",
@@ -30,17 +29,17 @@ export const Menu = {
         <Sidebar id="menu">
           <SidebarHeader>
             <div className="d-flex flex-column justify-content-center align-items-center text-secondary mt-4 mb-3">
-              <ProfileIcon />
+              TS
               <div className="mt-1">Tony Stark</div>
             </div>
           </SidebarHeader>
           <SidebarMenuItems>
-            <SidebarMenuItem href={"https://www.bmesolutions.in/"} icon={<UserIcon />}>Users</SidebarMenuItem>
-            <SidebarMenuItem href={"https://www.bmesolutions.in/"} icon={<ContactsIcon />}>Contacts</SidebarMenuItem>
-            <SidebarMenuItem href={"https://www.bmesolutions.in/"} icon={<ClientsIcon />}>Clients</SidebarMenuItem>
-            <SidebarMenuItem href={"https://www.bmesolutions.in/"} icon={<SitesIcon />}>Sites</SidebarMenuItem>
-            <SidebarMenuItem href={"https://www.bmesolutions.in/"} icon={<WorkersIcon />}>Workers</SidebarMenuItem>
-            <SidebarMenuItem href={"https://www.bmesolutions.in/"} icon={<SuppliersIcon />}>Suppliers</SidebarMenuItem>
+            <SidebarMenuItem href={"https://www.bmesolutions.in/"} icon={<UsersIcon color="#4F430F" />}>Users</SidebarMenuItem>
+            <SidebarMenuItem href={"https://www.bmesolutions.in/"} icon={<ContactsIcon color="#4F430F" />}>Contacts</SidebarMenuItem>
+            <SidebarMenuItem href={"https://www.bmesolutions.in/"} icon={<ClientsIcon color="#4F430F"/>}>Clients</SidebarMenuItem>
+            <SidebarMenuItem href={"https://www.bmesolutions.in/"} icon={<SitesIcon color="#4F430F" />}>Sites</SidebarMenuItem>
+            <SidebarMenuItem href={"https://www.bmesolutions.in/"} icon={<WorkerIcon color="#4F430F" />}>Workers</SidebarMenuItem>
+            <SidebarMenuItem href={"https://www.bmesolutions.in/"} icon={<SuppliersIcon color="#4F430F" />}>Suppliers</SidebarMenuItem>
           </SidebarMenuItems>
           <SidebarFooter>
             <div>&copy; BM e-Solutions</div>
