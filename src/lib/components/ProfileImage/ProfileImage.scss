@@ -1,0 +1,27 @@
+@import "../../../styles/global.scss";
+
+.layout {
+  border-radius: var(--border-radius);
+}
+
+.text-layout {
+  color: var(--secondary-color);
+  background-color: var(--primary-color);
+  border-radius: var(--border-radius);
+  padding: 24px;
+}
+
+$size-variants: (
+  base: 75px,
+  sm: 100px,
+  md: 125px,
+  lg: 150px,
+  xl: 200px,
+);
+
+@each $variant, $size in $size-variants {
+  .#{$variant} {
+    width: $size;
+    height: $size;
+  }
+}

@@ -7,6 +7,7 @@ import { Button, ButtonVariants } from "./../../lib/components/Button/Button";
 import { UsersIcon } from "../../lib/components/Icons/UsersIcon/UsersIcon";
 import { SitesIcon } from "../../lib/components/Icons/SitesIcon/SitesIcon";
 import React from "react";
+import { ProfileImage } from "../../lib/components/ProfileImage/ProfileImage";
 
 const meta = {
   title: "Components/Sidebar",
@@ -29,8 +30,7 @@ export const Menu = {
         <Sidebar id="menu">
           <SidebarHeader>
             <div className="d-flex flex-column justify-content-center align-items-center text-secondary mt-4 mb-3">
-              TS
-              <div className="mt-1">Tony Stark</div>
+              <ProfileImage alt="Tony stark"/>
             </div>
           </SidebarHeader>
           <SidebarMenuItems>
