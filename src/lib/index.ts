@@ -1,11 +1,12 @@
 // Components
-export * from "./components/Button/Button"; // Button Component
-export * from "./components/TextBox/TextBox"; // TextBox Component
-export * from "./components/Pin/Pin"; // Pin Component
-export * from "./components/Card/Card"; // Card component
-export * from "./components/Label/Label"; // Label Component
-export * from "./components/Toast/Toast"; // Toast Component
-export * from "./components/Sidebar/Sidebar"; // Sidebar Component
+export * from "./components/Button/Button";
+export * from "./components/TextBox/TextBox";
+export * from "./components/Pin/Pin";
+export * from "./components/Card/Card";
+export * from "./components/Label/Label";
+export * from "./components/Toast/Toast";
+export * from "./components/Sidebar/Sidebar";
+export * from "./components/ProfileImage/ProfileImage";
 
 // Icons
 export * from "./components/Icons/ClientsIcon/ClientsIcon";
