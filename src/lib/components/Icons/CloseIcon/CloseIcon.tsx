@@ -1,14 +1,15 @@
-import { IconProps } from "../DTOs";
+import { IconProps, sizes } from "../DTOs";
 import React from "react";
 
-const CloseIcon = ({ width, height, color }: IconProps) => {
+const CloseIcon = ({ size = "md", color, onClick }: IconProps) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width={width || "24"}
-      height={height || "24"}
+      width={sizes[size].width}
+      height={sizes[size].height}
       viewBox="0 0 24 24"
       fill="none"
+      onClick={onClick}
     >
       <path
         fillRule="evenodd"

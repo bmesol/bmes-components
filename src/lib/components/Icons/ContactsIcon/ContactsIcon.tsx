@@ -1,14 +1,15 @@
-import { IconProps } from "../DTOs";
+import { IconProps, sizes } from "../DTOs";
 import React from "react";
 
-const ContactsIcon = ({ width, height, color }: IconProps) => {
+const ContactsIcon = ({ size = "md", color, onClick }: IconProps) => {
   return (
     <svg
-      width={width || "50"}
-      height={height || "24"}
+      width={sizes[size].width}
+      height={sizes[size].height}
       viewBox="0 0 50 24"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      onClick={onClick}
     >
       <path
         fillRule="evenodd"
