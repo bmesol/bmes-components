@@ -33,7 +33,7 @@ jobs:
         shell: bash
         run: |
           echo "::group::Build"
-          npm ci
+          npm install
           npm run build-storybook
           echo "::endgroup::"
 
