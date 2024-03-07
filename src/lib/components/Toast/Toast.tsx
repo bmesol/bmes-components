@@ -1,9 +1,9 @@
-import React from "react";
-import closeIcon from "./../../../assets/Images/close-icon.svg";
+import { CloseIcon } from "../Icons/CloseIcon/CloseIcon";
 import { useToastContext } from "./ToastContext";
-import { ToastProvider } from "./ToastProvider"
+import { ToastProvider } from "./ToastProvider";
 import { useToast } from "./useToast";
 import { ToastProps } from "./DTOs";
+import React from "react";
 import "./Toast.scss";
 
 const Toast = (props: ToastProps) => {
@@ -18,7 +18,7 @@ const Toast = (props: ToastProps) => {
           <span>{message}</span>
         </div>
         <button className="bg-transparent border-0 p-0 m-0" onClick={close}>
-          <img src={closeIcon} alt="X" />
+          <CloseIcon color="white"/>
         </button>
       </div>
     </div>

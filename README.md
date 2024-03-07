@@ -26,6 +26,8 @@ To install packages from GitHub Packages using npm, ensure that you have the fol
 - **Create `.npmrc` File:** In your project's root directory, create an `.npmrc` file (or edit if it already exists). Add the following lines, 
 
     ```ini
+    registry=https://registry.npmjs.org/
+    @bmesol:registry=https://npm.pkg.github.com/
     //npm.pkg.github.com/:_authToken=TOKEN
     ```
 
@@ -34,7 +36,7 @@ To install packages from GitHub Packages using npm, ensure that you have the fol
 ## Installation
 
 ```
-npm install @bmesol/bmes-components@0.0.22-beta
+npm install @bmesol/bmes-components@0.0.26-beta
 ```
 
 Example usage

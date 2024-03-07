@@ -1,6 +1,7 @@
 import type { Preview } from "@storybook/react";
 import { useTheme } from "./useTheme";
 import "bootstrap/dist/css/bootstrap.css";
+import 'bootstrap/dist/js/bootstrap.js';
 import "./../src/styles/global.scss";
 
 export const preview: Preview = {
