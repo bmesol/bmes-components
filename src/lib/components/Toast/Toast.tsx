@@ -17,8 +17,8 @@ const Toast = (props: ToastProps) => {
           <div className="fw-bold">{heading}</div>
           <span>{message}</span>
         </div>
-        <button className="bg-transparent border-0 p-0 m-0 text-white" onClick={close}>
-          <CloseIcon />
+        <button className="bg-transparent border-0 p-0 m-0" onClick={close}>
+          <CloseIcon color="white"/>
         </button>
       </div>
     </div>

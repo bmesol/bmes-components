@@ -6,10 +6,19 @@ const sizes = {
   xxl: { width: "125", height: "60" },
 };
 
-interface IconProps {
-  size?: keyof typeof sizes;
-  onClick?: () => void;
-  color?: string;
+enum IconSizes {
+  SM = "sm",
+  MD = "md",
+  LG = "lg",
+  XL = "xl",
+  XXL = "xxl",
 }
 
-export { IconProps, sizes };
+interface IconProps {
+  size?: IconSizes;
+  onClick?: () => void;
+  color?: string;
+  isActive?: boolean;
+}
+
+export { IconProps, IconSizes, sizes };

@@ -40,8 +40,8 @@ const Sidebar = ({ id, children }: SidebarProps) => {
     <>
       <div className="offcanvas offcanvas-end sidebar" id={id}>
         <div className="text-end px-3">
-          <button className="border border-0 bg-transparent close-icon" data-bs-dismiss="offcanvas">
-            <CloseIcon />
+          <button className="border border-0 bg-transparent" data-bs-dismiss="offcanvas">
+            <CloseIcon color="#827e7d" />
           </button>
         </div>
         <div className="px-3">{header}</div>

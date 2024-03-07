@@ -1,27 +1,27 @@
 @import "../../../styles/global.scss";
 
 .layout {
-  border-radius: var(--border-radius);
+  border-radius: var(--text-profile-bg-color);
 }
 
 .text-layout {
-  color: var(--secondary-color);
-  background-color: var(--primary-color);
+  color: var(--text-profile-color);
+  background-color: var(--text-profile-bg-color);
   border-radius: var(--border-radius);
   padding: 24px;
 }
 
 $size-variants: (
-  base: 75px,
-  sm: 100px,
-  md: 125px,
-  lg: 150px,
-  xl: 200px,
+  sm: 100px 1.5rem,
+  md: 125px 2rem,
+  lg: 150px 2.5rem,
+  xl: 200px 3rem,
 );
 
 @each $variant, $size in $size-variants {
   .#{$variant} {
-    width: $size;
-    height: $size;
+    width: nth($size, 1);
+    height: nth($size, 1);
+    font-size: nth($size, 2);
   }
 }

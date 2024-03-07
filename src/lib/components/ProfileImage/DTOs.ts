@@ -1,7 +1,14 @@
-interface ProfileImageProps {
-  img?: React.HTMLProps<HTMLImageElement>["src"];
-  alt?: string;
-  size?: "base" | "sm" | "md" | "lg" | "xl";
+enum ProfileImageSizes {
+  SM = "sm",
+  MD = "md",
+  LG = "lg",
+  XL = "xl",
 }
 
-export { ProfileImageProps };
+interface ProfileImageProps {
+  imgURL?: React.HTMLProps<HTMLImageElement>["src"];
+  alt?: string;
+  size?: ProfileImageSizes;
+}
+
+export { ProfileImageProps, ProfileImageSizes };

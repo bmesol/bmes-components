@@ -1,19 +1,11 @@
-const useProfileImage = ({ alt }: { alt: string }) => {
-  const words = alt.trim().split(" ");
-  let profileText = "";
-  if (!(alt === "")) {
-    if (words.length >= 2) {
-      const firstLetter = words[0][0];
-      const secondLetter = words[1][0];
-      profileText = (firstLetter + secondLetter).toUpperCase();
-    } else if (words.length === 1) {
-      profileText = words[0][0].toUpperCase();
-    }
-  }
+const useProfileImage = ({ alt }: { alt: string }): any => {
+  let sentence = alt.trim();
+  if (!sentence.length) return "";
+  const words = sentence.split(" ");
+  let Text = words.map((word) => word[0].toUpperCase()).join("");
+  let profileText: string = Text.slice(0, 2);
 
-  return {
-    profileText,
-  };
+  return { profileText };
 };
 
 export { useProfileImage };

@@ -17,6 +17,10 @@
   --danger-bg-text-color: white;
   --gray-color: rgb(130, 126, 125);
 
+  /* --- Icon Colors --- */
+  --icon-color: black;
+  --active-icon-color: #4F430F;
+
   /* --- Common Values --- */
   --base-unit: 8px;
   --sm-unit: calc(var(--base-unit) / 2); /* 4px */
@@ -42,6 +46,10 @@
 
   /* --- Card Component Styles --- */
   --card-padding: var(--xl-unit);
+
+  /* --- ProfileImage Component Styles --- */
+  --text-profile-color: var(--secondary-color);
+  --text-profile-bg-color: var(--primary-color);
 
   /* --- Common Theme Font Styles ---- */
   font-family: "Inter";
