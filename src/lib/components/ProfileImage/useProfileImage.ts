@@ -6,7 +6,7 @@ const useProfileImage = ({ alt }: { alt: string }) => {
       const firstLetter = words[0][0];
       const secondLetter = words[1][0];
       profileText = (firstLetter + secondLetter).toUpperCase();
-    } else if (words.length >= 1) {
+    } else if (words.length === 1) {
       profileText = words[0][0].toUpperCase();
     }
   }
