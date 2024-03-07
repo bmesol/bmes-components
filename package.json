@@ -1,6 +1,6 @@
 {
   "name": "@bmesol/bmes-components",
-  "version": "0.0.26-beta",
+  "version": "0.0.28-beta",
   "description": "BM e-Solutions React UI Library",
   "main": "dist/bundle.js",
   "module": "dist/bundle.mjs",
@@ -8,7 +8,7 @@
   "scripts": {
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "build": "(rollup -c) && (rmdir /s /q dist\\stories) && (del dist\\bundle.js.map dist\\bundle.mjs.map) && (rmdir /s /q .github .storybook src public) && (del .babelrc.json .gitignore babel.config.json declaration.d.ts package-lock.json rollup.config.js tsconfig.json)"
+    "build": "(rollup -c) && (rm -rf dist/stories) && (rm -rf .github .storybook src public) && (rm .babelrc.json .gitignore babel.config.json declaration.d.ts package-lock.json rollup.config.js tsconfig.json)"
   },
   "repository": {
     "type": "git",

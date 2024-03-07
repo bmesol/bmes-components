@@ -8,7 +8,7 @@ const ProfileImage = ({ imgURL, alt = "", size }: ProfileImageProps) => {
   return (
     <>
       {imgURL ? (
-        <img src={imgURL} alt="Profile" className={`${size}`} />
+        <img src={imgURL} alt="Profile" className={`${size} img-layout`} />
       ) : (
         <div className={`${size} text-layout d-flex justify-content-center align-items-center`}>
           {profileText}
