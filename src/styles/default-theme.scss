@@ -1,60 +1,98 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 /* --- Font Family Roboto --- */
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 
-:root {
-  /* --- Theme Colors --- */
-  --primary-color: rgb(19, 122, 160);
-  --primary-bg-text-color: white;
-  --secondary-color: rgb(109, 118, 126);
-  --secondary-bg-text-color: white;
+@layer base {
+  :root {
+    /* --- Theme Colors --- */
+    --primary-color: rgb(19, 122, 160);
+    --primary-bg-text-color: white;
+    --secondary-color: rgb(109, 118, 126);
+    --secondary-bg-text-color: white;
+    --body-bg-color: white;
+    --body-bg-text-color: black;
 
-  /* --- Semantic Colors --- */
-  --success-color: rgb(25, 134, 83);
-  --success-bg-text-color: white;
-  --warning-color: rgb(255, 193, 7);
-  --warning-bg-text-color: white;
-  --danger-color: rgb(220, 56, 72);
-  --danger-bg-text-color: white;
-  --gray-color: rgb(130, 126, 125);
+    /* --- Semantic Colors --- */
+    --success-color: rgb(25, 134, 83);
+    --success-bg-text-color: white;
+    --warning-color: rgb(255, 193, 7);
+    --warning-bg-text-color: white;
+    --danger-color: rgb(220, 56, 72);
+    --danger-bg-text-color: white;
+    --gray-color: rgb(130, 126, 125);
 
-  /* --- Icon Colors --- */
-  --icon-color: black;
-  --active-icon-color: rgb(19, 122, 160);
+    /* --- Icon Colors --- */
+    --icon-color: black;
+    --active-icon-color: rgb(19, 122, 160);
 
-  /* --- Common Values --- */
-  --base-unit: 8px;
-  --sm-unit: calc(var(--base-unit) / 2); /* 4px */
-  --md-unit: calc(2 * var(--base-unit)); /* 16px */
-  --lg-unit: calc(3 * var(--base-unit)); /* 24px */
-  --xl-unit: calc(4 * var(--base-unit)); /* 32px */
+    /* --- Common Values --- */
+    --base-unit: 8px;
+    --sm-unit: calc(var(--base-unit) / 2); /* 4px */
+    --md-unit: calc(2 * var(--base-unit)); /* 16px */
+    --lg-unit: calc(3 * var(--base-unit)); /* 24px */
+    --xl-unit: calc(4 * var(--base-unit)); /* 32px */
 
-  --border-radius: var(--md-unit);
-  --box-shadow: 0px var(--sm-unit) var(--sm-unit) 0px #00000040;
+    --border-radius: var(--md-unit);
+    --box-shadow: 0px var(--sm-unit) var(--sm-unit) 0px #00000040;
 
-  .disabled {
-    opacity: 0.5;
-    cursor: not-allowed;
+    .disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+
+    /* --- Button Component Styles --- */
+    --button-padding: var(--base-unit) var(--xl-unit);
+
+    /* --- TextBox Component Styles --- */
+    --textbox-text-line-height: normal;
+    --textbox-padding: var(--base-unit) var(--md-unit);
+    --textbox-border: 1px solid var(--gray-color);
+
+    /* --- Card Component Styles --- */
+    --card-padding: var(--xl-unit);
+
+    /* --- ProfileImage Component Styles --- */
+    --text-profile-color: var(--primary-bg-text-color);
+    --text-profile-bg-color: var(--primary-color);
+
+    /* --- Shared Component Styles --- */
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 47.4% 11.2%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 47.4% 11.2%;
+
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+
+    --destructive: 0 100% 50%;
+    --destructive-foreground: 210 40% 98%;
+
+    --ring: 215 20.2% 65.1%;
   }
+}
 
-  /* --- Button Component Styles --- */
-  --button-padding: var(--base-unit) var(--xl-unit);
-
-  /* --- TextBox Component Styles --- */
-  --textbox-text-line-height: normal;
-  --textbox-padding: var(--base-unit) var(--md-unit);
-  --textbox-border: 1px solid var(--gray-color);
-
-  /* --- Card Component Styles --- */
-  --card-padding: var(--xl-unit);
-
-  /* --- ProfileImage Component Styles --- */
-  --text-profile-color: var(--primary-bg-text-color);
-  --text-profile-bg-color: var(--primary-color);
-
-  /* --- Common Theme Font Styles ---- */
-  font-family: "Roboto";
-  font-size: var(--md-unit);
-  font-weight: 400;
-  font-style: normal;
-  line-height: normal;
+@layer base {
+  * {
+    border: var(--border);
+  }
+  body {
+    /* --- Common Theme Font Styles ---- */
+    font-family: "Roboto";
+    font-size: var(--md-unit);
+    font-weight: 400;
+    font-style: normal;
+    line-height: normal;
+    background: var(--body-bg-color);
+    color: var(--body-bg-text-color);
+  }
 }
