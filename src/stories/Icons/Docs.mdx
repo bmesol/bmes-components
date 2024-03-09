@@ -1,38 +1,47 @@
+import { SuppliersIcon } from "../../lib/components/Icons/SuppliersIcon/SuppliersIcon";
+import { ContactsIcon } from "../../lib/components/Icons/ContactsIcon/ContactsIcon";
+import { ClientsIcon } from "../../lib/components/Icons/ClientsIcon/ClientsIcon";
+import { WorkerIcon } from "../../lib/components/Icons/WorkerIcon/WorkersIcon";
+import { CloseIcon } from "../../lib/components/Icons/CloseIcon/CloseIcon";
+import { SitesIcon } from "../../lib/components/Icons/SitesIcon/SitesIcon";
+import { UsersIcon } from "../../lib/components/Icons/UsersIcon/UsersIcon";
+import { MenuIcon } from "../../lib/components/Icons/MenuIcon/MenuIcon";
+import { EditIcon } from "../../lib/components/Icons/EditIcon/EditIcon";
 import { Meta, Title, Story } from "@storybook/blocks";
-import * as IconsStories from "./Icons.stories.tsx";
+import { Icon } from "./Icon";
 
-<Meta of={IconsStories} />
+<Meta title="Icons/Icons" />
 
 # Icons
 
 #
 
 <div className="row mt-5">
-  <div className="col-2 border border-1 text-center m-2">
-    <Story of={IconsStories.Clients} />
+  <div className="col-2 border border-1 m-2">
+    <Icon src={<ClientsIcon />} name="ClientsIcon" />
   </div>
-  <div className="col-2 border border-1 text-center m-2">
-    <Story of={IconsStories.Contacts} />
+  <div className="col-2 border border-1 m-2">
+    <Icon src={<ContactsIcon />} name="ContactsIcon" />
   </div>
-  <div className="col-2 border border-1 text-center m-2">
-    <Story of={IconsStories.Worker} />
+  <div className="col-2 border border-1 m-2">
+    <Icon src={<WorkerIcon />} name="WorkerIcon" />
   </div>
-  <div className="col-2 border border-1 text-center m-2">
-    <Story of={IconsStories.Close} />
+  <div className="col-2 border border-1 m-2">
+    <Icon src={<CloseIcon />} name="CloseIcon" />
   </div>
-  <div className="col-2 border border-1 text-center m-2">
-    <Story of={IconsStories.Sites} />
+  <div className="col-2 border border-1 m-2">
+    <Icon src={<SitesIcon />} name="SitesIcon" />
   </div>
-  <div className="col-2 border border-1 text-center m-2">
-    <Story of={IconsStories.Suppliers} />
+  <div className="col-2 border border-1 m-2">
+    <Icon src={<SuppliersIcon />} name="SuppliersIcon" />
   </div>
-  <div className="col-2 border border-1 text-center m-2">
-    <Story of={IconsStories.Users} />
+  <div className="col-2 border border-1 m-2">
+    <Icon src={<UsersIcon />} name="UsersIcon" />
   </div>
-  <div className="col-2 border border-1 text-center m-2">
-    <Story of={IconsStories.Menu} />
+  <div className="col-2 border border-1 m-2">
+    <Icon src={<MenuIcon />} name="MenuIcon" />
   </div>
-  <div className="col-2 border border-1 text-center m-2">
-    <Story of={IconsStories.Edit} />
+  <div className="col-2 border border-1 m-2">
+    <Icon src={<EditIcon />} name="EditIcon" />
   </div>
 </div>
