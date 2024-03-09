@@ -30,6 +30,7 @@ export const Menu = {
           <SidebarHeader>
             <div className="d-flex flex-column justify-content-center align-items-center text-secondary mt-4 mb-3">
               <ProfileImage alt="Tony stark"/>
+              <div className="mt-3">Tony stark</div>
             </div>
           </SidebarHeader>
           <SidebarMenuItems>

@@ -22,7 +22,7 @@ const SidebarMenuItems = ({ children }: SidebarChildProps) => {
 const SidebarMenuItem = ({ href, target, icon, children }: SidebarMenuItemProps) => {
   return (
     <div className="py-3 border border-2 border-bottom-0">
-      <a href={href} target={target} className="sidebar-menu-item text-decoration-none text-black">
+      <a href={href} target={target} className="sidebar-menu-item d-flex text-decoration-none text-black">
         <span className="sidebar-menu-item-icon ms-3">{icon}</span>
         <span className="sidebar-menu-item-text ms-2">{children}</span>
       </a>
