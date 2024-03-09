@@ -11,7 +11,6 @@ import { ProfileImage } from "../../lib/components/ProfileImage/ProfileImage";
 
 const meta = {
   title: "Components/Sidebar",
-  component: Sidebar,
   parameters: {
     layout: "centered",
   },

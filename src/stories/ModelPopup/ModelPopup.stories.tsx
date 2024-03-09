@@ -7,7 +7,7 @@ import { cn } from "../../lib/shared/components/DTOs";
 import React, { useState } from "react";
 
 const meta: Meta<typeof ModelPopup> = {
-  title: "Components/ModelPopup",
+  title: "Components/Model Popup",
   parameters: {
     layout: "centered",
   },
