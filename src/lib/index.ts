@@ -7,7 +7,7 @@ export * from "./components/Label/Label";
 export * from "./components/Toast/Toast";
 export * from "./components/Sidebar/Sidebar";
 export * from "./components/ProfileImage/ProfileImage";
-export * from "./components/ModelPopup/ModelPopup";
+export * from "./components/Model/Model";
 
 // Icons
 export * from "./components/Icons/ClientsIcon/ClientsIcon";

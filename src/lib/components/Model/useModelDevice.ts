@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-const useModelPopup = (query: string): boolean => {
+const useModelDevice = (query: string): boolean => {
   const [matches, setMatches] = useState(() => {
     if (typeof window !== "undefined") {
       return window.matchMedia(query).matches;
@@ -39,4 +39,4 @@ const useModelPopup = (query: string): boolean => {
   return matches;
 };
 
-export { useModelPopup };
+export { useModelDevice };
