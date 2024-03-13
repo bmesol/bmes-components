@@ -12,8 +12,6 @@
     --primary-bg-text-color: white;
     --secondary-color: rgb(109, 118, 126);
     --secondary-bg-text-color: white;
-    --body-bg-color: white;
-    --body-bg-text-color: black;
 
     /* --- Semantic Colors --- */
     --success-color: rgb(25, 134, 83);
@@ -82,9 +80,6 @@
 }
 
 @layer base {
-  * {
-    border: var(--border);
-  }
   body {
     /* --- Common Theme Font Styles ---- */
     font-family: "Roboto";
@@ -92,7 +87,5 @@
     font-weight: 400;
     font-style: normal;
     line-height: normal;
-    background: var(--body-bg-color);
-    color: var(--body-bg-text-color);
   }
 }
