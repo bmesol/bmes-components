@@ -8,6 +8,8 @@ export * from "./components/Toast/Toast";
 export * from "./components/Sidebar/Sidebar";
 export * from "./components/ProfileImage/ProfileImage";
 export * from "./components/Model/Model";
+export * from "./shared/components/Dialog/Dialog";
+export * from "./shared/components/Drawer/Drawer";
 
 // Icons
 export * from "./components/Icons/ClientsIcon/ClientsIcon";
