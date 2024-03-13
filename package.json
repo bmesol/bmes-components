@@ -8,7 +8,7 @@
   "scripts": {
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "build": "(rollup -c) && (rm -rf dist/stories) && (rm -rf .github .storybook src public) && (rm .babelrc.json .gitignore babel.config.json declaration.d.ts package-lock.json rollup.config.js tailwind.config.js tailwind.config.js tsconfig.json)"
+    "build": "(rollup -c) && (rm -rf dist/stories) && (rm -rf .github .storybook src public) && (rm .babelrc.json .gitignore babel.config.json declaration.d.ts package-lock.json rollup.config.js tailwind.config.js tsconfig.json)"
   },
   "repository": {
     "type": "git",
