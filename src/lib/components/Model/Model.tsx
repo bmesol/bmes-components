@@ -29,24 +29,23 @@ const Model = (props: ModelProps) => {
           }
           {content}
           <ModelFooter>
-            <div className="w-100">
-              <Button
-                label={submitLabel || "Submit"}
-                variant={ButtonVariants.SUCCESS}
-                onClick={() => {
-                  setIsModelOpen(false);
-                  if (onSubmit) onSubmit();
-                }}
-                classNames="w-100 mb-3"
-              />
+            <div className="float-right">
               <Button
                 label={cancelLabel || "Cancel"}
-                variant={ButtonVariants.OUTLINE_DANGER}
+                variant={ButtonVariants.OUTLINE_SECONDARY}
                 onClick={() => {
                   setIsModelOpen(false);
                   if (onCancel) onCancel();
                 }}
-                classNames="w-100"
+                classNames="mx-2"
+              />
+              <Button
+                label={submitLabel || "Submit"}
+                variant={ButtonVariants.PRIMARY}
+                onClick={() => {
+                  setIsModelOpen(false);
+                  if (onSubmit) onSubmit();
+                }}
               />
             </div>
           </ModelFooter>
