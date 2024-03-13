@@ -1,6 +1,6 @@
 {
   "name": "@bmesol/bmes-components",
-  "version": "0.0.36-beta",
+  "version": "0.0.37-beta",
   "description": "BM e-Solutions React UI Library",
   "main": "dist/bundle.js",
   "module": "dist/bundle.mjs",
@@ -43,8 +43,10 @@
     "@storybook/theming": "^7.6.10",
     "@svgr/rollup": "^8.1.0",
     "@types/bootstrap": "^5.2.10",
+    "autoprefixer": "^10.4.18",
     "babel-cli": "^6.26.0",
     "bootstrap": "^5.3.2",
+    "postcss-import": "^16.0.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "rollup": "^2.79.1",
