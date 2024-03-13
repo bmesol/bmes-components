@@ -1,38 +1,36 @@
-import { Meta, Title, Story } from "@storybook/blocks";
-import * as IconsStories from "./Icons.stories.tsx";
+import { Meta, Title } from "@storybook/blocks";
+import { Icon } from "./Icon";
 
-<Meta of={IconsStories} />
+<Meta title="Icons/Docs" />
 
-# Icons
+# Icon
 
-#
+The `Icon` component is a customizable UI element that displays icons of various sizes. It provides a selection of predefined icon sizes and allows customization of the icon color and click behavior.
 
-<div className="row mt-5">
-  <div className="col-2 border border-1 text-center m-2">
-    <Story of={IconsStories.Clients} />
-  </div>
-  <div className="col-2 border border-1 text-center m-2">
-    <Story of={IconsStories.Contacts} />
-  </div>
-  <div className="col-2 border border-1 text-center m-2">
-    <Story of={IconsStories.Worker} />
-  </div>
-  <div className="col-2 border border-1 text-center m-2">
-    <Story of={IconsStories.Close} />
-  </div>
-  <div className="col-2 border border-1 text-center m-2">
-    <Story of={IconsStories.Sites} />
-  </div>
-  <div className="col-2 border border-1 text-center m-2">
-    <Story of={IconsStories.Suppliers} />
-  </div>
-  <div className="col-2 border border-1 text-center m-2">
-    <Story of={IconsStories.Users} />
-  </div>
-  <div className="col-2 border border-1 text-center m-2">
-    <Story of={IconsStories.Menu} />
-  </div>
-  <div className="col-2 border border-1 text-center m-2">
-    <Story of={IconsStories.Edit} />
-  </div>
-</div>
+## Props
+
+| Name     | Type      | Default Value  | Description                                                                                                     |
+| -------- | --------- | -------------- | --------------------------------------------------------------------------------------------------------------- |
+| size     | IconSizes | `IconSizes.MD` | The size of the icon. Options: `IconSizes.SM`, `IconSizes.MD`, `IconSizes.LG`, `IconSizes.XL`, `IconSizes.XXL`. |
+| onClick  | function  | -              | Callback function invoked when the icon is clicked.                                                             |
+| color    | string    | -              | The color of the icon.                                                                                          |
+| isActive | boolean   | `false`        | Specifies if the icon is active or not.                                                                         |
+
+## Usage
+
+Open the Icons file and click on the Icon. Past it on your code.
+
+## Sample Code
+
+```jsx
+import React from "react";
+import { ClientsIcon, IconSizes } from "@bmesol/bmes-components";
+
+const MyComponent = () => {
+  return (
+    <>
+      Client <ClientsIcon size={IconSizes.SM} color="red" onClick={() => alert("Clicked")}/>
+    </>
+  );
+};
+```

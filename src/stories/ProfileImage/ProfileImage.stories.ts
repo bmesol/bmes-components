@@ -2,7 +2,7 @@ import { ProfileImage } from "../../lib/components/ProfileImage/ProfileImage";
 import type { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof ProfileImage> = {
-  title: "Components/ProfileImage",
+  title: "Components/Profile Image",
   component: ProfileImage,
   parameters: {
     layout: "centered",
