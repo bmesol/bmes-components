@@ -1,16 +1,16 @@
-import { Model } from "../../lib/components/Model/Model";
 import { Button, ButtonVariants } from "../../lib/components/Button/Button";
-import type { Meta, StoryObj } from "@storybook/react";
-import React from "react";
-import { ModelProvider } from "../../lib/components/Model/ModelProvider";
-import { useModel } from "../../lib/components/Model/Model";
-import { cn } from "../../lib/shared/components/DTOs";
 import { LabelTypes, LabelVariants } from "../../lib/components/Label/DTOs";
-import { Label } from "../../lib/components/Label/Label";
+import { ModelProvider } from "../../lib/components/Model/ModelProvider";
 import { TextBox } from "../../lib/components/TextBox/TextBox";
+import { useModel } from "../../lib/components/Model/Model";
+import { Model } from "../../lib/components/Model/Model";
+import { Label } from "../../lib/components/Label/Label";
+import { cn } from "../../lib/shared/components/DTOs";
+import type { Meta } from "@storybook/react";
+import React from "react";
 
 const meta: Meta<typeof Model> = {
-  title: "Components/Model Popup",
+  title: "Components/Model",
   parameters: {
     layout: "centered",
   },
@@ -18,18 +18,16 @@ const meta: Meta<typeof Model> = {
 
 export default meta;
 
-type Story = StoryObj<typeof meta>;
-
-export const Model_Popup = {
+export const Sample_Model = {
   render: (children: React.ReactElement): JSX.Element => {
     const App = () => {
       const model = useModel();
       return (
         <>
           <Button
-            variant={ButtonVariants.PRIMARY}
+            variant={ButtonVariants.OUTLINE_PRIMARY}
             label="Open Model"
-            classNames="bg-dark text-bg-dark m-3"
+            classNames="m-3"
             onClick={() =>
               model.open({
                 title: "Edit profile",
@@ -38,7 +36,7 @@ export const Model_Popup = {
                 content: (
                   <form
                     onSubmit={(e) => e.preventDefault()}
-                    className={cn("grid items-start gap-4 px-4 px-md-0")}
+                    className={cn("grid items-start gap-4")}
                   >
                     <div className="grid gap-2">
                       <Label
@@ -66,10 +64,7 @@ export const Model_Popup = {
                     </div>
                   </form>
                 ),
-                submitLabel: "Submit",
-                cancelLabel: "Cancel",
-                onSubmit: () => confirm("Do want to save these changes?"),
-                onCancel: () => alert("Do want to close?"),
+                onSubmit: () => {},
               })
             }
           />

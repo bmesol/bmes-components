@@ -4,20 +4,12 @@ import { useModelDevice } from "../useModelDevice";
 import { ModelTypes } from "../DTOs";
 import React from "react";
 
-const ModelDescription = ({ children, classNames = "" }: ModelTypes) => {
+const ModelDescription = ({ children }: ModelTypes) => {
   const isDesktop = useModelDevice("(min-width: 768px)");
   if (isDesktop) {
-    return (
-      <DialogDescription className={`${classNames}`}>
-        {children}
-      </DialogDescription>
-    );
+    return <DialogDescription>{children}</DialogDescription>;
   }
-  return (
-    <DrawerDescription className={`${classNames}`}>
-      {children}
-    </DrawerDescription>
-  );
+  return <DrawerDescription>{children}</DrawerDescription>;
 };
 
 export { ModelDescription };

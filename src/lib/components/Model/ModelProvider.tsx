@@ -1,4 +1,4 @@
-import React, { createContext } from "react";
+import React from "react";
 import { ModelContext } from "./ModelContext";
 import { ModelProviderProps } from "./DTOs";
 import { useModel } from "./useModel";
@@ -9,21 +9,20 @@ const ModelProvider = ({ children }: ModelProviderProps) => {
   return (
     <ModelContext.Provider value={contextValue}>
       {children}
-      {models &&
-        models.map((model) => {
-          return (
-            <Model
-              content={model.content}
-              title={model.title}
-              description={model.description}
-              submitLabel={model.submitLabel}
-              cancelLabel={model.cancelLabel}
-              onSubmit={model.onSubmit}
-              onCancel={model.onCancel}
-              isOpen={true}
-            />
-          );
-        })}
+      {models.map((model) => {
+        return (
+          <Model
+            key={Date.now()}
+            content={model.content}
+            title={model.title}
+            description={model.description}
+            submitLabel={model.submitLabel}
+            cancelLabel={model.cancelLabel}
+            onSubmit={model.onSubmit}
+            onCancel={model.onCancel}
+          />
+        );
+      })}
     </ModelContext.Provider>
   );
 };

@@ -4,16 +4,14 @@ import { useModelDevice } from "../useModelDevice";
 import { ModelTypes } from "../DTOs";
 import React from "react";
 
-const ModelContent = ({ children, classNames = "" }: ModelTypes) => {
+const ModelContent = ({ children }: ModelTypes) => {
   const isDesktop = useModelDevice("(min-width: 768px)");
   if (isDesktop) {
     return (
-      <DialogContent className={`${classNames} sm:max-w-[425px]`}>
-        {children}
-      </DialogContent>
+      <DialogContent className="sm:max-w-[425px]">{children}</DialogContent>
     );
   }
-  return <DrawerContent className={`${classNames}`}>{children}</DrawerContent>;
+  return <DrawerContent className="px-4">{children}</DrawerContent>;
 };
 
 export { ModelContent };

@@ -19,7 +19,7 @@ const useModelDevice = (query: string): boolean => {
       }
     };
 
-    handleChange(mediaQueryList); // Initial check
+    handleChange(mediaQueryList);
 
     const mediaQueryListener = (
       event: MediaQueryListEvent | MediaQueryList

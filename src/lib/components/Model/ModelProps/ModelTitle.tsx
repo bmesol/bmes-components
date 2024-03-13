@@ -4,12 +4,12 @@ import { ModelTypes } from "../DTOs";
 import { useModelDevice } from "../useModelDevice";
 import React from "react";
 
-const ModelTitle = ({ children, classNames = "" }: ModelTypes) => {
+const ModelTitle = ({ children }: ModelTypes) => {
   const isDesktop = useModelDevice("(min-width: 768px)");
   if (isDesktop) {
-    return <DialogTitle className={`${classNames}`}>{children}</DialogTitle>;
+    return <DialogTitle>{children}</DialogTitle>;
   }
-  return <DrawerTitle className={`${classNames}`}>{children}</DrawerTitle>;
+  return <DrawerTitle>{children}</DrawerTitle>;
 };
 
 export { ModelTitle };

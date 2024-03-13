@@ -4,12 +4,12 @@ import { useModelDevice } from "../useModelDevice";
 import { ModelTypes } from "../DTOs";
 import React from "react";
 
-const ModelHeader = ({ children, classNames = "" }: ModelTypes) => {
+const ModelHeader = ({ children }: ModelTypes) => {
   const isDesktop = useModelDevice("(min-width: 768px)");
   if (isDesktop) {
-    return <DialogHeader className={`${classNames}`}>{children}</DialogHeader>;
+    return <DialogHeader className="text-start">{children}</DialogHeader>;
   }
-  return <DrawerHeader className={`${classNames}`}>{children}</DrawerHeader>;
+  return <DrawerHeader className="px-0 text-start">{children}</DrawerHeader>;
 };
 
 export { ModelHeader };

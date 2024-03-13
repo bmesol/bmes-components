@@ -4,12 +4,12 @@ import { useModelDevice } from "../useModelDevice";
 import { ModelTypes } from "../DTOs";
 import React from "react";
 
-const ModelFooter = ({ children, classNames = "" }: ModelTypes) => {
+const ModelFooter = ({ children }: ModelTypes) => {
   const isDesktop = useModelDevice("(min-width: 768px)");
   if (isDesktop) {
-    return <DialogFooter className={`${classNames}`}>{children}</DialogFooter>;
+    return <DialogFooter>{children}</DialogFooter>;
   }
-  return <DrawerFooter className={`${classNames}`}>{children}</DrawerFooter>;
+  return <DrawerFooter className="px-0">{children}</DrawerFooter>;
 };
 
 export { ModelFooter };

@@ -1,6 +1,5 @@
 interface ModelTypes {
   children: React.ReactNode;
-  classNames?: string;
 }
 
 interface ModelProps {
@@ -11,19 +10,10 @@ interface ModelProps {
   cancelLabel?: string;
   onSubmit: () => void;
   onCancel?: () => void;
-  isOpen: boolean;
 }
 
 interface ModelContextValues {
-  open: (
-    content: React.ReactNode,
-    onSubmit: () => void,
-    title?: string,
-    description?: string,
-    submitLabel?: string,
-    cancelLabel?: string,
-    onCancel?: () => void
-  ) => void;
+  open: (props: ModelProps) => void;
 }
 
 interface ModelProviderProps {
