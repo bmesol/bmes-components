@@ -67,7 +67,7 @@ const Model = (props: ModelProps) => {
         <ModelFooter>
           <Button
             label={submitLabel || "Submit"}
-            variant={ButtonVariants.SUCCESS}
+            variant={ButtonVariants.PRIMARY}
             onClick={() => {
               setIsModelOpen(false);
               if (onSubmit) onSubmit();
@@ -76,7 +76,7 @@ const Model = (props: ModelProps) => {
           />
           <Button
             label={cancelLabel || "Cancel"}
-            variant={ButtonVariants.OUTLINE_DANGER}
+            variant={ButtonVariants.OUTLINE_SECONDARY}
             onClick={() => {
               setIsModelOpen(false);
               if (onCancel) onCancel();
