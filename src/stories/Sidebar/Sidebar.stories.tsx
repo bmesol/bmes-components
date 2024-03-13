@@ -34,12 +34,12 @@ export const Menu = {
             </div>
           </SidebarHeader>
           <SidebarMenuItems>
-            <SidebarMenuItem href={"https://www.bmesolutions.in/"} icon={<UsersIcon color="#4F430F" />}>Users</SidebarMenuItem>
-            <SidebarMenuItem href={"https://www.bmesolutions.in/"} icon={<ContactsIcon color="#4F430F" />}>Contacts</SidebarMenuItem>
-            <SidebarMenuItem href={"https://www.bmesolutions.in/"} icon={<ClientsIcon color="#4F430F"/>}>Clients</SidebarMenuItem>
-            <SidebarMenuItem href={"https://www.bmesolutions.in/"} icon={<SitesIcon color="#4F430F" />}>Sites</SidebarMenuItem>
-            <SidebarMenuItem href={"https://www.bmesolutions.in/"} icon={<WorkerIcon color="#4F430F" />}>Workers</SidebarMenuItem>
-            <SidebarMenuItem href={"https://www.bmesolutions.in/"} icon={<SuppliersIcon color="#4F430F" />}>Suppliers</SidebarMenuItem>
+            <SidebarMenuItem href={"https://www.bmesolutions.in/"} icon={<UsersIcon />}>Users</SidebarMenuItem>
+            <SidebarMenuItem href={"https://www.bmesolutions.in/"} icon={<ContactsIcon />}>Contacts</SidebarMenuItem>
+            <SidebarMenuItem href={"https://www.bmesolutions.in/"} icon={<ClientsIcon />}>Clients</SidebarMenuItem>
+            <SidebarMenuItem href={"https://www.bmesolutions.in/"} icon={<SitesIcon />}>Sites</SidebarMenuItem>
+            <SidebarMenuItem href={"https://www.bmesolutions.in/"} icon={<WorkerIcon />}>Workers</SidebarMenuItem>
+            <SidebarMenuItem href={"https://www.bmesolutions.in/"} icon={<SuppliersIcon />}>Suppliers</SidebarMenuItem>
           </SidebarMenuItems>
           <SidebarFooter>
             <div>&copy; BM e-Solutions</div>

@@ -25,8 +25,8 @@
     --gray-color: rgb(130, 126, 125);
 
     /* --- Icon Colors --- */
-    --icon-color: black;
-    --active-icon-color: #4f430f;
+    --icon-color: var(--secondary-color);
+    --active-icon-color: var(--primary-color);
 
     /* --- Common Values --- */
     --base-unit: 8px;

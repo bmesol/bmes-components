@@ -4,3 +4,101 @@ import { Meta, Title, Story } from "@storybook/blocks";
 <Meta of={ModelStories} />
 
 <Title />
+
+The `Model` component is a versatile UI element that renders either as a dialog or a drawer based on the screen size. It provides a convenient way to display content along with a title, description, and action buttons like submit and cancel.
+
+## Usage
+
+**1. To use the Model component, you need to add `ModelProvider` in root of the application.**
+
+```tsx
+import { ModelProvider } from "@bmesol/bmes-components";
+```
+
+```tsx
+const root = ReactDOM.createRoot(
+  document.getElementById("root") as HTMLElement
+);
+root.render(
+  <ModelProvider>
+    <App />
+  </ModelProvider>
+);
+```
+
+**2. The `useModel` hook returns a `model` function that you can use to display a model.**
+
+## Props
+
+| Name                | Type      | Default Value  | Description                                                  |
+| ------------------- | --------- | -------------- | ------------------------------------------------------------ |
+| title               | string    | -              | The title of the model.                                      |
+| description         | string    | -              | The description of the model.                                |
+| content (required)  | ReactNode | -              | The content of the model.                                    |
+| submitLabel         | string    | "Save changes" | The label for the submit button.                             |
+| cancelLabel         | string    | "Cancel"       | The label for the cancel button.                             |
+| onSubmit (required) | function  | -              | Callback function invoked when the submit button is clicked. |
+| onCancel            | function  | -              | Callback function invoked when the cancel button is clicked. |
+
+### Example
+
+### Preview
+
+<Story of={ModelStories.Sample_Model} />
+
+### Code
+
+```tsx
+import { Button, ButtonVariants } from "@bmesol/bmes-components";
+import { useModel } from "@bmesol/bmes-components";
+
+export const SampleModel = () => {
+  const model = useModel();
+
+  return (
+    <>
+      <Button
+        variant={ButtonVariants.PRIMARY}
+        label="Open Model"
+        onClick={() =>
+            model.open({
+                title: "Edit profile",
+                description:
+                  "Make changes to your profile here. Click save when you're done.",
+                content: (
+                  <form>
+                    <div className="grid gap-2">
+                      <Label
+                        type={LabelTypes.TEXT}
+                        label="User Name"
+                        variant={LabelVariants.DEFAULT}
+                      />
+                      <TextBox
+                        value={""}
+                        onChange={() => {}}
+                        classNames="w-100"
+                      />
+                    </div>
+                    <div className="grid gap-2">
+                      <Label
+                        type={LabelTypes.TEXT}
+                        label="Email"
+                        variant={LabelVariants.DEFAULT}
+                      />
+                      <TextBox
+                        value={""}
+                        onChange={() => {}}
+                        classNames="w-100"
+                      />
+                    </div>
+                  </form>
+                ),
+                onSubmit: () => {},
+              })
+            }
+          />
+      />
+    </>
+  );
+};
+```

@@ -2,31 +2,31 @@ The Label component is a versatile UI element designed for displaying various ty
 
 ## Text Variants
 
-1. **Default text Label**: This label is styled as the default text label.
+* **Default text Label**: This label is styled as the default text label.
 
-2. **Primary text Label**: This label is styled as the primary text label.
+* **Primary text Label**: This label is styled as the primary text label.
 
-3. **Secondary text Label**: This label is styled as the secondary text label.
+* **Secondary text Label**: This label is styled as the secondary text label.
 
-4. **Danger text Label**: This label is styled as the danger text label.
+* **Danger text Label**: This label is styled as the danger text label.
 
-5. **Success text Label**: This label is styled as the success text label.
+* **Success text Label**: This label is styled as the success text label.
 
-6. **Warning text Label**: This label is styled as the warning warning text label.
+* **Warning text Label**: This label is styled as the warning warning text label.
 
 ## Link Variants
 
-1. **Default link Label**: This label is styled as the default link label.
+* **Default link Label**: This label is styled as the default link label.
 
-2. **Primary link Label**: This label is styled as the primary link label.
+* **Primary link Label**: This label is styled as the primary link label.
 
-3.  **Secondary link Label**: This label is styled as the secondary link label.
+*  **Secondary link Label**: This label is styled as the secondary link label.
 
-4. **Danger link Label**: This label is styled as the danger link label.
+* **Danger link Label**: This label is styled as the danger link label.
 
-5. **Success link Label**: This label is styled as the success link label.
+* **Success link Label**: This label is styled as the success link label.
 
-6. **Warning link Label**: This label is styled as the warning link label.
+* **Warning link Label**: This label is styled as the warning link label.
 
 ## Usage
 

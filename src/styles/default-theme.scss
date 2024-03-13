@@ -26,7 +26,7 @@
 
     /* --- Icon Colors --- */
     --icon-color: black;
-    --active-icon-color: rgb(19, 122, 160);
+    --active-icon-color: var(--primary-color);
 
     /* --- Common Values --- */
     --base-unit: 8px;

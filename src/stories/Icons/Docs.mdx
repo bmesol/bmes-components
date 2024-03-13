@@ -1,47 +1,36 @@
-import { SuppliersIcon } from "../../lib/components/Icons/SuppliersIcon/SuppliersIcon";
-import { ContactsIcon } from "../../lib/components/Icons/ContactsIcon/ContactsIcon";
-import { ClientsIcon } from "../../lib/components/Icons/ClientsIcon/ClientsIcon";
-import { WorkerIcon } from "../../lib/components/Icons/WorkerIcon/WorkersIcon";
-import { CloseIcon } from "../../lib/components/Icons/CloseIcon/CloseIcon";
-import { SitesIcon } from "../../lib/components/Icons/SitesIcon/SitesIcon";
-import { UsersIcon } from "../../lib/components/Icons/UsersIcon/UsersIcon";
-import { MenuIcon } from "../../lib/components/Icons/MenuIcon/MenuIcon";
-import { EditIcon } from "../../lib/components/Icons/EditIcon/EditIcon";
-import { Meta, Title, Story } from "@storybook/blocks";
+import { Meta, Title } from "@storybook/blocks";
 import { Icon } from "./Icon";
 
-<Meta title="Icons/Icons" />
+<Meta title="Icons/Docs" />
 
-# Icons
+# Icon
 
-#
+The `Icon` component is a customizable UI element that displays icons of various sizes. It provides a selection of predefined icon sizes and allows customization of the icon color and click behavior.
 
-<div className="row mt-5">
-  <div className="col-2 border border-1 m-2">
-    <Icon src={<ClientsIcon />} name="ClientsIcon" />
-  </div>
-  <div className="col-2 border border-1 m-2">
-    <Icon src={<ContactsIcon />} name="ContactsIcon" />
-  </div>
-  <div className="col-2 border border-1 m-2">
-    <Icon src={<WorkerIcon />} name="WorkerIcon" />
-  </div>
-  <div className="col-2 border border-1 m-2">
-    <Icon src={<CloseIcon />} name="CloseIcon" />
-  </div>
-  <div className="col-2 border border-1 m-2">
-    <Icon src={<SitesIcon />} name="SitesIcon" />
-  </div>
-  <div className="col-2 border border-1 m-2">
-    <Icon src={<SuppliersIcon />} name="SuppliersIcon" />
-  </div>
-  <div className="col-2 border border-1 m-2">
-    <Icon src={<UsersIcon />} name="UsersIcon" />
-  </div>
-  <div className="col-2 border border-1 m-2">
-    <Icon src={<MenuIcon />} name="MenuIcon" />
-  </div>
-  <div className="col-2 border border-1 m-2">
-    <Icon src={<EditIcon />} name="EditIcon" />
-  </div>
-</div>
+## Props
+
+| Name     | Type      | Default Value  | Description                                                                                                     |
+| -------- | --------- | -------------- | --------------------------------------------------------------------------------------------------------------- |
+| size     | IconSizes | `IconSizes.MD` | The size of the icon. Options: `IconSizes.SM`, `IconSizes.MD`, `IconSizes.LG`, `IconSizes.XL`, `IconSizes.XXL`. |
+| onClick  | function  | -              | Callback function invoked when the icon is clicked.                                                             |
+| color    | string    | -              | The color of the icon.                                                                                          |
+| isActive | boolean   | `false`        | Specifies if the icon is active or not.                                                                         |
+
+## Usage
+
+Open the Icons file and click on the Icon. Past it on your code.
+
+## Sample Code
+
+```jsx
+import React from "react";
+import { ClientsIcon, IconSizes } from "@bmesol/bmes-components";
+
+const MyComponent = () => {
+  return (
+    <>
+      Client <ClientsIcon size={IconSizes.SM} color="red" onClick={() => alert("Clicked")}/>
+    </>
+  );
+};
+```
