@@ -15,8 +15,8 @@ export const theme = {
       border: "hsl(var(--border))",
       input: "hsl(var(--input))",
       ring: "hsl(var(--ring))",
-      background: "var(--body-bg-color)",
-      foreground: "var(--body-bg-text-color)",
+      background: "white",
+      foreground: "black",
       primary: {
         DEFAULT: "var(--primary-color)",
         foreground: "var(--primary-bg-text-color)",

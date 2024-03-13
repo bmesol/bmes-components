@@ -12,8 +12,6 @@
     --primary-bg-text-color: black;
     --secondary-color: rgb(79, 67, 15);
     --secondary-bg-text-color: white;
-    --body-bg-color: rgba(245, 245, 245);
-    --body-bg-text-color: black;
 
     /* --- Semantic Colors --- */
     --success-color: rgb(25, 134, 83);
@@ -82,9 +80,6 @@
 }
 
 @layer base {
-  * {
-    border: var(--border);
-  }
   body {
     /* --- Common Theme Font Styles ---- */
     font-family: "Inter";
@@ -92,7 +87,5 @@
     font-weight: 400;
     font-style: normal;
     line-height: normal;
-    background: var(--body-bg-color);
-    color: var(--body-bg-text-color);
   }
 }
