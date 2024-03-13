@@ -2,27 +2,27 @@ The Button component is a versatile UI element that allows users to trigger vari
 
 ## Regular Variant Buttons
 
-1. **Primary Button**: The primary button is styled as the main action button, emphasizing the most important action on a page.
+* **Primary Button**: The primary button is styled as the main action button, emphasizing the most important action on a page.
 
-2. **Secondary Button**: The secondary button serves as an alternative action button, providing users with additional options.
+* **Secondary Button**: The secondary button serves as an alternative action button, providing users with additional options.
 
-3. **Success Button**: The success button is styled for actions indicating success, such as form submissions.
+* **Success Button**: The success button is styled for actions indicating success, such as form submissions.
 
-4. **Warning Button**: The warning button is designed for actions that require user attention or confirmation.
+* **Warning Button**: The warning button is designed for actions that require user attention or confirmation.
 
-5. **Danger Button**: The danger button signifies actions with potentially harmful consequences and is styled accordingly.
+* **Danger Button**: The danger button signifies actions with potentially harmful consequences and is styled accordingly.
 
 ## Outline Variant Buttons
 
-1. **Outline Primary Button**: The outline primary button provides a subtle, outlined style for the main action, suitable for lighter backgrounds.
+* **Outline Primary Button**: The outline primary button provides a subtle, outlined style for the main action, suitable for lighter backgrounds.
 
-2. **Outline Secondary Button**: The outline secondary button offers an outlined alternative action style, complementing the primary actions.
+* **Outline Secondary Button**: The outline secondary button offers an outlined alternative action style, complementing the primary actions.
 
-3. **Outline Success Button**: The outline success button is an outlined version suitable for actions indicating success.
+* **Outline Success Button**: The outline success button is an outlined version suitable for actions indicating success.
 
-4.  **Outline Warning Button**: The outline warning button features an outlined style, ideal for drawing attention to actions that require caution.
+*  **Outline Warning Button**: The outline warning button features an outlined style, ideal for drawing attention to actions that require caution.
 
-5. **Outline Danger Button**: The outline danger button provides an outlined style for actions with potentially harmful consequences.
+* **Outline Danger Button**: The outline danger button provides an outlined style for actions with potentially harmful consequences.
 
 ## Usage
 

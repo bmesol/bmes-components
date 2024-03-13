@@ -1,5 +1,4 @@
 import { useToast } from "../../lib";
-import { IconProps } from "./DTOs";
 
 const useIcon = ({ name }: {name: string}) => {
   const toast = useToast();
