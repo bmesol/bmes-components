@@ -21,26 +21,34 @@ const Model = (props: ModelProps) => {
     return (
       <Dialog open={isModelOpen} onOpenChange={setIsModelOpen}>
         <ModelContent>
-          <ModelHeader>
-            <ModelTitle>{title}</ModelTitle>
-            <ModelDescription>{description}</ModelDescription>
-          </ModelHeader>
+          {(title || description) &&
+            <ModelHeader>
+              <ModelTitle>{title}</ModelTitle>
+              <ModelDescription>{description}</ModelDescription>
+            </ModelHeader>
+          }
           {content}
-          <Button
-            label={submitLabel || "Save changes"}
-            variant={ButtonVariants.SUCCESS}
-            onClick={onSubmit}
-          />
           <ModelFooter>
-            <Button
-              label={cancelLabel || "Cancel"}
-              variant={ButtonVariants.OUTLINE_DANGER}
-              onClick={() => {
-                setIsModelOpen(false);
-                if (onCancel) onCancel();
-              }}
-              classNames="w-100"
-            />
+            <div className="w-100">
+              <Button
+                label={submitLabel || "Submit"}
+                variant={ButtonVariants.SUCCESS}
+                onClick={() => {
+                  setIsModelOpen(false);
+                  if (onSubmit) onSubmit();
+                }}
+                classNames="w-100 mb-3"
+              />
+              <Button
+                label={cancelLabel || "Cancel"}
+                variant={ButtonVariants.OUTLINE_DANGER}
+                onClick={() => {
+                  setIsModelOpen(false);
+                  if (onCancel) onCancel();
+                }}
+                classNames="w-100"
+              />
+            </div>
           </ModelFooter>
         </ModelContent>
       </Dialog>
@@ -50,16 +58,21 @@ const Model = (props: ModelProps) => {
   return (
     <Drawer open={isModelOpen} onOpenChange={setIsModelOpen}>
       <ModelContent>
-        <ModelHeader>
-          <ModelTitle>{title}</ModelTitle>
-          <ModelDescription>{description}</ModelDescription>
-        </ModelHeader>
+        {(title || description) &&
+          <ModelHeader>
+            <ModelTitle>{title}</ModelTitle>
+            <ModelDescription>{description}</ModelDescription>
+          </ModelHeader>
+        }
         {content}
         <ModelFooter>
           <Button
-            label={submitLabel || "Save changes"}
+            label={submitLabel || "Submit"}
             variant={ButtonVariants.SUCCESS}
-            onClick={onSubmit}
+            onClick={() => {
+              setIsModelOpen(false);
+              if (onSubmit) onSubmit();
+            }}
             classNames="w-100 my-2"
           />
           <Button
