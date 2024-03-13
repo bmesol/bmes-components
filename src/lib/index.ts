@@ -8,7 +8,6 @@ export * from "./components/Toast/Toast";
 export * from "./components/Sidebar/Sidebar";
 export * from "./components/ProfileImage/ProfileImage";
 export * from "./components/Model/Model";
-export * from "./shared/components/DTOs"
 
 // Icons
 export * from "./components/Icons/ClientsIcon/ClientsIcon";

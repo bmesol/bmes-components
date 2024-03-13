@@ -10,6 +10,7 @@ import { useModelDevice } from "./useModelDevice";
 import { useModelContext } from "./ModelContext";
 import { ModelProvider } from "./ModelProvider";
 import React, { useState } from "react";
+import "../../../styles/global.scss";
 import { ModelProps } from "./DTOs";
 
 const Model = (props: ModelProps) => {
