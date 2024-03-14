@@ -24,7 +24,7 @@ const SidebarMenuItem = ({ href, target, icon, children }: SidebarMenuItemProps)
   return (
     <div className="py-3 border border-2 border-bottom-0">
       <Link to={href} target={target} className="sidebar-menu-item d-inline-block">
-        <div className="d-flex align-items-center">
+        <div className="d-flex align-items-center" data-bs-dismiss="offcanvas">
           <span className="sidebar-menu-item-icon ms-3 align-self-start">{icon}</span>
           <span className="sidebar-menu-item-text ms-2">{children}</span>
         </div>
