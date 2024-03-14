@@ -1,5 +1,5 @@
 import { LabelTypes, LabelVariants, LabelProps } from "./DTOs";
-import { Link } from "../Link/Link";
+import { Link } from "react-router-dom";
 import React from "react";
 import "./Label.scss";
 

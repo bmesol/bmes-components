@@ -4,10 +4,11 @@ import { ContactsIcon } from "../../lib/components/Icons/ContactsIcon/ContactsIc
 import { ClientsIcon } from "../../lib/components/Icons/ClientsIcon/ClientsIcon";
 import { WorkerIcon } from "../../lib/components/Icons/WorkerIcon/WorkersIcon";
 import { Button, ButtonVariants } from "./../../lib/components/Button/Button";
+import { ProfileImage } from "../../lib/components/ProfileImage/ProfileImage";
 import { UsersIcon } from "../../lib/components/Icons/UsersIcon/UsersIcon";
 import { SitesIcon } from "../../lib/components/Icons/SitesIcon/SitesIcon";
+import { BrowserRouter } from "react-router-dom";
 import React from "react";
-import { ProfileImage } from "../../lib/components/ProfileImage/ProfileImage";
 
 const meta = {
   title: "Components/Sidebar",
@@ -21,7 +22,7 @@ export default meta;
 export const Menu = {
   render: (children: React.ReactElement) => {
     return (
-      <>
+      <BrowserRouter>
         <SidebarTrigger sidebarId="menu">
           <Button variant={ButtonVariants.SUCCESS} label="Open Menu" classNames="my-3" onClick={() => {}} />
         </SidebarTrigger>
@@ -45,7 +46,7 @@ export const Menu = {
             <div>&copy; BM e-Solutions</div>
           </SidebarFooter>
         </Sidebar>
-      </>
+      </BrowserRouter>
     );
   },
 };

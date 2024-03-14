@@ -1,6 +1,6 @@
 import { SidebarProps, SidebarChildProps, SidebarTriggerProps, SidebarMenuItemProps } from "./DTOs";
 import { CloseIcon } from "../Icons/CloseIcon/CloseIcon";
-import { Link } from "../Link/Link";
+import { Link } from "react-router-dom";
 import React from "react";
 import "./Sidebar.scss";
 
