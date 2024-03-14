@@ -1,5 +1,3 @@
-import { To } from "react-router-dom";
-
 enum LabelTypes {
   LINK = "link",
   TEXT = "text",
@@ -18,7 +16,7 @@ interface LabelProps {
   type: LabelTypes;
   label: string;
   variant: LabelVariants;
-  href?: To;
+  href?: string;
   classNames?: string;
   target?: string;
 }

@@ -1,7 +1,7 @@
 import React from "react";
 import { TextBox } from "./../TextBox/TextBox";
 import { PinProps } from "./DTOs";
-import { usePin } from "./usePin";
+import { usePin } from "./Hooks";
 import { TextBoxTypes } from "../TextBox/DTOs";
 import "./Pin.scss";
 

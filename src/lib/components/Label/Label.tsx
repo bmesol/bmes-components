@@ -1,6 +1,5 @@
-import { LabelTypes, LabelVariants, LabelProps } from "./DTOs";
-import { Link } from "../Link/Link";
 import React from "react";
+import { LabelTypes, LabelVariants, LabelProps } from "./DTOs";
 import "./Label.scss";
 
 const Label = (props: LabelProps) => {
@@ -8,7 +7,7 @@ const Label = (props: LabelProps) => {
 
   return (
     <div className={`label ${variant} ${type} ${classNames}`}>
-      {type === "link" ? <Link to={href} target={target}>{label}</Link> : <span>{label}</span>}
+      {type === "link" ? <a href={href} target={target}>{label}</a> : <span>{label}</span>}
     </div>
   );
 };
