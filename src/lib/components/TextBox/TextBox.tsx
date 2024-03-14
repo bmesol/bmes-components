@@ -1,6 +1,6 @@
 import React from "react";
 import { TextBoxTypes, TextBoxProps } from "./DTOs";
-import { useTextBox } from "./Hooks";
+import { useTextBox } from "./useTextBox";
 import "./TextBox.scss";
 
 const TextBox = (props: TextBoxProps) => {
