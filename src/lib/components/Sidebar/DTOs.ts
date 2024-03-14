@@ -1,5 +1,3 @@
-import { To } from "react-router-dom";
-
 interface SidebarProps {
   id: string;
   children: React.ReactNode;
@@ -15,7 +13,7 @@ interface SidebarTriggerProps {
 }
 
 interface SidebarMenuItemProps {
-  href: To;
+  href: string;
   target?: string;
   icon?: React.ReactNode;
   children: React.ReactNode;

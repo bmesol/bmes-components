@@ -3,7 +3,6 @@ import type { Meta, StoryObj } from "@storybook/react";
 import { Card } from "./../../lib/components/Card/Card";
 import CardDoc from "./CardDoc.md";
 import { Button, ButtonVariants, Label, LabelTypes, LabelVariants, Pin, TextBox } from "../../lib";
-import { BrowserRouter } from "react-router-dom";
 
 const meta: Meta<typeof Card> = {
   title: "components/Card",
@@ -25,7 +24,7 @@ type Story = StoryObj<typeof Card>;
 
 export const Card_Sample: Story = {
   render: (children) => (
-    <BrowserRouter>
+    <>
       <Card>
         <div style={{ width: "250px" }}>
           <Label
@@ -58,6 +57,6 @@ export const Card_Sample: Story = {
           />
         </div>
       </Card>
-    </BrowserRouter>
+    </>
   ),
 };

@@ -2,8 +2,6 @@ import type { Meta, StoryObj } from "@storybook/react";
 import { Label } from "../../lib/components/Label/Label";
 import { LabelTypes, LabelVariants } from "../../lib/components/Label/DTOs";
 import LabelDoc from "./LabelDoc.md";
-import { BrowserRouter } from "react-router-dom";
-import React from "react";
 
 const meta: Meta<typeof Label> = {
   title: "Components/Label",
@@ -41,11 +39,4 @@ export const Link_Default: Story = {
     type: LabelTypes.LINK,
     variant: LabelVariants.DEFAULT,
   },
-  decorators: [
-    (Story) => (
-      <BrowserRouter>
-        <Story />
-      </BrowserRouter>
-    ),
-  ],
 };
