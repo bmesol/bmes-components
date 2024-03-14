@@ -4,10 +4,10 @@ import { ContactsIcon } from "../../lib/components/Icons/ContactsIcon/ContactsIc
 import { ClientsIcon } from "../../lib/components/Icons/ClientsIcon/ClientsIcon";
 import { WorkerIcon } from "../../lib/components/Icons/WorkerIcon/WorkersIcon";
 import { Button, ButtonVariants } from "./../../lib/components/Button/Button";
+import { ProfileImage } from "../../lib/components/ProfileImage/ProfileImage";
 import { UsersIcon } from "../../lib/components/Icons/UsersIcon/UsersIcon";
 import { SitesIcon } from "../../lib/components/Icons/SitesIcon/SitesIcon";
 import React from "react";
-import { ProfileImage } from "../../lib/components/ProfileImage/ProfileImage";
 
 const meta = {
   title: "Components/Sidebar",

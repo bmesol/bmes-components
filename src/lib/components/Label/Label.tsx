@@ -1,5 +1,5 @@
-import React from "react";
 import { LabelTypes, LabelVariants, LabelProps } from "./DTOs";
+import React from "react";
 import "./Label.scss";
 
 const Label = (props: LabelProps) => {
