@@ -1,0 +1,60 @@
+import * as RadioStories from "./Radio.stories.tsx";
+import { Meta, Title, Story } from "@storybook/blocks";
+
+<Meta of={RadioStories} />
+
+<Title />
+
+The `Radio` component allows users to select a single option from a set of options. It is typically used within a `RadioGroup` to provide a group of related options.
+
+## Radio Props
+
+| Prop        | Type             | Required | Description                                         |
+| ----------- | ---------------- | -------- | --------------------------------------------------- |
+| id          | string           | Yes      | Unique identifier for the radio input.              |
+| value       | string           | Yes      | Value associated with the radio option.             |
+| label       | string or number | Yes      | Text or number to display next to the radio button. |
+| classNames? | string           | No       | Additional CSS classes for styling purposes.        |
+
+#### **Notes :**
+
+- Ensure each Radio component has a unique `id` prop value.
+- Utilize the `value` prop to associate a specific value with each radio option.
+- The `label` prop provides the text or number displayed next to the radio button.
+- Use the optional `classNames` prop for custom styling using CSS classes.
+
+## Example
+
+#
+
+### Preview
+
+<Story of={RadioStories.Sample_Radio} />
+
+### Code
+
+```tsx
+import { RadioGroup, Radio, Button, ButtonVariants } from "@bmesol/bmes-components";
+
+export const SampleRadio = () => {
+  const [gender, setGender] = useState("Male");
+  return (
+    <>
+      <RadioGroup defaultValue="Male" onValueChange={setGender} classNames="d-flex mt-4">
+        <div className="mb-2 text-primary">Select Gender : </div>
+        <Radio id="1" value="Male" label={"Male"} />
+        <Radio id="2" value="Female" label={"Female"} />
+      </RadioGroup>
+
+      <Button
+        label="Show Gender"
+        variant={ButtonVariants.OUTLINE_SECONDARY}
+        onClick={() => {
+          alert("You selected " + gender + " as your Gender");
+        }}
+        classNames="mt-3 mb-4"
+      />
+    </>
+  );
+};
+```

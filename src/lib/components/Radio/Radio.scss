@@ -1,0 +1,10 @@
+@import "../../../styles/global.scss";
+
+.radio {
+  .fill-current {
+    color: var(--primary-color) !important;
+  }
+  button {
+    border-color: var(--primary-color) !important;
+  }
+}
