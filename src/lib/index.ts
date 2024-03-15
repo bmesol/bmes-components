@@ -9,6 +9,7 @@ export * from "./components/Sidebar/Sidebar";
 export * from "./components/ProfileImage/ProfileImage";
 export * from "./components/Model/Model";
 export * from "./components/Radio/Radio";
+export * from "./components/Checkbox/Checkbox";
 
 // Icons
 export * from "./components/Icons/ClientsIcon/ClientsIcon";

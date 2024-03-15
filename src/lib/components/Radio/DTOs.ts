@@ -8,7 +8,7 @@ interface RadioGroupProps {
 interface RadioProps {
   id: string;
   value: string;
-  label: string | number;
+  label: string;
   classNames?: string;
 }
 

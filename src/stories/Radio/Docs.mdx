@@ -7,14 +7,23 @@ import { Meta, Title, Story } from "@storybook/blocks";
 
 The `Radio` component allows users to select a single option from a set of options. It is typically used within a `RadioGroup` to provide a group of related options.
 
+## RadioGroup Props
+
+| Prop          | Type      | Description                                                                                                                       | Required |
+| ------------- | --------- | --------------------------------------------------------------------------------------------------------------------------------- | -------- |
+| defaultValue  | string    | The default value for the RadioGroup. If provided, it sets the initially selected radio button.                                   | No       |
+| onValueChange | function  | A callback function invoked when the selected value of the RadioGroup changes. It receives the new selected value as a parameter. | Yes      |
+| children      | ReactNode | The children of the RadioGroup component. These are typically the individual radio button components.                             | Yes      |
+| classNames?   | string    | Additional CSS classes for styling purposes.                                                                                      | No       |
+
 ## Radio Props
 
-| Prop        | Type             | Required | Description                                         |
-| ----------- | ---------------- | -------- | --------------------------------------------------- |
-| id          | string           | Yes      | Unique identifier for the radio input.              |
-| value       | string           | Yes      | Value associated with the radio option.             |
-| label       | string or number | Yes      | Text or number to display next to the radio button. |
-| classNames? | string           | No       | Additional CSS classes for styling purposes.        |
+| Prop        | Type   | Description                                         | Required |
+| ----------- | ------ | --------------------------------------------------- | -------- |
+| id          | string | Unique identifier for the radio input.              | Yes      |
+| value       | string | Value associated with the radio option.             | Yes      |
+| label       | string | Text or number to display next to the radio button. | Yes      |
+| classNames? | string | Additional CSS classes for styling purposes.        | No       |
 
 #### **Notes :**
 
@@ -40,7 +49,11 @@ export const SampleRadio = () => {
   const [gender, setGender] = useState("Male");
   return (
     <>
-      <RadioGroup defaultValue="Male" onValueChange={setGender} classNames="d-flex mt-4">
+      <RadioGroup
+        defaultValue="Male"
+        onValueChange={setGender}
+        classNames="d-flex mt-4"
+      >
         <div className="mb-2 text-primary">Select Gender : </div>
         <Radio id="1" value="Male" label={"Male"} />
         <Radio id="2" value="Female" label={"Female"} />

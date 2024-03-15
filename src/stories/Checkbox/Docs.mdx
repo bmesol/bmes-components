@@ -1,0 +1,69 @@
+import * as CheckboxStories from "./Checkbox.stories.tsx";
+import { Meta, Title, Story } from "@storybook/blocks";
+
+<Meta of={CheckboxStories} />
+
+<Title />
+
+The `Checkbox` component is a customizable input element that allows users to make binary choices, typically used in forms. It provides a simple and accessible way to toggle between two states: checked and unchecked.
+
+## Checkbox Props
+
+| Prop            | Type     | Description                                                     | Required |
+| --------------- | -------- | --------------------------------------------------------------- | -------- |
+| id              | string   | The unique identifier for the checkbox.                         | Yes      |
+| label           | string   | The text displayed next to the checkbox.                        | Yes      |
+| checked         | boolean  | Represents the current state of the checkbox. Default: `false`. | No       |
+| onCheckedChange | function | Callback function triggered when the checkbox state changes.    | Yes      |
+| isDisabled      | boolean  | Indicates whether the checkbox is disabled. Default: `false`.   | No       |
+| classNames      | string   | Additional CSS classes to apply to the checkbox.                | No       |
+
+#### **Notes :**
+
+- Ensure each Checkbox component has a unique `id` prop value.
+- Utilize the `value` prop to associate a specific value with each Checkbox option.
+- The `label` prop provides the text or number displayed next to the Checkbox button.
+- Use the optional `classNames` prop for custom styling using CSS classes.
+
+## Example
+
+#
+
+### Preview
+
+<Story of={CheckboxStories.Sample_Checkbox} />
+
+### Code
+
+```tsx
+import { Checkbox, Button, ButtonVariants, useToast } from "@bmesol/bmes-components";
+
+export const SampleCheckbox = () => {
+  const toast = useToast();
+  const [isAgreed, setIsAgreed] = useState(false);
+
+  const handleSubmitButton = () => {
+    if (isAgreed) {
+      toast.success("Successfully submitted...!");
+    } else {
+      toast.error("Accept the Terms and Conditions");
+    }
+  };
+
+  return (
+    <>
+      <Checkbox
+        id="1"
+        label="Agree to the Terms and Conditions"
+        onCheckedChange={setIsAgreed}
+      />
+      <Button
+        label="Submit"
+        variant={ButtonVariants.PRIMARY}
+        onClick={handleSubmitButton}
+        classNames="mt-4"
+      />
+    </>
+  );
+};
+```
