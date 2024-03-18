@@ -4,7 +4,7 @@ import React from "react";
 import "./Radio.scss";
 
 const Radio = (props: RadioProps) => {
-  const { items, direction, selectedValue, onValueChange, classNames } = props;
+  const { items, direction, selectedValue, onValueChange, classNames = "" } = props;
   return (
     <>
       <RadioGroup defaultValue={selectedValue} onValueChange={onValueChange} className={`${direction} ${classNames}`}>

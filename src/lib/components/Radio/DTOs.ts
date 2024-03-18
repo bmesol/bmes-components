@@ -10,7 +10,7 @@ interface ItemsType {
 
 interface RadioProps {
   items: ItemsType[];
-  direction: Directions;
+  direction?: Directions;
   selectedValue?: string;
   onValueChange: any;
   classNames?: string;

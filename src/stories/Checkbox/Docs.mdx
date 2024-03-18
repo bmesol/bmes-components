@@ -9,18 +9,17 @@ The `Checkbox` component is a customizable input element that allows users to ma
 
 ## Checkbox Props
 
-| Prop            | Type     | Description                                                     | Required |
-| --------------- | -------- | --------------------------------------------------------------- | -------- |
-| id              | string   | The unique identifier for the checkbox.                         | Yes      |
-| label           | string   | The text displayed next to the checkbox.                        | Yes      |
-| checked         | boolean  | Represents the current state of the checkbox. Default: `false`. | No       |
-| onCheckedChange | function | Callback function triggered when the checkbox state changes.    | Yes      |
-| isDisabled      | boolean  | Indicates whether the checkbox is disabled. Default: `false`.   | No       |
-| classNames      | string   | Additional CSS classes to apply to the checkbox.                | No       |
+| Name            | Type                                        | Required | Description                                                                                                                                                                                      |
+| --------------- | ------------------------------------------- | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| items           | `Array<{ label: string, value: string }>`   | Yes      | An array of objects representing the items to be displayed in the checkbox list.                                                                                                                 |
+| selectedValues  | `string[]`                                  | No       | An array of strings representing the currently selected values.                                                                                                                                  |
+| onCheckedChange | `(currentSelectedValues: string[]) => void` | Yes      | A function that will be called whenever the selection changes. It receives the `currentSelectedValues`, which represent the values of the checkboxes that are currently selected after the change. |
+| isDisabled      | `boolean`                                   | No       | If `true`, disables the checkbox component.                                                                                                                                                      |
+| classNames      | `string`                                    | No       | Additional CSS classes to be applied to the checkbox component.                                                                                                                                  |
 
 #### **Notes :**
 
-- Ensure each Checkbox component has a unique `id` prop value.
+- Ensure each Checkbox component has a unique `value` prop value.
 - Utilize the `value` prop to associate a specific value with each Checkbox option.
 - The `label` prop provides the text or number displayed next to the Checkbox button.
 - Use the optional `classNames` prop for custom styling using CSS classes.
@@ -40,29 +39,33 @@ import { Checkbox, Button, ButtonVariants, useToast } from "@bmesol/bmes-compone
 
 export const SampleCheckbox = () => {
   const toast = useToast();
-  const [isAgreed, setIsAgreed] = useState(false);
+  const [selectedValue, setSelectedValue] = useState<string[]>([]);
+  const statementList = [ { label: "Agree to the Terms and Conditions", value: "Agree" } ];
 
-  const handleSubmitButton = () => {
-    if (isAgreed) {
-      toast.success("Successfully submitted...!");
-    } else {
-      toast.error("Accept the Terms and Conditions");
-    }
+  const handleCheckedChange = (currentSelectedValues: string[]) => {
+    setSelectedValue(currentSelectedValues);
   };
 
+  const handleSubmitButton = () => {
+    const isAgree = selectedValue.includes("Agree");
+    if (isAgree) {
+      toast.success("Successfully submitted");
+    } else {
+      toast.error("Agree to the Terms and Conditions");
+    }
+  };
   return (
     <>
-      <Checkbox
-        id="1"
-        label="Agree to the Terms and Conditions"
-        onCheckedChange={setIsAgreed}
-      />
-      <Button
-        label="Submit"
-        variant={ButtonVariants.PRIMARY}
-        onClick={handleSubmitButton}
-        classNames="mt-4"
-      />
+      <div className="my-4">
+        <Checkbox items={statementList} onCheckedChange={handleCheckedChange} />
+
+        <Button
+          label="Submit"
+          variant={ButtonVariants.PRIMARY}
+          onClick={handleSubmitButton}
+          classNames="mt-4"
+        />
+      </div>
     </>
   );
 };
