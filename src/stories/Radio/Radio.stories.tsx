@@ -1,5 +1,5 @@
 import { Button, ButtonVariants } from "../../lib/components/Button/Button";
-import { RadioGroup, Radio } from "../../lib/components/Radio/Radio";
+import { Radio, Directions } from "../../lib/components/Radio/Radio";
 import type { Meta, StoryObj } from "@storybook/react";
 import React, { useState } from "react";
 
@@ -18,13 +18,18 @@ export const Sample_Radio: Story = {
   render: () => {
     const App = () => {
       const [gender, setGender] = useState("Male");
+      const genderRadioList = [ { label: "Male", value: "Male" }, { label: "Female", value: "Female" } ];
       return (
         <>
-          <RadioGroup defaultValue="Male" onValueChange={setGender} classNames="d-flex mt-4">
-            <div className="mb-2 text-primary">Select Gender : </div>
-            <Radio id="1" value="Male" label={"Male"} />
-            <Radio id="2" value="Female" label={"Female"} />
-          </RadioGroup>
+          <div className="d-flex mt-4">
+            <div className="text-success fw-bold">Select Gender : &nbsp;</div>
+            <Radio
+              items={genderRadioList}
+              direction={Directions.HORIZONTAL}
+              selectedValue="Male"
+              onValueChange={setGender}
+            />
+          </div>
 
           <Button
             label="Show Gender"
@@ -32,7 +37,7 @@ export const Sample_Radio: Story = {
             onClick={() => {
               alert("You selected " + gender + " as your Gender");
             }}
-            classNames="mt-3 mb-4"
+            classNames="mt-4 mb-4"
           />
         </>
       );

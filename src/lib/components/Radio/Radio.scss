@@ -8,3 +8,8 @@
     border-color: var(--primary-color) !important;
   }
 }
+
+.horizontal {
+  display: flex !important;
+  flex-wrap: wrap !important;
+}

@@ -1,15 +1,19 @@
-interface RadioGroupProps {
-  defaultValue?: string;
-  onValueChange: any;
-  children: React.ReactNode;
-  classNames?: string;
+enum Directions {
+  HORIZONTAL = "horizontal",
+  VERTICAL = "vertical",
+}
+
+interface ItemsType {
+  label: string;
+  value: string;
 }
 
 interface RadioProps {
-  id: string;
-  value: string;
-  label: string;
+  items: ItemsType[];
+  direction: Directions;
+  selectedValue?: string;
+  onValueChange: any;
   classNames?: string;
 }
 
-export { RadioGroupProps, RadioProps };
+export { RadioProps, Directions };
