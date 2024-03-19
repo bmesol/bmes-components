@@ -1,21 +1,38 @@
-import { Tooltip as SharedTooltip, TooltipTrigger, TooltipContent, TooltipProvider as SharedTooltipProvider } from "../../shared/components/Tooltip/Tooltip";
-import { useTooltipContext } from "./TooltipContext";
-import { TooltipProvider } from "./TooltipProvider";
-import React, { useState } from "react";
+import { Tooltip as SharedTooltip, TooltipTrigger, TooltipContent, TooltipProvider } from "../../shared/components/Tooltip/Tooltip";
+import { useModelDevice } from "../Model/useModelDevice";
 import { TooltipProps, Positions } from "./DTOs";
+import React, { useState } from "react";
 
 const Tooltip = (props: TooltipProps) => {
-  const { content, position } = props;
-  const [isTooltipOpen, setIsTooltipOpen] = useState(true);
+  const { trigger, content, position } = props;
+  const isTouchDevices = useModelDevice("(max-width: 768px)");
+  const [isTooltipOpen, setIsTooltipOpen] = useState(false);
+
+  if (isTouchDevices) {
+    return (
+      <>
+        <TooltipProvider>
+          <SharedTooltip open={isTooltipOpen}>
+            <TooltipTrigger onClick={() => setIsTooltipOpen(!isTooltipOpen)}>
+              {trigger}
+            </TooltipTrigger>
+            <TooltipContent side={position}>{content}</TooltipContent>
+          </SharedTooltip>
+        </TooltipProvider>
+      </>
+    );
+  }
+
   return (
     <>
-      <SharedTooltipProvider>
-        <SharedTooltip open={isTooltipOpen} onOpenChange={setIsTooltipOpen}>
+      <TooltipProvider>
+        <SharedTooltip>
+          <TooltipTrigger>{trigger}</TooltipTrigger>
           <TooltipContent side={position}>{content}</TooltipContent>
         </SharedTooltip>
-      </SharedTooltipProvider>
+      </TooltipProvider>
     </>
   );
 };
 
-export { Tooltip, TooltipProvider, useTooltipContext as useTooltip, Positions };
+export { Tooltip, Positions };

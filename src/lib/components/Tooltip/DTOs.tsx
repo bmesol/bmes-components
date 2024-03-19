@@ -6,16 +6,9 @@ enum Positions {
 }
 
 interface TooltipProps {
+  trigger: React.ReactNode;
   content: React.ReactNode;
   position?: Positions;
 }
 
-interface TooltipContextValues {
-  show: (props: TooltipProps) => void;
-}
-
-interface TooltipProviderProps {
-  children: React.ReactElement;
-}
-
-export { TooltipProps, Positions, TooltipContextValues, TooltipProviderProps };
+export { TooltipProps, Positions };
