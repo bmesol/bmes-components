@@ -1,8 +1,8 @@
-import { SearchBar } from "../../lib/components/SearchBar/SearchBar";
+import { SearchBox } from "../../lib/components/SearchBox/SearchBox";
 import React from "react";
 
 const meta = {
-  title: "Components/SearchBar",
+  title: "Components/SearchBox",
   parameters: {
     layout: "centered",
   },
@@ -10,7 +10,7 @@ const meta = {
 
 export default meta;
 
-export const Sample_SearchBar = {
+export const Sample_SearchBox = {
   render: () => {
     const App = () => {
       const handleSearchButton = (value: string) => {
@@ -19,7 +19,7 @@ export const Sample_SearchBar = {
       return (
         <>
           <div className="my-4">
-            <SearchBar onSearch={handleSearchButton} />
+            <SearchBox onSearch={handleSearchButton} />
           </div>
         </>
       );

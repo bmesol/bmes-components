@@ -1,11 +1,11 @@
-import * as SearchBar from "./SearchBar.stories.tsx";
+import * as SearchBox from "./SearchBox.stories.tsx";
 import { Meta, Title, Story } from "@storybook/blocks";
 
-<Meta of={SearchBar} />
+<Meta of={SearchBox} />
 
 <Title />
 
-The `SearchBar` component provides a user interface element for inputting search queries and triggering search actions within your application. It can be easily integrated into your project to enhance search functionality.
+The `SearchBox` component provides a user interface element for inputting search queries and triggering search actions within your application. It can be easily integrated into your project to enhance search functionality.
 
 ## Props
 
@@ -17,22 +17,22 @@ The `SearchBar` component provides a user interface element for inputting search
 
 ### Preview
 
-<Story of={SearchBar.Sample_SearchBar} />
+<Story of={SearchBox.Sample_SearchBox} />
 
 ### Code
 
 ## Usage
 
 ```tsx
-import { SearchBar } from "@bmesol/bmes-components";
+import { SearchBox } from "@bmesol/bmes-components";
 
-export const SampleSearchBar = () => {
+export const SampleSearchBox = () => {
   const handleSearchButton = (searchValue: string) => {
     alert("You Searched : " + searchValue);
   };
   return (
     <>
-      <SearchBar onSearch={handleSearchButton} />
+      <SearchBox onSearch={handleSearchButton} />
     </>
   );
 };

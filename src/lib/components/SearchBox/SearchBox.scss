@@ -7,12 +7,12 @@
   position: absolute;
   top: 0;
   right: 0;
-  border: 2px solid rgb(130, 126, 125);
+  border: 2px solid var(--gray-color);
   border-radius: var(--border-radius);
   height: 100%;
   padding-left: 8px;
   padding-right: 32px;
-  color: rgb(130, 126, 125);
+  color: var(--gray-color);
   font-weight: bold;
   background: rgb(255, 255, 255);
 }

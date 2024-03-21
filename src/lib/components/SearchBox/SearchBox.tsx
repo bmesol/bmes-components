@@ -1,13 +1,13 @@
-import { useSearchBar } from "./useSearchBar";
+import { useSearchBox } from "./useSearchBox";
 import { TextBox } from "../TextBox/TextBox";
 import { SearchIcon } from "lucide-react";
-import { SearchBarProps } from "./DTOs";
+import { SearchBoxProps } from "./DTOs";
 import React from "react";
-import "./SearchBar.scss";
+import "./SearchBox.scss";
 
-const SearchBar = (props: SearchBarProps) => {
+const SearchBox = (props: SearchBoxProps) => {
   const { onSearch } = props;
-  const { search, handleSearch, handleEnterToSearch, handleSearchButton } = useSearchBar({ onSearch });
+  const { search, handleSearch, handleEnterToSearch, handleSearchButton } = useSearchBox({ onSearch });
   return (
     <>
       <div className="position-relative">
@@ -27,4 +27,4 @@ const SearchBar = (props: SearchBarProps) => {
   );
 };
 
-export { SearchBar };
+export { SearchBox };

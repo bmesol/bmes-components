@@ -8,7 +8,7 @@ export * from "./components/Toast/Toast";
 export * from "./components/Sidebar/Sidebar";
 export * from "./components/ProfileImage/ProfileImage";
 export * from "./components/Model/Model";
-export * from "./components/SearchBar/SearchBar";
+export * from "./components/SearchBox/SearchBox";
 
 // Icons
 export * from "./components/Icons/ClientsIcon/ClientsIcon";

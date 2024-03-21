@@ -1,7 +1,7 @@
-import { SearchBarProps } from "./DTOs";
+import { SearchBoxProps } from "./DTOs";
 import { useState } from "react";
 
-const useSearchBar = ({ onSearch }: SearchBarProps) => {
+const useSearchBox = ({ onSearch }: SearchBoxProps) => {
   const [search, setSearch] = useState("");
 
   const handleSearch = (searchValue: string) => {
@@ -28,4 +28,4 @@ const useSearchBar = ({ onSearch }: SearchBarProps) => {
   };
 };
 
-export { useSearchBar };
+export { useSearchBox };
