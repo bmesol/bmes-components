@@ -1,0 +1,13 @@
+@import "../../../styles//global.scss";
+
+.checkbox {
+  button {
+    border-color: var(--primary-color) !important;
+    border-radius: var(--sm-unit) !important;
+  }
+}
+
+.horizontal {
+  display: flex !important;
+  flex-wrap: wrap !important;
+}

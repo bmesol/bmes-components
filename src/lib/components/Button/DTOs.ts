@@ -12,6 +12,7 @@ enum ButtonVariants {
 }
 
 interface ButtonProps {
+  icon?: React.ReactNode;
   label: string;
   onClick: () => void;
   variant: ButtonVariants;

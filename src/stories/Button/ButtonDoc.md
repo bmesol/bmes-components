@@ -28,22 +28,26 @@ The Button component is a versatile UI element that allows users to trigger vari
 
 The Button component is a powerful and flexible UI element designed to accommodate a wide range of actions within a web application. Its versatility is enhanced by the following set of props:
 
-#### 1. `label` (string)
+#### 1. `icon` (optional)
+
+* An optional icon to be displayed within the button. If provided, the icon will appear before the label text.
+
+#### 2. `label` (string)
 
 * Specifies the text label for the button. It is recommended to keep the label concise, not exceeding 13 characters, for optimal visual presentation.
 
-#### 2.  `variant` (ButtonVariants)
+#### 3.  `variant` (ButtonVariants)
 
 * Utilizes the ButtonVariants constants to specify the visual style of the button. Whether it's a primary, secondary, success, warning, danger, or one of the outlined variants, this prop ensures consistency in button appearance across the application.
 
-#### 3. `onClick` (function)
+#### 4. `onClick` (function)
 
 * Defines the function to be executed when the button is clicked. This prop allows developers to seamlessly integrate custom behavior, making the Button component highly adaptable.
 
-#### 4. `classNames` (string - optional)
+#### 5. `classNames` (string - optional)
 
 * Offers the flexibility to apply additional custom CSS classes to the button. This prop enables developers to further customize the styling of the Button component according to specific design requirements.
 
-#### 5. `isDisabled` (boolean - optional)
+#### 6. `isDisabled` (boolean - optional)
 
 * Allows developers to control the state of the button, making it either enabled or disabled. When set to true, the button becomes unresponsive to user interactions, providing a straightforward way to manage button accessibility.
