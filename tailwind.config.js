@@ -46,7 +46,7 @@ export const theme = {
         foreground: "hsl(var(--card-foreground))",
       },
       theme1: {
-        DEFAULT: "var(--theme1-color)",
+        DEFAULT: "var(--gray-color)",
       },
     },
     borderRadius: {
