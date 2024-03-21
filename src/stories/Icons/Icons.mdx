@@ -2,11 +2,14 @@ import { SuppliersIcon } from "../../lib/components/Icons/SuppliersIcon/Supplier
 import { ContactsIcon } from "../../lib/components/Icons/ContactsIcon/ContactsIcon";
 import { ClientsIcon } from "../../lib/components/Icons/ClientsIcon/ClientsIcon";
 import { WorkerIcon } from "../../lib/components/Icons/WorkerIcon/WorkersIcon";
+import { SearchIcon } from "../../lib/components/Icons/SearchIcon/SearchIcon";
 import { CloseIcon } from "../../lib/components/Icons/CloseIcon/CloseIcon";
 import { SitesIcon } from "../../lib/components/Icons/SitesIcon/SitesIcon";
 import { UsersIcon } from "../../lib/components/Icons/UsersIcon/UsersIcon";
+import { PhoneIcon } from "../../lib/components/Icons/PhoneIcon/PhoneIcon";
 import { MenuIcon } from "../../lib/components/Icons/MenuIcon/MenuIcon";
 import { EditIcon } from "../../lib/components/Icons/EditIcon/EditIcon";
+import { InfoIcon } from "../../lib/components/Icons/InfoIcon/InfoIcon";
 import { Meta, Title } from "@storybook/blocks";
 import { Icon } from "./Icon";
 
@@ -43,6 +46,15 @@ import { Icon } from "./Icon";
   </div>
   <div className="col-2 border border-1 m-2">
     <Icon src={<EditIcon />} name="EditIcon" />
+  </div>
+  <div className="col-2 border border-1 m-2">
+    <Icon src={<PhoneIcon />} name="PhoneIcon" />
+  </div>
+  <div className="col-2 border border-1 m-2">
+    <Icon src={<InfoIcon />} name="InfoIcon" />
+  </div>
+  <div className="col-2 border border-1 m-2">
+    <Icon src={<SearchIcon />} name="SearchIcon" />
   </div>
 </div>
 ```

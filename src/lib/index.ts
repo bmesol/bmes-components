@@ -9,6 +9,8 @@ export * from "./components/Sidebar/Sidebar";
 export * from "./components/ProfileImage/ProfileImage";
 export * from "./components/Model/Model";
 export * from "./components/Switch/Switch";
+export * from "./components/Radio/Radio";
+export * from "./components/Checkbox/Checkbox";
 
 // Icons
 export * from "./components/Icons/ClientsIcon/ClientsIcon";
@@ -20,3 +22,6 @@ export * from "./components/Icons/SitesIcon/SitesIcon";
 export * from "./components/Icons/SuppliersIcon/SuppliersIcon";
 export * from "./components/Icons/UsersIcon/UsersIcon";
 export * from "./components/Icons/WorkerIcon/WorkersIcon";
+export * from "./components/Icons/InfoIcon/InfoIcon";
+export * from "./components/Icons/MenuIcon/MenuIcon";
+export * from "./components/Icons/SearchIcon/SearchIcon";
