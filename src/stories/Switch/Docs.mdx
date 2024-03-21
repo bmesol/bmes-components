@@ -1,0 +1,59 @@
+import * as SwitchStories from "./Switch.stories.tsx";
+import { Meta, Title, Story } from "@storybook/blocks";
+
+<Meta of={SwitchStories} />
+
+<Title />
+
+The Switch component provides a toggle switch interface for user interaction.
+
+## Props
+
+| Prop            | Type     | Default | Required | Description                                                                                       |
+| --------------- | -------- | ------- | -------- | ------------------------------------------------------------------------------------------------- |
+| onCheckedChange | function | -       | Yes      | Callback function triggered when the switch state changes. Receives the new state as an argument. |
+| label           | string   | -       | No       | The label associated with the switch.                                                             |
+| checked         | boolean  | false   | No       | Determines whether the switch is in the "on" or "off" state.                                      |
+| isDisabled      | boolean  | false   | No       | If `true`, disables user interaction with the switch.                                             |
+| classNames      | string   | -       | No       | Additional CSS classes to apply to the switch component.                                          |
+
+### Example
+
+### Preview
+
+<Story of={SwitchStories.Sample_Switch} />
+
+### Code
+
+```tsx
+import { Switch, Button, ButtonVariants, useToast } from "@bmesol/bmes-components";
+
+export const SampleSwitch = () => {
+  const toast = useToast();
+  const [isActive, setIsActive] = useState(false);
+
+  const handleStatusButton = () => {
+    if (isActive) {
+      toast.success("Active User");
+    } else {
+      toast.info("Inactive User");
+    }
+  };
+  return (
+    <>
+      <Switch
+        label="Is Active"
+        onCheckedChange={setIsActive}
+        classNames="mt-4"
+      />
+
+      <Button
+        variant={ButtonVariants.PRIMARY}
+        label="Show Status"
+        classNames="bg-dark text-bg-dark mt-4 mb-2"
+        onClick={handleStatusButton}
+      />
+    </>
+  );
+};
+```
