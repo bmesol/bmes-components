@@ -18,7 +18,7 @@ export const Sample_SearchBox = {
       };
       return (
         <>
-          <div className="my-4">
+          <div className="my-4" style={{minWidth: "50vw"}}>
             <SearchBox onSearch={handleSearchButton} />
           </div>
         </>

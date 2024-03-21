@@ -1,3 +1,4 @@
+import { Button, ButtonVariants } from "../Button/Button";
 import { useSearchBox } from "./useSearchBox";
 import { TextBox } from "../TextBox/TextBox";
 import { SearchIcon } from "lucide-react";
@@ -18,10 +19,13 @@ const SearchBox = (props: SearchBoxProps) => {
           onChange={handleSearch}
           onKeyDown={handleEnterToSearch}
         />
-        <button className="search" onClick={() => handleSearchButton(search)}>
-          <SearchIcon />
-          &nbsp;<span>Search</span>
-        </button>
+        <Button
+          icon={<SearchIcon />}
+          label="Search"
+          variant={ButtonVariants.OUTLINE_SECONDARY}
+          classNames="search"
+          onClick={() => handleSearchButton(search)}
+        />
       </div>
     </>
   );
