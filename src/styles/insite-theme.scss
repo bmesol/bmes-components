@@ -76,11 +76,7 @@
     --destructive-foreground: 210 40% 98%;
 
     --ring: 215 20.2% 65.1%;
-  }
-}
 
-@layer base {
-  body {
     /* --- Common Theme Font Styles ---- */
     font-family: "Inter";
     font-size: var(--md-unit);
