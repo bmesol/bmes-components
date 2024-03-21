@@ -22,7 +22,7 @@ export const Sample_Textarea: Story = {
         setValue(currentValue);
       };
       return (
-        <>
+        <div style={{minWidth: "50vw"}}>
           <Textarea
             label="Notes"
             length={1000}
@@ -36,7 +36,7 @@ export const Sample_Textarea: Story = {
             classNames="bg-dark text-bg-dark m-3"
             onClick={() => alert("Your Notes : " + value)}
           />
-        </>
+        </div>
       );
     };
     return <App />;
