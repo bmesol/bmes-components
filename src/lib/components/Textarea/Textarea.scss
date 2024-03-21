@@ -1,0 +1,22 @@
+@import "./../../../styles/global.scss";
+
+textarea {
+  border: var(--textbox-border);
+  border-radius: var(--border-radius);
+  background: white;
+  color: var(--gray-color);
+}
+textarea:focus {
+  border: 1px solid var(--primary-color);
+  outline: none;
+}
+
+.text-count {
+  color: var(--gray-color);
+  position: absolute;
+  right: 12px;
+  bottom: 6px;
+  user-select: none;
+  background: white;
+  border-radius: var(--border-radius);
+}

@@ -8,6 +8,7 @@ export * from "./components/Toast/Toast";
 export * from "./components/Sidebar/Sidebar";
 export * from "./components/ProfileImage/ProfileImage";
 export * from "./components/Model/Model";
+export * from "./components/Textarea/Textarea";
 export * from "./components/SearchBox/SearchBox";
 export * from "./components/Tooltip/Tooltip"
 export * from "./components/Switch/Switch";
