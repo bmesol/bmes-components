@@ -3,7 +3,7 @@
 .checkbox {
   button {
     border-color: var(--primary-color) !important;
-    border-radius: 5px !important;
+    border-radius: var(--sm-unit) !important;
   }
 }
 
