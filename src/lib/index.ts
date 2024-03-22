@@ -26,5 +26,5 @@ export * from "./components/Icons/SuppliersIcon/SuppliersIcon";
 export * from "./components/Icons/UsersIcon/UsersIcon";
 export * from "./components/Icons/WorkerIcon/WorkersIcon";
 export * from "./components/Icons/InfoIcon/InfoIcon";
-export * from "./components/Icons/MenuIcon/MenuIcon";
+export * from "./components/Icons/PhoneIcon/PhoneIcon";
 export * from "./components/Icons/SearchIcon/SearchIcon";
