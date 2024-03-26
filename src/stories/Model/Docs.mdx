@@ -30,15 +30,21 @@ root.render(
 
 ## Props
 
-| Name                | Type      | Default Value  | Description                                                  |
-| ------------------- | --------- | -------------- | ------------------------------------------------------------ |
-| title               | string    | -              | The title of the model.                                      |
-| description         | string    | -              | The description of the model.                                |
-| content (required)  | ReactNode | -              | The content of the model.                                    |
-| submitLabel         | string    | "Submit" | The label for the submit button.                             |
-| cancelLabel         | string    | "Cancel"       | The label for the cancel button.                             |
-| onSubmit (required) | function  | -              | Callback function invoked when the submit button is clicked. |
-| onCancel            | function  | -              | Callback function invoked when the cancel button is clicked. |
+| Name                | Type            | Default Value | Description                                                                                                                                            |
+| ------------------- | --------------- | ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| title               | string          | -             | The title of the model.                                                                                                                                |
+| description         | string          | -             | The description of the model.                                                                                                                          |
+| content (required)  | ReactNode       | -             | The content of the model.                                                                                                                              |
+| submitLabel         | string          | "Submit"      | The label for the submit button.                                                                                                                       |
+| cancelLabel         | string          | "Cancel"      | The label for the cancel button.                                                                                                                       |
+| onSubmit (required) | `() => boolean` | -             | A callback function invoked when the submit button is clicked. This function should return a boolean indicating whether the submission was successful. |
+| onCancel            | function        | -             | Callback function invoked when the cancel button is clicked.                                                                                           |
+
+#### Notes:
+
+- The `title`, `description`, `submitLabel`, and `cancelLabel` properties are optional and can be omitted if not needed.
+- The `onSubmit` function is required and must be provided. It should return a boolean value indicating whether the submission was successful or not.
+- The `onCancel` function is optional. If provided, it will be invoked when the cancel button is clicked.
 
 ### Example
 
@@ -93,7 +99,10 @@ export const SampleModel = () => {
                     </div>
                   </form>
                 ),
-                onSubmit: () => {},
+                onSubmit: () => {
+                  confirm("Are you sure you want to submit?")
+                  return true;
+                },
               })
             }
           />

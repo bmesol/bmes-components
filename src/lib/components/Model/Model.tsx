@@ -21,12 +21,12 @@ const Model = (props: ModelProps) => {
     return (
       <Dialog open={isModelOpen} onOpenChange={setIsModelOpen}>
         <ModelContent>
-          {(title || description) &&
+          {(title || description) && (
             <ModelHeader>
               <ModelTitle>{title}</ModelTitle>
               <ModelDescription>{description}</ModelDescription>
             </ModelHeader>
-          }
+          )}
           {content}
           <ModelFooter>
             <div className="float-right">
@@ -43,8 +43,12 @@ const Model = (props: ModelProps) => {
                 label={submitLabel || "Submit"}
                 variant={ButtonVariants.PRIMARY}
                 onClick={() => {
+                  let continueFunction = true;
+                  if (onSubmit) {
+                    continueFunction = onSubmit();
+                  }
+                  if (!continueFunction) return;
                   setIsModelOpen(false);
-                  if (onSubmit) onSubmit();
                 }}
               />
             </div>
@@ -57,20 +61,24 @@ const Model = (props: ModelProps) => {
   return (
     <Drawer open={isModelOpen} onOpenChange={setIsModelOpen}>
       <ModelContent>
-        {(title || description) &&
+        {(title || description) && (
           <ModelHeader>
             <ModelTitle>{title}</ModelTitle>
             <ModelDescription>{description}</ModelDescription>
           </ModelHeader>
-        }
+        )}
         {content}
         <ModelFooter>
           <Button
             label={submitLabel || "Submit"}
             variant={ButtonVariants.PRIMARY}
             onClick={() => {
+              let continueFunction = true;
+              if (onSubmit) {
+                continueFunction = onSubmit();
+              }
+              if (!continueFunction) return;
               setIsModelOpen(false);
-              if (onSubmit) onSubmit();
             }}
             classNames="w-100 my-2"
           />
