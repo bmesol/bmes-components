@@ -3,4 +3,7 @@
 .spinner {
   color: var(--spinner-color);
   background-color: var(--spinner-bg-color);
+  position: fixed;
+  top: 0;
+  left: 0;
 }
