@@ -17,19 +17,24 @@ export const Sample_Loading = {
   render: (children: React.ReactElement): JSX.Element => {
     const App = () => {
       const loading = useLoading();
+
+      const hideLoading = () => {
+        setTimeout(() => {
+          loading.hide();
+        }, 1500);
+      };
+
       return (
         <>
           <div className="d-flex justify-content-center my-4">
             <Button
               label="Show"
-              onClick={() => loading.show()}
+              onClick={() => {
+                loading.show();
+                hideLoading();
+              }}
               variant={ButtonVariants.SUCCESS}
               classNames="me-4"
-            />
-            <Button
-              label="Hide"
-              onClick={() => loading.hide()}
-              variant={ButtonVariants.DANGER}
             />
           </div>
         </>
