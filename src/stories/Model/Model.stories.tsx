@@ -65,7 +65,7 @@ export const Sample_Model = {
                   </form>
                 ),
                 onSubmit: () => {
-                  confirm("Are you sure you want to submit?")
+                  confirm("Are you sure you want to submit?");
                   return true;
                 },
               })

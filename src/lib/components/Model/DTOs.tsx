@@ -8,7 +8,7 @@ interface ModelProps {
   content: React.ReactNode;
   submitLabel?: string;
   cancelLabel?: string;
-  onSubmit: () => boolean;
+  onSubmit: Function;
   onCancel?: () => void;
 }
 
