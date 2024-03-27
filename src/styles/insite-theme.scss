@@ -56,6 +56,10 @@
     --text-profile-color: var(--secondary-color);
     --text-profile-bg-color: var(--primary-color);
 
+    /* --- Loading Component Styles --- */
+    --spinner-color: var(--primary-color);
+    --spinner-bg-color: rgba(0, 0, 0, 0.8);
+
     /* --- Shared Component Styles --- */
     --muted: 210 40% 96.1%;
     --muted-foreground: 215.4 16.3% 46.9%;

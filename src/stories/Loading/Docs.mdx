@@ -1,0 +1,64 @@
+import * as LoadingStories from "./Loading.stories.tsx";
+import { Meta, Title, Story } from "@storybook/blocks";
+
+<Meta of={LoadingStories} />
+
+<Title />
+
+The `Loading` component is a React component designed to display a loading indicator while data is being fetched or processed asynchronously. It provides a visual cue to users that an operation is in progress.
+
+## Usage
+
+**1. To use the Loading component, you need to add `LoadingProvider` in root of the application.**
+
+```tsx
+import { LoadingProvider } from "@bmesol/bmes-components";
+```
+
+```tsx
+const root = ReactDOM.createRoot(
+  document.getElementById("root") as HTMLElement
+);
+root.render(
+  <LoadingProvider>
+    <App />
+  </LoadingProvider>
+);
+```
+
+**2. The `useLoading` hook returns a `loading` function that you can use to display a loader.**
+
+```tsx
+import { useLoading, Button, ButtonVariants } from "@bmesol/bmes-components";
+
+const App = () => {
+  const loading = useLoading();
+
+  const fetchUserProfile = async () => {
+    loading.show(); // Show loading indicator
+
+    try {
+      // Perform asynchronous operation
+    } catch (error) {
+      // Handle error
+    } finally {
+      loading.hide(); // Hide loading indicator
+    }
+  };
+
+  return (
+    <>
+      <Button
+        label="Get User Profile"
+        onClick={fetchUserProfile}
+        variant={ButtonVariants.PRIMARY}
+      />
+    </>
+  );
+};
+```
+
+#### Notes:
+
+- `loading.show()`: This function is used to make the loading indicator visible. It's called when you want to inform users that something is loading, like when a webpage is waiting for data to load or process.
+- `loading.hide()`: Conversely, this function is used to hide the loading indicator. You call it when the loading process is complete, and you're ready to show the actual content to the user.
