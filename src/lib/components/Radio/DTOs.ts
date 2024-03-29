@@ -9,6 +9,7 @@ interface ItemsType {
 }
 
 interface RadioProps {
+  label?: string;
   items: ItemsType[];
   direction?: Directions;
   selectedValue?: string;
