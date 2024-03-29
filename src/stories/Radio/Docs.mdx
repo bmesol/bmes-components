@@ -9,13 +9,14 @@ The `Radio` component allows users to select a single option from a set of optio
 
 ## Radio Props
 
-| Name          | Type                                      | Required | Description                                                  |
-| ------------- | ----------------------------------------- | -------- | ------------------------------------------------------------ |
-| items         | `Array<{ label: string, value: string }>` | Yes      | An array of objects representing each radio option.          |
-| direction     | `Enum { HORIZONTAL, VERTICAL }`           | Yes      | Specifies the direction of the radio options display.        |
-| selectedValue | string                                    | No       | The value of the currently selected radio option.            |
-| onValueChange | function                                  | Yes      | A callback function invoked when the selected value changes. |
-| classNames    | string                                    | No       | Additional CSS classes for custom styling.                   |
+| Name          | Type                                      | Required | Description                                                                                                                 |
+| ------------- | ----------------------------------------- | -------- | --------------------------------------------------------------------------------------------------------------------------- |
+| label         | string                                    | No       | The label prop provides a label or title for the Radio component, describing the input field's purpose or expected content. |
+| items         | `Array<{ label: string, value: string }>` | Yes      | An array of objects representing each radio option.                                                                         |
+| direction     | `Enum { HORIZONTAL, VERTICAL }`           | Yes      | Specifies the direction of the radio options display.                                                                       |
+| selectedValue | string                                    | No       | The value of the currently selected radio option.                                                                           |
+| onValueChange | function                                  | Yes      | A callback function invoked when the selected value changes.                                                                |
+| classNames    | string                                    | No       | Additional CSS classes for custom styling.                                                                                  |
 
 #### **Notes :**
 
@@ -39,12 +40,16 @@ import { Radio, Button, ButtonVariants } from "@bmesol/bmes-components";
 
 export const SampleRadio = () => {
   const [gender, setGender] = useState("Male");
-  const genderRadioList = [ { label: "Male", value: "Male" }, { label: "Female", value: "Female" } ];
+  const genderRadioList = [
+    { label: "Male", value: "Male" },
+    { label: "Female", value: "Female" },
+  ];
   return (
     <>
       <div className="d-flex mt-4">
         <div className="text-success fw-bold">Select Gender : </div>
         <Radio
+          label="Select Gender"
           items={genderRadioList}
           direction={Directions.HORIZONTAL}
           selectedValue="Male"
