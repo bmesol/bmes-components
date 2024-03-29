@@ -22,8 +22,8 @@ export const Sample_Radio: Story = {
       return (
         <>
           <div className="d-flex mt-4">
-            <div className="text-success fw-bold">Select Gender : &nbsp;</div>
             <Radio
+              label="Select Gender"
               items={genderRadioList}
               direction={Directions.HORIZONTAL}
               selectedValue="Male"
