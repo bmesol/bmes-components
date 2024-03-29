@@ -2,15 +2,21 @@ import { useState, useMemo } from "react";
 import { ModelProps } from "./DTOs";
 
 const useModel = () => {
-  const [models, setModels] = useState<ModelProps[]>([]);
+  const [model, setModel] = useState<ModelProps>();
 
-  const contextValue = useMemo(
-    () => ({ open: (props: ModelProps) => setModels([props]) }), []
-  );
+  const open = (props: ModelProps) => setModel(props);
+
+  const close = () => {
+    if (model) {
+      setModel({ ...model, isOpen: false });
+    }
+  };
+
+  const contextValue = useMemo(() => ({ open, close }), [open, close]);
 
   return {
     contextValue,
-    models,
+    model,
   };
 };
 

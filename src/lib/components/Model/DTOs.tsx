@@ -6,10 +6,7 @@ interface ModelProps {
   title?: string;
   description?: string;
   content: React.ReactNode;
-  submitLabel?: string;
-  cancelLabel?: string;
-  onSubmit: Function;
-  onCancel?: () => void;
+  isOpen?: boolean;
 }
 
 interface ModelContextValues {
