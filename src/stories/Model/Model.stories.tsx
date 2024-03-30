@@ -62,6 +62,7 @@ export const Sample_Model = {
                         classNames="w-100"
                       />
                     </div>
+                    <Button label="Save" onClick={() => model.close() } variant={ButtonVariants.PRIMARY} />
                   </form>
                 ),
               })

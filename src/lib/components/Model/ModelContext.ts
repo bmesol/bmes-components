@@ -3,6 +3,7 @@ import { ModelContextValues } from "./DTOs";
 
 const defaultModelContextValues: ModelContextValues = {
   open: () => {},
+  close: () => {}
 };
 
 const ModelContext = createContext<ModelContextValues>(defaultModelContextValues);
