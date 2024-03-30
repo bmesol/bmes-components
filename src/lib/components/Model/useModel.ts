@@ -1,18 +1,15 @@
 import { useState, useMemo } from "react";
-import { ModelProps } from "./DTOs";
+import { ModelOpenProps } from "./DTOs";
 
 const useModel = () => {
-  const [model, setModel] = useState<ModelProps>();
+  const [model, setModel] = useState<ModelOpenProps | undefined>(undefined);
+  const open = (props: ModelOpenProps) => setModel(props);
 
-  const open = (props: ModelProps) => setModel(props);
+  const close = () => setModel(undefined);
 
-  const close = () => {
-    if (model) {
-      setModel({ ...model, isOpen: false });
-    }
-  };
-
-  const contextValue = useMemo(() => ({ open, close }), [open, close]);
+  const contextValue = useMemo(
+    () => ({ open, close }), [open, close]
+  );
 
   return {
     contextValue,
