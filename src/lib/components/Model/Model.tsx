@@ -7,13 +7,13 @@ import { ModelTitle } from "./ModelProps/ModelTitle";
 import { useModelDevice } from "./useModelDevice";
 import { useModelContext } from "./ModelContext";
 import { ModelProvider } from "./ModelProvider";
-import React from "react";
+import React, { useState } from "react";
 import { ModelProps } from "./DTOs";
 
 const Model = (props: ModelProps) => {
   const { title, description, content, close } = props;
   const isDesktop = useModelDevice("(min-width: 768px)");
-
+  const [isOpen, setIsOpen] = useState<boolean>(true);
   if (isDesktop) {
     return (
       <Dialog open={true} onOpenChange={()=> { close();}}>
@@ -31,7 +31,7 @@ const Model = (props: ModelProps) => {
   }
 
   return (
-    <Drawer open={true} onOpenChange={()=> close()}>
+    <Drawer open={isOpen} onOpenChange={setIsOpen}>
       <ModelContent>
         {(title || description) && (
           <ModelHeader>
