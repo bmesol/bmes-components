@@ -62,7 +62,20 @@ export const Sample_Model = {
                         classNames="w-100"
                       />
                     </div>
-                    <Button label="Save" onClick={() => model.close() } variant={ButtonVariants.PRIMARY} />
+                    <div className="d-flex flex-md-row-reverse flex-column flex-md-row gap-3">
+                      <Button
+                        label="Save"
+                        variant={ButtonVariants.PRIMARY}
+                        onClick={() => model.close()}
+                        classNames="float-md-end"
+                      />
+                      <Button
+                        label="Cancel"
+                        variant={ButtonVariants.OUTLINE_SECONDARY}
+                        onClick={() => model.close()}
+                        classNames="float-md-end"
+                      />
+                    </div>
                   </form>
                 ),
               })
