@@ -1,0 +1,91 @@
+import * as DropdownStories from "./Dropdown.stories.tsx";
+import { Meta, Title, Story } from "@storybook/blocks";
+
+<Meta of={DropdownStories} />
+
+<Title />
+
+The `Dropdown` component is a customizable user interface element designed to present a list of selectable options to the user in a dropdown menu format. It allows users to choose a single option from a list of items.
+
+## Dropdown Props
+
+| Prop          | Type                                      | Required | Description                                                                                    |
+| ------------- | ----------------------------------------- | -------- | ---------------------------------------------------------------------------------------------- |
+| label         | string                                    | No       | Label text for the dropdown, displayed above the dropdown.                                     |
+| items         | `Array<{ label: string, value: string }>` | Yes      | An array of objects representing the items to be displayed in the dropdown.                    |
+| placeholder   | string                                    | Yes      | Placeholder text displayed in the dropdown when no item is selected.                           |
+| selectedValue | string                                    | No       | The value of the currently selected item. Use this prop to pre-select an item in the dropdown. |
+| onValueChange | `(value: string)=>void`                   | Yes      | A callback function invoked when the user selects an item from the dropdown.                   |
+| isSearch      | boolean                                   | No       | A boolean value indicating whether to enable search functionality within the dropdown.         |
+
+#### **Notes :**
+
+- Ensure that the `items` array passed to the Dropdown component contains unique values for each item's `value` property to accurately handle selection changes.
+
+## Example
+
+#
+
+### Preview
+
+<Story of={DropdownStories.Sample_Dropdown} />
+
+### Code
+
+```tsx
+import { Dropdown, Button, ButtonVariants } from "@bmesol/bmes-components";
+
+export const SampleDropdown = () => {
+  const [value, setValue] = useState("");
+  const courses = [
+    {
+      value: "Mechatronics Engineering",
+      label: "Mechatronics Engineering",
+    },
+    {
+      value: "Computer Science and Engineering",
+      label: "Computer Science and Engineering",
+    },
+    {
+      value: "Mechanical Engineering",
+      label: "Mechanical Engineering",
+    },
+    {
+      value: "Civil Engineering",
+      label: "Civil Engineering",
+    },
+    {
+      value: "Information Technology",
+      label: "Information Technology",
+    },
+  ];
+  return (
+    <>
+      <div>
+        <Dropdown
+          label="UG Courses"
+          items={courses}
+          placeholder="Select Branch"
+          isSearch={true}
+          onValueChange={(value: string) => setValue(value)}
+        />
+      </div>
+      <div>
+        <Button
+          label="Submit"
+          variant={ButtonVariants.SECONDARY}
+          onClick={() => {
+            if (value !== "") {
+              confirm(
+                "Are you sure you want to select " + value + " as your course?"
+              );
+            } else {
+              alert("Please select your course");
+            }
+          }}
+        />
+      </div>
+    </>
+  );
+};
+```

@@ -15,6 +15,7 @@ export * from "./components/Switch/Switch";
 export * from "./components/Radio/Radio";
 export * from "./components/Checkbox/Checkbox";
 export * from "./components/Loading/Loading";
+export * from "./components/Dropdown/Dropdown";
 
 // Icons
 export * from "./components/Icons/ClientsIcon/ClientsIcon";
