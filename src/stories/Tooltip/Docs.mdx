@@ -12,8 +12,8 @@ The `Tooltip` component provides a simple and effective way to display additiona
 | Name     | Type            | Required | Default       | Description                                                            |
 | -------- | --------------- | -------- | ------------- | ---------------------------------------------------------------------- |
 | trigger  | React.ReactNode | Yes      | -             | The element that triggers the display of the tooltip.                  |
-| content  | React.ReactNode | Yes      | -             | The content to be displayed within the tooltip.                        |
 | position | Positions       | No       | Positions.TOP | Specifies the position of the tooltip relative to its trigger element. |
+| children | React.ReactNode | Yes      | -             | The content to be displayed within the tooltip.                        |
 
 ### Positions
 
@@ -40,7 +40,9 @@ import { Tooltip, InfoIcon } from "@bmesol/bmes-components";
 export const SimpleTooltip = () => {
   return (
     <>
-      <Tooltip trigger={<InfoIcon />} content={<p>Tooltip content</p>} />
+      <Tooltip trigger={<InfoIcon />}>
+        <p>Tooltip content</p>
+      </Tooltip>
     </>
   );
 };
