@@ -30,15 +30,16 @@ root.render(
 
 ## Props
 
-| Name                | Type      | Default Value  | Description                                                  |
-| ------------------- | --------- | -------------- | ------------------------------------------------------------ |
-| title               | string    | -              | The title of the model.                                      |
-| description         | string    | -              | The description of the model.                                |
-| content (required)  | ReactNode | -              | The content of the model.                                    |
-| submitLabel         | string    | "Submit" | The label for the submit button.                             |
-| cancelLabel         | string    | "Cancel"       | The label for the cancel button.                             |
-| onSubmit (required) | function  | -              | Callback function invoked when the submit button is clicked. |
-| onCancel            | function  | -              | Callback function invoked when the cancel button is clicked. |
+| Name        | Type      | Default Value | Required | Description                                                                      |
+| ----------- | --------- | ------------- | -------- | -------------------------------------------------------------------------------- |
+| title       | string    | -             | No       | The title to display at the top of the model.                                    |
+| description | string    | -             | No       | A brief description or summary of the model's purpose.                           |
+| content     | ReactNode | -             | Yes      | The main content to be displayed within the model. This is a required parameter. |
+| close()     | function  | -             | No       | A function used to close the model.                                              |
+
+#### Notes:
+
+- The `close()` method is used to dismiss or close the model. When called, it triggers the action to hide or remove the model from the view, effectively closing it. This method does not require any parameters.
 
 ### Example
 
@@ -91,9 +92,22 @@ export const SampleModel = () => {
                         classNames="w-100"
                       />
                     </div>
+                    <div className="d-flex flex-md-row-reverse flex-column flex-md-row gap-3">
+                      <Button
+                        label="Save"
+                        variant={ButtonVariants.PRIMARY}
+                        onClick={() => model.close()}
+                        classNames="float-md-end"
+                      />
+                      <Button
+                        label="Cancel"
+                        variant={ButtonVariants.OUTLINE_SECONDARY}
+                        onClick={() => model.close()}
+                        classNames="float-md-end"
+                      />
+                    </div>
                   </form>
                 ),
-                onSubmit: () => {},
               })
             }
           />

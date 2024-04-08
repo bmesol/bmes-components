@@ -1,23 +1,24 @@
 interface ModelTypes {
   children: React.ReactNode;
 }
-
-interface ModelProps {
+interface ModelOpenProps{
   title?: string;
   description?: string;
   content: React.ReactNode;
-  submitLabel?: string;
-  cancelLabel?: string;
-  onSubmit: () => void;
-  onCancel?: () => void;
+}
+interface ModelProps extends ModelOpenProps {
+  close: Function;
 }
 
+
+
 interface ModelContextValues {
-  open: (props: ModelProps) => void;
+  open: (props: ModelOpenProps) => void;
+  close: () => void;
 }
 
 interface ModelProviderProps {
   children: React.ReactElement;
 }
 
-export { ModelTypes, ModelProps, ModelContextValues, ModelProviderProps };
+export { ModelTypes, ModelProps, ModelContextValues, ModelProviderProps, ModelOpenProps };
