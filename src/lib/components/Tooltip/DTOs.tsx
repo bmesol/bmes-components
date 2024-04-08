@@ -7,7 +7,7 @@ enum Positions {
 
 interface TooltipProps {
   trigger: React.ReactNode;
-  content: React.ReactNode;
+  children: React.ReactNode;
   position?: Positions;
 }
 
