@@ -29,3 +29,8 @@ export * from "./components/Icons/WorkerIcon/WorkersIcon";
 export * from "./components/Icons/InfoIcon/InfoIcon";
 export * from "./components/Icons/PhoneIcon/PhoneIcon";
 export * from "./components/Icons/SearchIcon/SearchIcon";
+export * from "./components/Icons/ChevronDownIcon/ChevronDownIcon";
+export * from "./components/Icons/TickIcon/TickIcon";
+export * from "./components/Icons/TrashIcon/TrashIcon";
+export * from "./components/Icons/MailIcon/MailIcon";
+export * from "./components/Icons/LocationIcon/LocationIcon";
