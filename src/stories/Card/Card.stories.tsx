@@ -45,7 +45,7 @@ export const Card_Sample: Story = {
             label="Forget pin?"
             variant={LinkVariants.DEFAULT}
             classNames="mt-2"
-            href=""
+            onClick={()=>{}}
           />
           <Button
             label="Sign in"
