@@ -1,0 +1,47 @@
+import * as TooltipStories from "./Tooltip.stories.tsx";
+import { Meta, Title, Story } from "@storybook/blocks";
+
+<Meta of={TooltipStories} />
+
+<Title />
+
+The `Tooltip` component provides a simple and effective way to display additional information or context when hovering over an element. It enhances user experience by providing supplementary details without cluttering the interface.
+
+## Props
+
+| Name     | Type            | Required | Default       | Description                                                            |
+| -------- | --------------- | -------- | ------------- | ---------------------------------------------------------------------- |
+| trigger  | React.ReactNode | Yes      | -             | The element that triggers the display of the tooltip.                  |
+| content  | React.ReactNode | Yes      | -             | The content to be displayed within the tooltip.                        |
+| position | Positions       | No       | Positions.TOP | Specifies the position of the tooltip relative to its trigger element. |
+
+### Positions
+
+The `Positions` enum specifies the position of the tooltip relative to its trigger element. It accepts one of the following values:
+
+- **TOP**: Positions the tooltip above the trigger element.
+- **RIGHT**: Positions the tooltip to the right of the trigger element.
+- **BOTTOM**: Positions the tooltip below the trigger element.
+- **LEFT**: Positions the tooltip to the left of the trigger element.
+
+By default, the tooltip is positioned at the top if the `position` prop is not provided.
+
+### Examples
+
+### Preview
+
+<Story of={TooltipStories.Sample_Tooltip} />
+
+### Code
+
+```tsx
+import { Tooltip, InfoIcon } from "@bmesol/bmes-components";
+
+export const SimpleTooltip = () => {
+  return (
+    <>
+      <Tooltip trigger={<InfoIcon />} content={<p>Tooltip content</p>} />
+    </>
+  );
+};
+```

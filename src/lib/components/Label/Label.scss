@@ -1,9 +1,9 @@
 @import "../../../styles/global.scss";
 
 @mixin Label($text-color) {
+  color: $text-color;
   height: var(--lg-unit);
   line-height: var(--lg-unit);
-  color: $text-color;
 }
 
 $label-colors: (
@@ -12,18 +12,18 @@ $label-colors: (
   secondary: var(--secondary-color),
   danger: var(--danger-color),
   success: var(--success-color),
-  warning: var(--warning-color)
+  warning: var(--warning-color),
 );
 
 @each $variant, $color in $label-colors {
-  label {
+  div .label {
     &.#{$variant} {
       a {
         @include Label($color);
         text-decoration: underline;
+        text-underline-offset: var(--sm-unit);
       }
-
-      span {
+      > span {
         @include Label($color);
       }
     }

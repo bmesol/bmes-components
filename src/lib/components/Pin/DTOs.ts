@@ -1,9 +1,9 @@
 interface PinProps {
-  label?: string;
   length: number;
+  label?: string;
   required?: boolean;
   value: string;
-  onChange: (newValue: string) => void;
+  onChange: Function;
 }
 
 export { PinProps };

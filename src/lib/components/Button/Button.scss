@@ -19,14 +19,16 @@ $button-variants: (
 );
 
 @each $variant, $colors in $button-variants {
-  .#{$variant} {
-    @include button(nth($colors, 1), nth($colors, 2));
-  }
-  .outline-#{$variant} {
-    @include button(white, nth($colors, 1));
-    border: 2px solid nth($colors, 1);
-  }
-  .outline-#{$variant}:hover {
-    @include button(nth($colors, 1), nth($colors, 2));
+  button {
+    &.#{$variant} {
+      @include button(nth($colors, 1), nth($colors, 2));
+    }
+    &.outline-#{$variant} {
+      @include button(white, nth($colors, 1));
+      border: 2px solid nth($colors, 1);
+    }
+    &.outline-#{$variant}:hover {
+      @include button(nth($colors, 1), nth($colors, 2));
+    }
   }
 }

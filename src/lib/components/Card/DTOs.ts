@@ -1,8 +1,6 @@
-import React ,{ ReactNode } from "react";
-
 interface CardProps {
-    children: ReactNode;
-    classNames?: string;
-  }
+  children: React.ReactNode;
+  classNames?: string;
+}
 
-  export{ CardProps }
+export { CardProps };

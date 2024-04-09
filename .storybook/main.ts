@@ -2,6 +2,7 @@ import type { StorybookConfig } from "@storybook/react-webpack5";
 
 const config: StorybookConfig = {
   stories: ["../src/**/*.mdx", "../src/**/*.stories.@(js|jsx|mjs|ts|tsx)"],
+  staticDirs: ['../public'],
 
   addons: [
     "@storybook/addon-links",
@@ -9,6 +10,7 @@ const config: StorybookConfig = {
     "@storybook/preset-create-react-app",
     "@storybook/addon-interactions",
     "@storybook/addon-toolbars",
+    "@storybook/addon-mdx-gfm"
   ],
 
   framework: {

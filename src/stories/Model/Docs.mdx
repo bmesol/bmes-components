@@ -1,0 +1,118 @@
+import * as ModelStories from "./Model.stories.tsx";
+import { Meta, Title, Story } from "@storybook/blocks";
+
+<Meta of={ModelStories} />
+
+<Title />
+
+The `Model` component is a versatile UI element that renders either as a dialog or a drawer based on the screen size. It provides a convenient way to display content along with a title, description, and action buttons like submit and cancel.
+
+## Usage
+
+**1. To use the Model component, you need to add `ModelProvider` in root of the application.**
+
+```tsx
+import { ModelProvider } from "@bmesol/bmes-components";
+```
+
+```tsx
+const root = ReactDOM.createRoot(
+  document.getElementById("root") as HTMLElement
+);
+root.render(
+  <ModelProvider>
+    <App />
+  </ModelProvider>
+);
+```
+
+**2. The `useModel` hook returns a `model` function that you can use to display a model.**
+
+## Props
+
+| Name        | Type      | Default Value | Required | Description                                                                      |
+| ----------- | --------- | ------------- | -------- | -------------------------------------------------------------------------------- |
+| title       | string    | -             | No       | The title to display at the top of the model.                                    |
+| description | string    | -             | No       | A brief description or summary of the model's purpose.                           |
+| content     | ReactNode | -             | Yes      | The main content to be displayed within the model. This is a required parameter. |
+| close()     | function  | -             | No       | A function used to close the model.                                              |
+
+#### Notes:
+
+- The `close()` method is used to dismiss or close the model. When called, it triggers the action to hide or remove the model from the view, effectively closing it. This method does not require any parameters.
+
+### Example
+
+### Preview
+
+<Story of={ModelStories.Sample_Model} />
+
+### Code
+
+```tsx
+import { Button, ButtonVariants } from "@bmesol/bmes-components";
+import { useModel } from "@bmesol/bmes-components";
+
+export const SampleModel = () => {
+  const model = useModel();
+
+  return (
+    <>
+      <Button
+        variant={ButtonVariants.PRIMARY}
+        label="Open Model"
+        onClick={() =>
+            model.open({
+                title: "Edit profile",
+                description:
+                  "Make changes to your profile here. Click save when you're done.",
+                content: (
+                  <form>
+                    <div className="grid gap-2">
+                      <Label
+                        type={LabelTypes.TEXT}
+                        label="User Name"
+                        variant={LabelVariants.DEFAULT}
+                      />
+                      <TextBox
+                        value={""}
+                        onChange={() => {}}
+                        classNames="w-100"
+                      />
+                    </div>
+                    <div className="grid gap-2">
+                      <Label
+                        type={LabelTypes.TEXT}
+                        label="Email"
+                        variant={LabelVariants.DEFAULT}
+                      />
+                      <TextBox
+                        value={""}
+                        onChange={() => {}}
+                        classNames="w-100"
+                      />
+                    </div>
+                    <div className="d-flex flex-md-row-reverse flex-column flex-md-row gap-3">
+                      <Button
+                        label="Save"
+                        variant={ButtonVariants.PRIMARY}
+                        onClick={() => model.close()}
+                        classNames="float-md-end"
+                      />
+                      <Button
+                        label="Cancel"
+                        variant={ButtonVariants.OUTLINE_SECONDARY}
+                        onClick={() => model.close()}
+                        classNames="float-md-end"
+                      />
+                    </div>
+                  </form>
+                ),
+              })
+            }
+          />
+      />
+    </>
+  );
+};
+```

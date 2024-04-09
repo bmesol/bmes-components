@@ -1,0 +1,35 @@
+import * as ProfileImage from "./ProfileImage.stories.ts";
+import { Meta, Title, Story } from "@storybook/blocks";
+
+<Meta of={ProfileImage} />
+
+<Title />
+
+The `Profile Image` component displays a user's profile image with customizable size options. If the `imgURL` is not provided, the `alt` first two sentences first letters will be displayed as the profile image.
+
+## Props
+
+| Name   | Type              | Default Value          | Description                                                                                                                             |
+| ------ | ----------------- | ---------------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
+| imgURL | string            | -                      | The URL of the image to be displayed.                                                                                                   |
+| alt    | string            | -                      | The alternative text for the image (for accessibility).                                                                                 |
+| size   | ProfileImageSizes | `ProfileImageSizes.MD` | The size of the profile image. Options: `ProfileImageSizes.SM`, `ProfileImageSizes.MD`, `ProfileImageSizes.LG`, `ProfileImageSizes.XL`. |
+
+## Usage
+
+```tsx
+import { ProfileImage, ProfileImageSizes } from "@bmesol/bmes-components";
+
+export const SampleProfile = () => {
+  return (
+    <>
+      <ProfileImage
+        imgURL="path_to_image.jpg"
+        alt="Tony stark"
+        size={ProfileImageSizes.SM}
+      />
+      Tony stark
+    </>
+  );
+};
+```
