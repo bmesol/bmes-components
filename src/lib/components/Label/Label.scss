@@ -16,11 +16,9 @@ $label-colors: (
 );
 
 @each $variant, $color in $label-colors {
-  div .label {
+  .label {
     &.#{$variant} {
-      > p {
-        @include Label($color);
-      }
+      @include Label($color);
     }
   }
 }

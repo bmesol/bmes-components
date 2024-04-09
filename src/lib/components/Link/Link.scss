@@ -16,13 +16,11 @@ $link-colors: (
 );
 
 @each $variant, $color in $link-colors {
-  div .link {
+  .link {
     &.#{$variant} {
-      a {
-        @include Link($color);
-        text-decoration: underline;
-        text-underline-offset: var(--sm-unit);
-      }
+      @include Link($color);
+      text-decoration: underline;
+      text-underline-offset: var(--sm-unit);
     }
   }
 }

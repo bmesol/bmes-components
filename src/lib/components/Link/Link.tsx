@@ -1,4 +1,4 @@
-import { LinkProps, LinkVariants } from "./DTOs";
+import { LinkProps, LinkVariants, LinkTargetTypes } from "./DTOs";
 import React from "react";
 import "./Link.scss";
 
@@ -6,12 +6,12 @@ const Link = (props: LinkProps) => {
   const { label = "", variant, href = "", target = "", onClick, classNames = "" } = props;
 
   return (
-    <div className={`link ${variant} ${classNames}`}>
-      <a href={href} target={target} onClick={onClick}>
+    <>
+      <a href={href} target={target} onClick={onClick} className={`link ${variant} ${classNames}`}>
         {label}
       </a>
-    </div>
+    </>
   );
 };
 
-export { Link, LinkVariants };
+export { Link, LinkVariants, LinkTargetTypes };

@@ -1,43 +1,32 @@
 The Link component is a versatile UI element designed for displaying various types of links, within a web application. It offers different variants to accommodate different styles and purposes.
 
-## Link Variants
+## Variants
 
-- **Default**: This label is styled as the default link label.
+| Variant   | Description                                                                                                            |
+| --------- | ---------------------------------------------------------------------------------------------------------------------- |
+| Default   | The default link style suitable for general links, providing a standard appearance without any specific emphasis.      |
+| Primary   | A prominent link style often used for important actions or primary navigation links, typically with a bold appearance. |
+| Secondary | A subdued link style used for secondary actions or less important links, designed to be less visually prominent.       |
+| Danger    | Indicates a potentially risky or destructive action when clicked, styled with colors or icons to signify caution.      |
+| Success   | Represents a successful action or positive outcome, styled to indicate success or completion of a task.                |
+| Warning   | Indicates a warning or cautionary message, typically used for important notifications or preemptive alerts.            |
 
-- **Primary**: This label is styled as the primary link label.
-
-- **Secondary**: This label is styled as the secondary link label.
-
-- **Danger**: This label is styled as the danger link label.
-
-- **Success**: This label is styled as the success link label.
-
-- **Warning**: This label is styled as the warning link label.
-
-## Usage
+## Props
 
 The Link component is a powerful and flexible UI element designed to accommodate a wide range of actions within a web application. Its versatility is enhanced by the following set of props:
 
-#### 1. `label` (string)
+| Property   | Type                | Description                                                                                    |
+| ---------- | ------------------- | ---------------------------------------------------------------------------------------------- |
+| label      | string              | The text to be displayed on the link.                                                          |
+| variant    | LinkVariants        | The variant of the link, e.g., LinkVariants.DEFAULT.                                           |
+| href       | string (optional)   | The URL of the page the link goes to.                                                          |
+| target     | LinkTargetTypes     | Specifies where to open the linked document. e.g., LinkTargetTypes.BLANK.                      |
+| onClick    | function (optional) | Defines the function to be executed when the link is clicked.                                  |
+| classNames | string (optional)   | Custom CSS classes to apply to the label, allowing further customization of the label styling. |
 
-- The text to be displayed on the link.
+#### **Notes :**
 
-#### 2. `variant` (LinkVariants)
-
-- The variant of the link, e.g., LinkVariants.DEFAULT.
-
-#### 3. `href` (string - optional)
-
-- The href specifies the URL of the page the link goes to.
-
-#### 4. `target` (string - optional)
-
-- Specifies where to open the linked document.
-
-#### 5. `onClick` (function - optional)
-
-- Defines the function to be executed when the link is clicked. This prop allows developers to seamlessly integrate custom behavior, making the Link component highly adaptable.
-
-#### 6. `classNames` (string - optional)
-
-- Offers the flexibility to apply additional custom CSS classes to the label. This prop enables developers to further customize the styling of the label component according to specific design requirements.
+- `LinkTargetTypes.SELF`: Opens the linked document in the same frame as it was clicked (this is default).
+- `LinkTargetTypes.BLANK`: Opens the linked document in a new window or tab.
+- `LinkTargetTypes.PARENT`: Opens the linked document in the parent frame.
+- `LinkTargetTypes.TOP`: Opens the linked document in the full body of the window.

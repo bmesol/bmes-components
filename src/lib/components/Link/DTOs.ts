@@ -7,13 +7,20 @@ enum LinkVariants {
   WARNING = "warning",
 }
 
+enum LinkTargetTypes {
+  SELF = "_self",
+  BLANK = "_blank",
+  PARENT = "_parent",
+  TOP = "_top",
+}
+
 interface LinkProps {
   label: string;
   variant: LinkVariants;
   href?: string;
+  target?: LinkTargetTypes;
   onClick?: () => void;
   classNames?: string;
-  target?: string;
 }
 
-export { LinkProps, LinkVariants };
+export { LinkProps, LinkVariants, LinkTargetTypes };

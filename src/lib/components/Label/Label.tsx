@@ -6,9 +6,9 @@ const Label = (props: LabelProps) => {
   const { label = "", variant, classNames = "" } = props;
 
   return (
-    <div className={`label ${variant} ${classNames}`}>
-      <p>{label}</p>
-    </div>
+    <>
+      <p className={`label ${variant} ${classNames}`}>{label}</p>
+    </>
   );
 };
 
