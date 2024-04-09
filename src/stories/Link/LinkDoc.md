@@ -1,0 +1,32 @@
+The Link component is a versatile UI element designed for displaying various types of links, within a web application. It offers different variants to accommodate different styles and purposes.
+
+## Variants
+
+| Variant   | Description                                                                                                            |
+| --------- | ---------------------------------------------------------------------------------------------------------------------- |
+| Default   | The default link style suitable for general links, providing a standard appearance without any specific emphasis.      |
+| Primary   | A prominent link style often used for important actions or primary navigation links, typically with a bold appearance. |
+| Secondary | A subdued link style used for secondary actions or less important links, designed to be less visually prominent.       |
+| Danger    | Indicates a potentially risky or destructive action when clicked, styled with colors or icons to signify caution.      |
+| Success   | Represents a successful action or positive outcome, styled to indicate success or completion of a task.                |
+| Warning   | Indicates a warning or cautionary message, typically used for important notifications or preemptive alerts.            |
+
+## Props
+
+The Link component is a powerful and flexible UI element designed to accommodate a wide range of actions within a web application. Its versatility is enhanced by the following set of props:
+
+| Property   | Type                | Description                                                                                    |
+| ---------- | ------------------- | ---------------------------------------------------------------------------------------------- |
+| label      | string              | The text to be displayed on the link.                                                          |
+| variant    | LinkVariants        | The variant of the link, e.g., LinkVariants.DEFAULT.                                           |
+| href       | string (optional)   | The URL of the page the link goes to.                                                          |
+| target     | LinkTargetTypes     | Specifies where to open the linked document. e.g., LinkTargetTypes.BLANK.                      |
+| onClick    | function (optional) | Defines the function to be executed when the link is clicked.                                  |
+| classNames | string (optional)   | Custom CSS classes to apply to the label, allowing further customization of the label styling. |
+
+#### **Notes :**
+
+- `LinkTargetTypes.SELF`: Opens the linked document in the same frame as it was clicked (this is default).
+- `LinkTargetTypes.BLANK`: Opens the linked document in a new window or tab.
+- `LinkTargetTypes.PARENT`: Opens the linked document in the parent frame.
+- `LinkTargetTypes.TOP`: Opens the linked document in the full body of the window.
