@@ -4,8 +4,9 @@ textarea {
   border: var(--textbox-border);
   border-radius: var(--border-radius);
   background: white;
-  color: var(--gray-color);
+  color: var(--gray-color) !important;
 }
+
 textarea:focus {
   border: 1px solid var(--primary-color);
   outline: none;

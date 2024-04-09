@@ -1,6 +1,6 @@
 import { Button, ButtonVariants } from "../../lib/components/Button/Button";
-import { LabelTypes, LabelVariants } from "../../lib/components/Label/DTOs";
 import { ModelProvider } from "../../lib/components/Model/ModelProvider";
+import { LabelVariants } from "../../lib/components/Label/DTOs";
 import { TextBox } from "../../lib/components/TextBox/TextBox";
 import { useModel } from "../../lib/components/Model/Model";
 import { Model } from "../../lib/components/Model/Model";
@@ -40,7 +40,6 @@ export const Sample_Model = {
                   >
                     <div className="grid gap-2">
                       <Label
-                        type={LabelTypes.TEXT}
                         label="User Name"
                         variant={LabelVariants.DEFAULT}
                       />
@@ -52,7 +51,6 @@ export const Sample_Model = {
                     </div>
                     <div className="grid gap-2">
                       <Label
-                        type={LabelTypes.TEXT}
                         label="Email"
                         variant={LabelVariants.DEFAULT}
                       />
