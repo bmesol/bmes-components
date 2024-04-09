@@ -1,12 +1,12 @@
 @import "../../../styles/global.scss";
 
-@mixin Label($text-color) {
+@mixin Link($text-color) {
   color: $text-color;
   height: var(--lg-unit);
   line-height: var(--lg-unit);
 }
 
-$label-colors: (
+$link-colors: (
   default: var(--gray-color),
   primary: var(--primary-color),
   secondary: var(--secondary-color),
@@ -15,11 +15,13 @@ $label-colors: (
   warning: var(--warning-color),
 );
 
-@each $variant, $color in $label-colors {
-  div .label {
+@each $variant, $color in $link-colors {
+  div .link {
     &.#{$variant} {
-      > p {
-        @include Label($color);
+      a {
+        @include Link($color);
+        text-decoration: underline;
+        text-underline-offset: var(--sm-unit);
       }
     }
   }

@@ -1,4 +1,4 @@
-enum LabelVariants {
+enum LinkVariants {
   DEFAULT = "default",
   PRIMARY = "primary",
   SECONDARY = "secondary",
@@ -7,10 +7,13 @@ enum LabelVariants {
   WARNING = "warning",
 }
 
-interface LabelProps {
+interface LinkProps {
   label: string;
-  variant: LabelVariants;
+  variant: LinkVariants;
+  href?: string;
+  onClick?: () => void;
   classNames?: string;
+  target?: string;
 }
 
-export { LabelProps, LabelVariants };
+export { LinkProps, LinkVariants };
