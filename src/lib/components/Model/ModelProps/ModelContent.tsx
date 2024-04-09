@@ -11,7 +11,7 @@ const ModelContent = ({ children }: ModelTypes) => {
       <DialogContent className="sm:max-w-[425px]">{children}</DialogContent>
     );
   }
-  return <DrawerContent className="px-4">{children}</DrawerContent>;
+  return <DrawerContent className="px-4 pb-4">{children}</DrawerContent>;
 };
 
 export { ModelContent };

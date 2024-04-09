@@ -4,7 +4,7 @@ import { TooltipProps, Positions } from "./DTOs";
 import React, { useState } from "react";
 
 const Tooltip = (props: TooltipProps) => {
-  const { trigger, content, position } = props;
+  const { trigger, children, position } = props;
   const isTouchDevices = useModelDevice("(max-width: 768px)");
   const [isTooltipOpen, setIsTooltipOpen] = useState(false);
 
@@ -16,7 +16,7 @@ const Tooltip = (props: TooltipProps) => {
             <TooltipTrigger onClick={() => setIsTooltipOpen(!isTooltipOpen)}>
               {trigger}
             </TooltipTrigger>
-            <TooltipContent side={position}>{content}</TooltipContent>
+            <TooltipContent side={position}>{children}</TooltipContent>
           </SharedTooltip>
         </TooltipProvider>
       </>
@@ -28,7 +28,7 @@ const Tooltip = (props: TooltipProps) => {
       <TooltipProvider>
         <SharedTooltip>
           <TooltipTrigger>{trigger}</TooltipTrigger>
-          <TooltipContent side={position}>{content}</TooltipContent>
+          <TooltipContent side={position}>{children}</TooltipContent>
         </SharedTooltip>
       </TooltipProvider>
     </>

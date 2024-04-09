@@ -5,24 +5,20 @@ import { useModel } from "./useModel";
 import { Model } from "./Model";
 
 const ModelProvider = ({ children }: ModelProviderProps) => {
-  const { contextValue, models } = useModel();
+  const { contextValue, model } = useModel();
   return (
     <ModelContext.Provider value={contextValue}>
       {children}
-      {models.map((model) => {
-        return (
-          <Model
-            key={Date.now()}
-            content={model.content}
-            title={model.title}
-            description={model.description}
-            submitLabel={model.submitLabel}
-            cancelLabel={model.cancelLabel}
-            onSubmit={model.onSubmit}
-            onCancel={model.onCancel}
-          />
-        );
-      })}
+      {model && (
+        <Model
+          key={Date.now()}
+          content={model.content}
+          title={model.title}
+          description={model.description}
+          close={() => contextValue.close()}
+        />
+      )
+      }
     </ModelContext.Provider>
   );
 };

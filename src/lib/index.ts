@@ -10,10 +10,11 @@ export * from "./components/ProfileImage/ProfileImage";
 export * from "./components/Model/Model";
 export * from "./components/Textarea/Textarea";
 export * from "./components/SearchBox/SearchBox";
-export * from "./components/Tooltip/Tooltip"
+export * from "./components/Tooltip/Tooltip";
 export * from "./components/Switch/Switch";
 export * from "./components/Radio/Radio";
 export * from "./components/Checkbox/Checkbox";
+export * from "./components/Loading/Loading";
 
 // Icons
 export * from "./components/Icons/ClientsIcon/ClientsIcon";
@@ -26,5 +27,10 @@ export * from "./components/Icons/SuppliersIcon/SuppliersIcon";
 export * from "./components/Icons/UsersIcon/UsersIcon";
 export * from "./components/Icons/WorkerIcon/WorkersIcon";
 export * from "./components/Icons/InfoIcon/InfoIcon";
-export * from "./components/Icons/MenuIcon/MenuIcon";
+export * from "./components/Icons/PhoneIcon/PhoneIcon";
 export * from "./components/Icons/SearchIcon/SearchIcon";
+export * from "./components/Icons/ChevronDownIcon/ChevronDownIcon";
+export * from "./components/Icons/TickIcon/TickIcon";
+export * from "./components/Icons/TrashIcon/TrashIcon";
+export * from "./components/Icons/MailIcon/MailIcon";
+export * from "./components/Icons/LocationIcon/LocationIcon";

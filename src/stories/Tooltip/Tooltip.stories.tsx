@@ -17,7 +17,9 @@ export const Sample_Tooltip = {
       return (
         <>
           <div className="mt-3">
-            <Tooltip trigger={<InfoIcon />} content={<p>Tooltip content</p>} />
+            <Tooltip trigger={<InfoIcon />}>
+              <p>Tooltip content</p>
+            </Tooltip>
           </div>
         </>
       );
