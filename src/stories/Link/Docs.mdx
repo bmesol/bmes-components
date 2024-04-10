@@ -1,3 +1,11 @@
+import { Meta, Title, Story } from "@storybook/blocks";
+import * as LinkStories from "./Link.stories.tsx";
+import { Preview } from "./../Preview.tsx";
+
+<Meta of={LinkStories} />
+
+<Title />
+
 The Link component is a versatile UI element designed for displaying various types of links, within a web application. It offers different variants to accommodate different styles and purposes.
 
 ## Variants
@@ -15,7 +23,7 @@ The Link component is a versatile UI element designed for displaying various typ
 
 The Link component is a powerful and flexible UI element designed to accommodate a wide range of actions within a web application. Its versatility is enhanced by the following set of props:
 
-| Property   | Type                | Description                                                                                    |
+| Props      | Type                | Description                                                                                    |
 | ---------- | ------------------- | ---------------------------------------------------------------------------------------------- |
 | label      | string              | The text to be displayed on the link.                                                          |
 | variant    | LinkVariants        | The variant of the link, e.g., LinkVariants.DEFAULT.                                           |
@@ -30,3 +38,28 @@ The Link component is a powerful and flexible UI element designed to accommodate
 - `LinkTargetTypes.BLANK`: Opens the linked document in a new window or tab.
 - `LinkTargetTypes.PARENT`: Opens the linked document in the parent frame.
 - `LinkTargetTypes.TOP`: Opens the linked document in the full body of the window.
+
+### Preview
+
+<Preview>
+  <Story of={LinkStories.SampleLink} />
+</Preview>
+
+### Code
+
+```tsx
+import { Link, LinkVariants } from "@bmesol/bmes-components";
+
+export const SampleLink = () => {
+  return (
+    <>
+      <Link
+        label="Contact Us"
+        variant={LinkVariants.PRIMARY}
+        href="https://www.bmesolutions.in/contact/"
+        target={LinkTargetTypes.BLANK}
+      />
+    </>
+  );
+};
+```

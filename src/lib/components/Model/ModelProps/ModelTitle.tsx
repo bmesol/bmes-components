@@ -1,7 +1,7 @@
 import { DialogTitle } from "../../../shared/components/Dialog/Dialog";
 import { DrawerTitle } from "../../../shared/components/Drawer/Drawer";
-import { ModelTypes } from "../DTOs";
 import { useModelDevice } from "../useModelDevice";
+import { ModelTypes } from "../DTOs";
 import React from "react";
 
 const ModelTitle = ({ children }: ModelTypes) => {

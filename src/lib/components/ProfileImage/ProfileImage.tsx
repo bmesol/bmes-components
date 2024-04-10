@@ -1,5 +1,5 @@
-import { useProfileImage } from "./useProfileImage";
 import { ProfileImageProps, ProfileImageSizes } from "./DTOs";
+import { useProfileImage } from "./useProfileImage";
 import "./ProfileImage.scss";
 import React from "react";
 

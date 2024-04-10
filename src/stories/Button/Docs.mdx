@@ -1,0 +1,90 @@
+import { Meta, Title, Story } from "@storybook/blocks";
+import * as ButtonStories from "./Button.stories.tsx";
+import { Preview } from "./../Preview.tsx";
+
+<Meta of={ButtonStories} />
+
+<Title />
+
+The Button component is a versatile UI element that allows users to trigger various actions within a web application. It comes with two distinct variants: Regular and Outline, each offering different visual styles to suit different design needs.
+
+## Regular Variant Buttons
+
+- **Primary Button**: The primary button is styled as the main action button, emphasizing the most important action on a page.
+
+- **Secondary Button**: The secondary button serves as an alternative action button, providing users with additional options.
+
+- **Success Button**: The success button is styled for actions indicating success, such as form submissions.
+
+- **Warning Button**: The warning button is designed for actions that require user attention or confirmation.
+
+- **Danger Button**: The danger button signifies actions with potentially harmful consequences and is styled accordingly.
+
+## Outline Variant Buttons
+
+- **Outline Primary Button**: The outline primary button provides a subtle, outlined style for the main action, suitable for lighter backgrounds.
+
+- **Outline Secondary Button**: The outline secondary button offers an outlined alternative action style, complementing the primary actions.
+
+- **Outline Success Button**: The outline success button is an outlined version suitable for actions indicating success.
+
+- **Outline Warning Button**: The outline warning button features an outlined style, ideal for drawing attention to actions that require caution.
+
+- **Outline Danger Button**: The outline danger button provides an outlined style for actions with potentially harmful consequences.
+
+## Props
+
+The Button component is a powerful and flexible UI element designed to accommodate a wide range of actions within a web application. Its versatility is enhanced by the following set of props:
+
+| Props      | Type           | Required | Description                                                                                                        |
+| ---------- | -------------- | -------- | ------------------------------------------------------------------------------------------------------------------ |
+| icon       | ReactNode      | No       | An optional icon to be displayed within the button. If provided, the icon will appear before the label text.       |
+| label      | string         | Yes      | Specifies the text label for the button. It is recommended to keep the label concise, not exceeding 13 characters. |
+| variant    | ButtonVariants | Yes      | Utilizes the ButtonVariants constants to specify the visual style of the button.                                   |
+| onClick    | function       | Yes      | Defines the function to be executed when the button is clicked.                                                    |
+| classNames | string         | No       | Offers the flexibility to apply additional custom CSS classes to the button.                                       |
+| isDisabled | boolean        | No       | Allows developers to control the state of the button, making it either enabled or disabled.                        |
+
+### Preview
+
+<Preview classNames="justify-content-around">
+  <Story of={ButtonStories.RegularVariant} />
+  <Story of={ButtonStories.OutlineVariant} />
+  <Story of={ButtonStories.RegularVariantWithIcon} />
+  <Story of={ButtonStories.OutlineVariantWithIcon} />
+</Preview>
+
+### Code
+
+```tsx
+import { Button, ButtonVariants } from "@bmesol/bmes-components";
+
+export const SampleButtons = () => {
+  return (
+    <div className="d-flex justify-content-around">
+      <Button
+        label="Regular"
+        variant={ButtonVariants.PRIMARY}
+        onClick={() => alert("You clicked on Regular Variant Button")}
+      />
+      <Button
+        label="Outline"
+        variant={ButtonVariants.OUTLINE_SECONDARY}
+        onClick={() => alert("You clicked on Outline Variant Button")}
+      />
+      <Button
+        icon={<SearchIcon />}
+        label="Search"
+        variant={ButtonVariants.PRIMARY}
+        onClick={() => alert("You clicked on Regular Variant with Icon Button")}
+      />
+      <Button
+        icon={<SearchIcon />}
+        label="Search"
+        variant={ButtonVariants.OUTLINE_SECONDARY}
+        onClick={() => alert("You clicked on Outline Variant with Icon Button")}
+      />
+    </div>
+  );
+};
+```

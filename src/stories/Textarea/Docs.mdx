@@ -1,5 +1,6 @@
 import * as TextareaStories from "./Textarea.stories.tsx";
 import { Meta, Title, Story } from "@storybook/blocks";
+import { Preview } from "./../Preview.tsx";
 
 <Meta of={TextareaStories} />
 
@@ -9,16 +10,15 @@ The `Textarea` component is a customizable text input field that allows users to
 
 ## Props
 
-| Prop        | Type     | Required | Default Value | Description                                                                                                                                                         |
-| ----------- | -------- | :------: | ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| label       | string   |    No    | -             | A label for the textarea, describing the purpose of the input.                                                                                                      |
-| length      | number   |   Yes    | -             | The maximum length of the text that can be entered into the textarea.                                                                                               |
-| value       | string   |   Yes    | -             | The current value of the textarea.                                                                                                                                  |
-| onChange    | Function |   Yes    | -             | A callback function that is triggered when the textarea value changes. It takes one argument, currentValue, which is the current value of the textarea as a string. |
-| placeholder | string   |    No    | -             | A placeholder text displayed in the textarea when it is empty.                                                                                                      |
-| isDisabled  | boolean  |    No    | false         | Specifies whether the textarea is disabled or not.                                                                                                                  |
-| classNames  | string   |    No    | -             | Additional CSS classes to be applied to the textarea.                                                                                                               |
-|             |
+| Props       | Type     | Required | Description                                                                                                                                                         |
+| ----------- | -------- | :------: | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| label       | string   |    No    | A label for the textarea, describing the purpose of the input.                                                                                                      |
+| length      | number   |   Yes    | The maximum length of the text that can be entered into the textarea.                                                                                               |
+| value       | string   |   Yes    | The current value of the textarea.                                                                                                                                  |
+| onChange    | Function |   Yes    | A callback function that is triggered when the textarea value changes. It takes one argument, currentValue, which is the current value of the textarea as a string. |
+| placeholder | string   |    No    | A placeholder text displayed in the textarea when it is empty.                                                                                                      |
+| isDisabled  | boolean  |    No    | Specifies whether the textarea is disabled or not.                                                                                                                  |
+| classNames  | string   |    No    | Additional CSS classes to be applied to the textarea.                                                                                                               |
 
 ### Notes
 
@@ -30,15 +30,11 @@ The `Textarea` component is a customizable text input field that allows users to
 
 - You can apply custom styles to the textarea using the `classNames` prop.
 
-### Example
-
 ### Preview
 
-#
-
-<Story of={TextareaStories.Sample_Textarea} />
-
-#
+<Preview>
+  <Story of={TextareaStories.SampleTextarea} />
+</Preview>
 
 ### Code
 
@@ -47,22 +43,18 @@ import { Textarea, Button, ButtonVariants } from "@bmesol/bmes-components";
 
 export const SimpleTextarea = () => {
   const [value, setValue] = useState("");
-  const handleTextareaChange = (currentValue: string) => {
-    setValue(currentValue);
-  };
   return (
     <>
       <Textarea
         label="Notes"
         length={1000}
         value={value}
-        onChange={handleTextareaChange}
+        onChange={(inputValue: string) => setValue(inputValue)}
         placeholder="Enter value here"
       />
       <Button
         variant={ButtonVariants.PRIMARY}
         label="Submit"
-        classNames="bg-dark text-bg-dark m-3"
         onClick={() => alert("Your Notes : " + value)}
       />
     </>

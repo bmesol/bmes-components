@@ -1,5 +1,6 @@
-import * as SearchBox from "./SearchBox.stories.tsx";
 import { Meta, Title, Story } from "@storybook/blocks";
+import * as SearchBox from "./SearchBox.stories.tsx";
+import { Preview } from "./../Preview.tsx";
 
 <Meta of={SearchBox} />
 
@@ -9,30 +10,28 @@ The `SearchBox` component provides a user interface element for inputting search
 
 ## Props
 
-| Name     | Type                            | Required | Description                                                                                                                                                                 |
+| Props     | Type                            | Required | Description                                                                                                                                                                 |
 | -------- | ------------------------------- | :------: | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | onSearch | `(searchValue: string) => void` |   Yes    | A function that will be called when the user initiates a search. It takes one parameter: `searchValue`, a string representing the current search query entered by the user. |
 
-### Examples
-
 ### Preview
 
-<Story of={SearchBox.Sample_SearchBox} />
+<Preview>
+  <Story of={SearchBox.SampleSearchBox} />
+</Preview>
 
 ### Code
-
-## Usage
 
 ```tsx
 import { SearchBox } from "@bmesol/bmes-components";
 
 export const SampleSearchBox = () => {
-  const handleSearchButton = (searchValue: string) => {
-    alert("You Searched : " + searchValue);
+  const handleSearch = (searchString: string) => {
+    alert("You Searched : " + searchString);
   };
   return (
     <>
-      <SearchBox onSearch={handleSearchButton} />
+      <SearchBox onSearch={handleSearch} />
     </>
   );
 };

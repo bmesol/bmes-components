@@ -1,3 +1,11 @@
+import { Meta, Title, Story } from "@storybook/blocks";
+import * as LabelStories from "./Label.stories.ts";
+import { Preview } from "./../Preview.tsx";
+
+<Meta of={LabelStories} />
+
+<Title />
+
 The Label component is a versatile UI element designed for displaying various types of labels, within a web application. It offers different variants to accommodate different styles and purposes.
 
 ## Variants
@@ -15,8 +23,31 @@ The Label component is a versatile UI element designed for displaying various ty
 
 The Label component is a powerful and flexible UI element designed to accommodate a wide range of actions within a web application. Its versatility is enhanced by the following set of props:
 
-| Property   | Type              | Description                                                                                    |
+| Props      | Type              | Description                                                                                    |
 | ---------- | ----------------- | ---------------------------------------------------------------------------------------------- |
 | label      | string            | The text to be displayed on the label.                                                         |
-| variant    | LinkVariants      | The variant of the label, e.g., LabelVariants.DEFAULT.                                         |
+| variant    | LabelVariants     | The variant of the label, e.g., LabelVariants.DEFAULT.                                         |
 | classNames | string (optional) | Custom CSS classes to apply to the label, allowing further customization of the label styling. |
+
+### Preview
+
+<Preview>
+  <Story of={LabelStories.SampleLabel} />
+</Preview>
+
+### Code
+
+```tsx
+import { Label, LabelVariants } from "@bmesol/bmes-components";
+
+export const SampleLabel = () => {
+  return (
+    <>
+      <Label
+        label="Not have an account?"
+        variant={LabelVariants.PRIMARY}
+      />
+    </>
+  );
+};
+```

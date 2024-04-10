@@ -1,4 +1,4 @@
-import { ProfileImage } from "../../lib/components/ProfileImage/ProfileImage";
+import { ProfileImage, ProfileImageSizes } from "../../lib";
 import type { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof ProfileImage> = {
@@ -13,8 +13,9 @@ export default meta;
 
 type Story = StoryObj<typeof meta>;
 
-export const Profile_Image: Story = {
+export const SampleProfile: Story = {
   args: {
     alt: "Tony stark",
+    size: ProfileImageSizes.SM,
   },
 };

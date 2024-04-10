@@ -1,5 +1,6 @@
-import * as ToastStories from "./Toast.stories.tsx";
 import { Meta, Title, Story } from "@storybook/blocks";
+import * as ToastStories from "./Toast.stories.tsx";
+import { Preview } from "./../Preview.tsx";
 
 <Meta of={ToastStories}/>
 
@@ -59,13 +60,13 @@ export const ToastDemo = () => {
 }
 ```
 
-### Examples
-
 ### 1. Toast Message
 
 ### Preview
 
-<Story of={ToastStories.Toast_Message}/>
+<Preview>
+  <Story of={ToastStories.ToastMessage}/>
+</Preview>
 
 ### Code
 
@@ -107,7 +108,9 @@ export const ToastMessageSimple = () => {
 
 ### Preview
 
-<Story of={ToastStories.Toast_Heading_Message}/>
+<Preview>
+  <Story of={ToastStories.ToastHeadingMessage}/>
+</Preview>
 
 ### Code
 

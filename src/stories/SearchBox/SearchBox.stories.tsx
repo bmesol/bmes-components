@@ -1,4 +1,4 @@
-import { SearchBox } from "../../lib/components/SearchBox/SearchBox";
+import { SearchBox } from "../../lib";
 import React from "react";
 
 const meta = {
@@ -10,20 +10,17 @@ const meta = {
 
 export default meta;
 
-export const Sample_SearchBox = {
+export const SampleSearchBox = {
   render: () => {
-    const App = () => {
-      const handleSearchButton = (value: string) => {
-        alert("You Searched : " + value);
-      };
-      return (
-        <>
-          <div className="my-4" style={{minWidth: "50vw"}}>
-            <SearchBox onSearch={handleSearchButton} />
-          </div>
-        </>
-      );
+    const handleSearch = (searchString: string) => {
+      alert("You Searched : " + searchString);
     };
-    return <App />;
+    return (
+      <>
+        <div style={{ minWidth: "50vw" }}>
+          <SearchBox onSearch={handleSearch} />
+        </div>
+      </>
+    );
   },
 };

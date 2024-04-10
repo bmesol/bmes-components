@@ -1,5 +1,6 @@
-import * as ModelStories from "./Model.stories.tsx";
 import { Meta, Title, Story } from "@storybook/blocks";
+import * as ModelStories from "./Model.stories.tsx";
+import { Preview } from "./../Preview.tsx";
 
 <Meta of={ModelStories} />
 
@@ -30,22 +31,22 @@ root.render(
 
 ## Props
 
-| Name        | Type      | Default Value | Required | Description                                                                      |
-| ----------- | --------- | ------------- | -------- | -------------------------------------------------------------------------------- |
-| title       | string    | -             | No       | The title to display at the top of the model.                                    |
-| description | string    | -             | No       | A brief description or summary of the model's purpose.                           |
-| content     | ReactNode | -             | Yes      | The main content to be displayed within the model. This is a required parameter. |
-| close()     | function  | -             | No       | A function used to close the model.                                              |
+| Props       | Type      | Required | Description                                                                      |
+| ----------- | --------- | -------- | -------------------------------------------------------------------------------- |
+| title       | string    | No       | The title to display at the top of the model.                                    |
+| description | string    | No       | A brief description or summary of the model's purpose.                           |
+| content     | ReactNode | Yes      | The main content to be displayed within the model. This is a required parameter. |
+| close()     | function  | No       | A function used to close the model.                                              |
 
-#### Notes:
+#### Notes :
 
 - The `close()` method is used to dismiss or close the model. When called, it triggers the action to hide or remove the model from the view, effectively closing it. This method does not require any parameters.
 
-### Example
-
 ### Preview
 
-<Story of={ModelStories.Sample_Model} />
+<Preview>
+  <Story of={ModelStories.SampleModel} />
+</Preview>
 
 ### Code
 

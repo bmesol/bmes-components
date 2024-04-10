@@ -1,21 +1,13 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { Button } from "../../lib/components/Button/Button";
-import { ButtonVariants } from "../../lib/components/Button/DTOs";
-import ButtonDoc from "./ButtonDoc.md";
+import { Button, ButtonVariants } from "../../lib";
 import { SearchIcon } from "lucide-react";
 import React from "react";
 
 const meta: Meta<typeof Button> = {
   title: "Components/Button",
-  tags: ["autodocs"],
   component: Button,
   parameters: {
     layout: "centered",
-    docs: {
-      description: {
-        component: ButtonDoc,
-      },
-    },
   },
 };
 
@@ -25,7 +17,7 @@ type Story = StoryObj<typeof meta>;
 
 /* --- Stories for Regular Button Variants --- */
 
-export const Regular_Variant: Story = {
+export const RegularVariant: Story = {
   args: {
     label: "Regular",
     variant: ButtonVariants.PRIMARY,
@@ -38,10 +30,10 @@ export const Regular_Variant: Story = {
 
 /* --- Stories for Outline Button Variants --- */
 
-export const Outline_Variant: Story = {
+export const OutlineVariant: Story = {
   args: {
     label: "Outline",
-    variant: ButtonVariants.OUTLINE_PRIMARY,
+    variant: ButtonVariants.OUTLINE_SECONDARY,
     onClick: () => {
       alert("You clicked on Outline Variant Button");
     },
@@ -51,7 +43,7 @@ export const Outline_Variant: Story = {
 
 /* --- Stories for Regular Button with Icon Variants --- */
 
-export const Regular_Variant_With_Icon: Story = {
+export const RegularVariantWithIcon: Story = {
   args: {
     icon: <SearchIcon />,
     label: "Search",
@@ -65,11 +57,11 @@ export const Regular_Variant_With_Icon: Story = {
 
 /* --- Stories for Outline Button with Icon Variants --- */
 
-export const Outline_Variant_With_Icon: Story = {
+export const OutlineVariantWithIcon: Story = {
   args: {
     icon: <SearchIcon />,
     label: "Search",
-    variant: ButtonVariants.OUTLINE_PRIMARY,
+    variant: ButtonVariants.OUTLINE_SECONDARY,
     onClick: () => {
       alert("You clicked on Outline Variant with Icon Button");
     },
