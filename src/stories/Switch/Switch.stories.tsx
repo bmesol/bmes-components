@@ -1,6 +1,4 @@
-import { ToastProvider, useToast } from "./../../lib/components/Toast/Toast";
-import { Button, ButtonVariants } from "../../lib/components/Button/Button";
-import { Switch } from "../../lib/components/Switch/Switch";
+import { Switch, ToastProvider, useToast, Button, ButtonVariants } from "./../../lib";
 import React, { useState } from "react";
 
 const meta = {
@@ -12,8 +10,8 @@ const meta = {
 
 export default meta;
 
-export const Sample_Switch = {
-  render: (children: React.ReactElement): JSX.Element => {
+export const SampleSwitch = {
+  render: () => {
     const App = () => {
       const toast = useToast();
       const [isActive, setIsActive] = useState(false);
@@ -22,17 +20,16 @@ export const Sample_Switch = {
         if (isActive) {
           toast.success("Active User");
         } else {
-          toast.info("Inactive User");
+          toast.info("In Active User");
         }
       };
       return (
         <>
-          <Switch label="Is Active" onCheckedChange={setIsActive} classNames="mt-4"/>
-
+          <Switch label="Is Active" onCheckedChange={setIsActive} />
           <Button
             variant={ButtonVariants.PRIMARY}
             label="Show Status"
-            classNames="bg-dark text-bg-dark mt-4 mb-2"
+            classNames="bg-dark text-bg-dark mt-4"
             onClick={handleStatusButton}
           />
         </>

@@ -14,6 +14,7 @@ const useCheckbox = ({ selectedValues, onCheckedChange }: UseCheckboxProps) => {
     const updatedValues = checked ? [...currentValues, value] : currentValues.filter((item) => item !== value);
     setCurrentValues(updatedValues);
   };
+
   return {
     handleCheckedChange,
   };

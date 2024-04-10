@@ -1,6 +1,4 @@
-import { Button, ButtonVariants, ToastProvider, useToast } from "../../lib";
-import { Checkbox } from "../../lib/components/Checkbox/Checkbox";
-import { Directions } from "../../lib";
+import { Checkbox, Directions, Button, ButtonVariants, ToastProvider, useToast } from "../../lib";
 import type { Meta, StoryObj } from "@storybook/react";
 import React, { useState } from "react";
 
@@ -15,7 +13,7 @@ export default meta;
 
 type Story = StoryObj<typeof Checkbox>;
 
-export const Sample_Checkbox: Story = {
+export const SampleCheckbox: Story = {
   render: () => {
     const App = () => {
       const toast = useToast();
@@ -38,13 +36,9 @@ export const Sample_Checkbox: Story = {
         <>
           <div className="my-4">
             <Checkbox items={statementList} direction={Directions.VERTICAL} onCheckedChange={handleCheckedChange} />
-
-            <Button
-              label="Submit"
-              variant={ButtonVariants.PRIMARY}
-              onClick={handleSubmitButton}
-              classNames="mt-4"
-            />
+            <div className="text-center">
+              <Button label="Submit" variant={ButtonVariants.PRIMARY} onClick={handleSubmitButton} classNames="mt-4" />
+            </div>
           </div>
         </>
       );

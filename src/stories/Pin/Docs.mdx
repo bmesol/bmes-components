@@ -1,0 +1,62 @@
+import { Meta, Title, Story } from "@storybook/blocks";
+import * as PinStories from "./Pin.stories.ts";
+import { SamplePin } from "./SamplePin.tsx";
+import { Preview } from "./../Preview.tsx";
+
+<Meta of={PinStories} />
+
+<Title />
+
+The Pin component is a user interface element designed for entering PINS in a numeric format. Below, I'll provide a detailed explanation of its usage and their functionalities.
+
+## Props
+
+The Pin component is typically utilized for PIN entry purposes in forms or authentication-related interfaces. Its versatility is enhanced by the following set of props:
+
+| Props      | Type                           | Required | Description                                                                                                                 |
+| ---------- | ------------------------------ | -------- | --------------------------------------------------------------------------------------------------------------------------- |
+| length     | number                         | Yes      | Defines the length of the PIN input field.                                                                                  |
+| label      | string                         | No       | Specifies the label associated with the Pin component, providing contextual information about the purpose of the PIN input. |
+| value      | string                         | Yes      | Represents the current value of the Pin component, allowing control of the input's value from the parent component.         |
+| onChange   | `(inputValue: string) => void` | Yes      | A callback function triggered when the Pin input value changes, providing the updated value as an argument.                 |
+| isDisabled | boolean                        | No       | Specifies whether the Pin input is disabled, preventing user interactions.                                                  |
+| required   | boolean                        | No       | Indicates whether the Pin input is mandatory, enforcing users to fill in the field before submitting a form.                |
+
+### Preview
+
+<Preview>
+  <SamplePin />
+</Preview>
+
+### Code
+
+```tsx
+import { Pin, Button, ButtonVariants } from "@bmesol/bmes-components";
+
+export const SamplePin = () => {
+  const [pin, setPin] = useState("");
+
+  const handleButtonClick = () => {
+    if (pin.length) {
+      alert("Your Pin : " + pin);
+    } else {
+      alert("Please enter your pin");
+    }
+  };
+
+  return (
+      <Pin
+        label="Pin"
+        length={4}
+        value={pin}
+        onChange={(inputValue: string) => setPin(inputValue)}
+      />
+      <Button
+        icon={<Eye />}
+        label="Show My Pin"
+        variant={ButtonVariants.DANGER}
+        onClick={handleButtonClick}
+      />
+  );
+};
+```

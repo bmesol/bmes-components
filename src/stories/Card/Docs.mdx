@@ -1,0 +1,63 @@
+import { Meta, Title, Story } from "@storybook/blocks";
+import * as CardStories from "./Card.stories.tsx";
+import { Preview } from "./../Preview.tsx";
+
+<Meta of={CardStories} />
+
+<Title />
+
+The Card component is a reusable component designed for creating customizable cards to present content. Cards serve as a flexible and aesthetically pleasing means to display content and actions. Whether you're showcasing text, images, buttons, or other components, the Card component provides a cohesive and visually appealing presentation.
+
+## Props
+
+The Card component is a powerful and flexible UI element designed to accommodate a wide range of actions within a web application. Its versatility is enhanced by the following set of props:
+
+| Props      | Type      | Required | Description                                                                                          |
+| ---------- | --------- | -------- | ---------------------------------------------------------------------------------------------------- |
+| children   | ReactNode | Yes      | Represents the content to be displayed inside the card. It can include any valid ReactNode.          |
+| classNames | string    | No       | Offers the flexibility to apply additional custom CSS classes to the card for styling customization. |
+
+### Preview
+
+<Preview>
+  <Story of={CardStories.SampleCard} />
+</Preview>
+
+### Code
+
+```tsx
+import { Card, ProfileImage, ProfileImageSizes, Label, LabelVariants, PhoneIcon } from "@bmesol/bmes-components";
+
+export const SampleCard = () => {
+  return (
+    <Card classNames="d-flex flex-row justify-content-between">
+      <div className="d-flex align-items-center">
+        <ProfileImage alt="Tony stark" size={ProfileImageSizes.SM} />
+        <div className="ms-4">
+          <Label
+            label="Tony stark"
+            variant={LabelVariants.DEFAULT}
+            classNames="fw-bold"
+          />
+          <Label
+            label="Admin"
+            variant={LabelVariants.DEFAULT}
+            classNames="my-2"
+          />
+          <div className="d-flex align-items-center phone">
+            <PhoneIcon />
+            <Label
+              label="9087654321"
+              variant={LabelVariants.DEFAULT}
+              classNames="ms-1"
+            />
+          </div>
+        </div>
+      </div>
+      <div>
+        <div className="rounded-5 p-2 bg-success"></div>
+      </div>
+    </Card>
+  );
+};
+```

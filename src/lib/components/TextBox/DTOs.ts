@@ -13,6 +13,7 @@ interface TextBoxProps {
   classNames?: string;
   value: string;
   onChange: Function;
+  isDisabled?: boolean;
   refs?: any;
   onKeyDown?: any;
 }

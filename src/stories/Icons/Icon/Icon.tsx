@@ -1,4 +1,4 @@
-import { ToastProvider } from "../../../lib/components/Toast/Toast";
+import { ToastProvider } from "../../../lib";
 import { useIcon } from "./useIcon";
 import { IconProps } from "./DTOs";
 import React from "react";

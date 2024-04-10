@@ -8,12 +8,12 @@ The `Icon` component is a customizable UI element that displays icons of various
 
 ## Props
 
-| Name     | Type      | Default Value  | Description                                                                                                     |
-| -------- | --------- | -------------- | --------------------------------------------------------------------------------------------------------------- |
-| size     | IconSizes | `IconSizes.MD` | The size of the icon. Options: `IconSizes.SM`, `IconSizes.MD`, `IconSizes.LG`, `IconSizes.XL`, `IconSizes.XXL`. |
-| onClick  | function  | -              | Callback function invoked when the icon is clicked.                                                             |
-| color    | string    | -              | The color of the icon.                                                                                          |
-| isActive | boolean   | `false`        | Specifies if the icon is active or not.                                                                         |
+| Props    | Type      | Required | Description                                                                                                     |
+| -------- | --------- | -------- | --------------------------------------------------------------------------------------------------------------- |
+| size     | IconSizes | No       | The size of the icon. Options: `IconSizes.SM`, `IconSizes.MD`, `IconSizes.LG`, `IconSizes.XL`, `IconSizes.XXL`. |
+| onClick  | function  | No       | Callback function invoked when the icon is clicked.                                                             |
+| color    | string    | No       | The color of the icon.                                                                                          |
+| isActive | boolean   | No       | Specifies if the icon is active or not.                                                                         |
 
 ## Usage
 
@@ -22,7 +22,6 @@ Open the Icons file and click on the Icon. Past it on your code.
 ## Sample Code
 
 ```jsx
-import React from "react";
 import { ClientsIcon, IconSizes } from "@bmesol/bmes-components";
 
 const MyComponent = () => {

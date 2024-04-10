@@ -1,5 +1,6 @@
-import * as SwitchStories from "./Switch.stories.tsx";
 import { Meta, Title, Story } from "@storybook/blocks";
+import * as SwitchStories from "./Switch.stories.tsx";
+import { Preview } from "./../Preview.tsx";
 
 <Meta of={SwitchStories} />
 
@@ -9,7 +10,7 @@ The Switch component provides a toggle switch interface for user interaction.
 
 ## Props
 
-| Prop            | Type     | Default | Required | Description                                                                                       |
+| Props            | Type     | Default | Required | Description                                                                                       |
 | --------------- | -------- | ------- | -------- | ------------------------------------------------------------------------------------------------- |
 | onCheckedChange | function | -       | Yes      | Callback function triggered when the switch state changes. Receives the new state as an argument. |
 | label           | string   | -       | No       | The label associated with the switch.                                                             |
@@ -17,11 +18,11 @@ The Switch component provides a toggle switch interface for user interaction.
 | isDisabled      | boolean  | false   | No       | If `true`, disables user interaction with the switch.                                             |
 | classNames      | string   | -       | No       | Additional CSS classes to apply to the switch component.                                          |
 
-### Example
-
 ### Preview
 
-<Story of={SwitchStories.Sample_Switch} />
+<Preview>
+  <Story of={SwitchStories.SampleSwitch} />
+</Preview>
 
 ### Code
 
@@ -36,7 +37,7 @@ export const SampleSwitch = () => {
     if (isActive) {
       toast.success("Active User");
     } else {
-      toast.info("Inactive User");
+      toast.info("In Active User");
     }
   };
   return (
@@ -44,9 +45,7 @@ export const SampleSwitch = () => {
       <Switch
         label="Is Active"
         onCheckedChange={setIsActive}
-        classNames="mt-4"
       />
-
       <Button
         variant={ButtonVariants.PRIMARY}
         label="Show Status"

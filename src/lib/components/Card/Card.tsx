@@ -1,5 +1,5 @@
-import React from "react";
 import { CardProps } from "./DTOs";
+import React from "react";
 import "./Card.scss";
 
 const Card = (props: CardProps) => {

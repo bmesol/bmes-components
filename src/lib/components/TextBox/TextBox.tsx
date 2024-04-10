@@ -1,11 +1,11 @@
-import React from "react";
 import { TextBoxTypes, TextBoxProps } from "./DTOs";
 import { useTextBox } from "./useTextBox";
+import React from "react";
 import "./TextBox.scss";
 
 const TextBox = (props: TextBoxProps) => {
   const { input, handleOnChange } = useTextBox(props);
-  const { label = "", required = false, placeholder = "", classNames = "", type = "text", refs, onKeyDown } = props;
+  const { label = "", required = false, placeholder = "", classNames = "", type = "text", refs, onKeyDown, isDisabled = false } = props;
 
   return (
     <div className="textbox">
@@ -13,12 +13,13 @@ const TextBox = (props: TextBoxProps) => {
       <input
         type={type}
         placeholder={`${placeholder}`}
-        className={`textbox ${classNames}`}
+        className={`textbox ${classNames} ${isDisabled ? "disabled" : ""}`}
         required={required}
         value={input}
         onChange={(e)=>handleOnChange(e.target.value)}
         onKeyDown={onKeyDown}
         ref={refs}
+        disabled={isDisabled}
       />
     </div>
   );
