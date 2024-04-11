@@ -36,7 +36,7 @@ To install packages from GitHub Packages using npm, ensure that you have the fol
 ## Installation
 
 ```
-npm install @bmesol/bmes-components@0.0.57-beta
+npm install @bmesol/bmes-components@0.0.58-beta
 ```
 
 Example usage
@@ -44,7 +44,7 @@ Example usage
 ```jsx
 import { Button, ButtonVariants } from "@bmesol/bmes-components";
 
-function App() {
+export const App = () => {
   const handleClick = () => {
     alert("You clicked on Primary Button");
   };

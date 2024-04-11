@@ -1,0 +1,18 @@
+@import "../../../styles/global.scss";
+
+.select,
+.select-item {
+  color: var(--gray-color);
+}
+
+.select-item:focus {
+  background-color: rgba(254, 210, 83, 0.1);
+}
+
+.select-item {
+  svg {
+    color: var(--primary-color);
+    width: 22.69px;
+    height: 23px;
+  }
+}
