@@ -5,19 +5,19 @@ import React from "react";
 import "./Select.scss";
 
 const Select = (props: SelectProps) => {
-  const { label, items, selectedValue, onValueChange, placeholder, isDisabled = false } = props;
+  const { label, items, selectedValue, onValueChange, placeholder, isDisabled = false, classNames = "" } = props;
   return (
     <>
       {label && ( <Label label={label} variant={LabelVariants.DEFAULT} classNames="text-black mb-2" /> )}
       <SharedSelect onValueChange={onValueChange} defaultValue={selectedValue} disabled={isDisabled}>
-        <SelectTrigger className="w-100 select">
+        <SelectTrigger className={`w-100 select ${classNames}`}>
           <SelectValue placeholder={`${placeholder || "Select"}`} />
         </SelectTrigger>
         <SelectContent>
           <SelectGroup>
             {items.map((item) => (
-              <SelectItem className="select-item" value={item.label}>
-                {item.value}
+              <SelectItem className="select-item" value={item.value}>
+                {item.label}
               </SelectItem>
             ))}
           </SelectGroup>

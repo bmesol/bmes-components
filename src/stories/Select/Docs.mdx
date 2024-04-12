@@ -18,6 +18,7 @@ The `Select` component is a customizable user interface element designed to pres
 | onValueChange | `(value: string)=>void`                   | Yes      | A callback function invoked when the user selects an item from the select.                   |
 | placeholder   | string                                    | No       | Placeholder text displayed in the select when no item is selected.                           |
 | isDisabled    | boolean                                   | No       | Specifies whether the Select is disabled, preventing user interactions.                      |
+| classNames    | string                                    | No       | Additional CSS classes for custom styling.                                                   |
 
 #### **Notes :**
 
@@ -65,11 +66,7 @@ export const SampleSelect = () => {
 
   return (
     <>
-      <Select
-        label="Courses"
-        items={courses}
-        onValueChange={setValue}
-      />
+      <Select label="Courses" items={courses} onValueChange={setValue} />
       <Button
         label="Submit"
         variant={ButtonVariants.SECONDARY}

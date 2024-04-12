@@ -10,6 +10,7 @@ interface SelectProps {
   onValueChange: any;
   placeholder?: string;
   isDisabled?: boolean;
+  classNames?: string;
 }
 
 export { SelectProps };
