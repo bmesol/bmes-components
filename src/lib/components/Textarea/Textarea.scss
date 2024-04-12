@@ -7,6 +7,10 @@ textarea {
   color: var(--gray-color) !important;
 }
 
+textarea::placeholder{
+  color: var(--gray-color) !important;
+}
+
 textarea:focus {
   border: 1px solid var(--primary-color);
   outline: none;

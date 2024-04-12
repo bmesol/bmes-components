@@ -2,16 +2,23 @@
 
 .textbox {
   color: var(--gray-color);
+
+  ::placeholder {
+    color: var(--gray-color);
+  }
+
   line-height: var(--lg-unit);
   .label {
     color: black;
   }
+
   input {
     padding: var(--textbox-padding);
     border: var(--textbox-border);
     border-radius: var(--border-radius);
     background: white;
   }
+
   input:focus {
     border: 1px solid var(--primary-color);
     outline: none;
