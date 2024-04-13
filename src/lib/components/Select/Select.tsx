@@ -16,7 +16,7 @@ const Select = (props: SelectProps) => {
         <SelectContent>
           <SelectGroup>
             {items.map((item) => (
-              <SelectItem className="select-item" value={item.value}>
+              <SelectItem key={item.value} className="select-item" value={item.value}>
                 {item.label}
               </SelectItem>
             ))}
