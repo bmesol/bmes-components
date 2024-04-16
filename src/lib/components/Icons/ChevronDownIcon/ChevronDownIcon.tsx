@@ -12,6 +12,7 @@ const ChevronDownIcon = ({ size = IconSizes.MD, color, isActive, onClick }: Icon
       xmlns="http://www.w3.org/2000/svg"
       xmlnsXlink="http://www.w3.org/1999/xlink"
       onClick={onClick}
+      className={onClick && "cursor-pointer"}
     >
       <desc>Created with Pixso.</desc>
       <defs />
@@ -19,10 +20,10 @@ const ChevronDownIcon = ({ size = IconSizes.MD, color, isActive, onClick }: Icon
         id="path"
         d="M5.03 8.67L11.03 14.67L17.03 8.67"
         stroke={isActive && "var(--active-icon-color)" || color || "var(--icon-color)"}
-        stroke-opacity="1.000000"
-        stroke-width="2.000000"
-        stroke-linejoin="round"
-        stroke-linecap="round"
+        strokeOpacity="1.000000"
+        strokeWidth="2.000000"
+        strokeLinejoin="round"
+        strokeLinecap="round"
       />
     </svg>
   );

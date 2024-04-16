@@ -11,6 +11,7 @@ const CloseIcon = ({ size = IconSizes.MD, color, isActive, onClick }: IconProps)
       viewBox="0 0 24 24"
       fill="none"
       onClick={onClick}
+      className={onClick && "cursor-pointer"}
     >
       <path
         fillRule="evenodd"
