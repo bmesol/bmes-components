@@ -4,6 +4,7 @@ export * from "./components/TextBox/TextBox";
 export * from "./components/Pin/Pin";
 export * from "./components/Card/Card";
 export * from "./components/Label/Label";
+export * from "./components/Link/Link";
 export * from "./components/Toast/Toast";
 export * from "./components/Sidebar/Sidebar";
 export * from "./components/ProfileImage/ProfileImage";
@@ -15,6 +16,7 @@ export * from "./components/Switch/Switch";
 export * from "./components/Radio/Radio";
 export * from "./components/Checkbox/Checkbox";
 export * from "./components/Loading/Loading";
+export * from "./components/Select/Select";
 
 // Icons
 export * from "./components/Icons/ClientsIcon/ClientsIcon";

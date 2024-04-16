@@ -1,13 +1,21 @@
-import { Sidebar, SidebarTrigger, SidebarHeader, SidebarMenuItems, SidebarMenuItem, SidebarFooter } from "../../lib/components/Sidebar/Sidebar";
-import { SuppliersIcon } from "../../lib/components/Icons/SuppliersIcon/SuppliersIcon";
-import { ContactsIcon } from "../../lib/components/Icons/ContactsIcon/ContactsIcon";
-import { ClientsIcon } from "../../lib/components/Icons/ClientsIcon/ClientsIcon";
-import { WorkerIcon } from "../../lib/components/Icons/WorkerIcon/WorkersIcon";
-import { Button, ButtonVariants } from "./../../lib/components/Button/Button";
-import { ProfileImage } from "../../lib/components/ProfileImage/ProfileImage";
-import { UsersIcon } from "../../lib/components/Icons/UsersIcon/UsersIcon";
-import { SitesIcon } from "../../lib/components/Icons/SitesIcon/SitesIcon";
 import React from "react";
+import {
+  Sidebar,
+  SidebarTrigger,
+  SidebarHeader,
+  SidebarMenuItems,
+  SidebarMenuItem,
+  SidebarFooter,
+  SuppliersIcon,
+  ContactsIcon,
+  ClientsIcon,
+  WorkerIcon,
+  Button,
+  ButtonVariants,
+  ProfileImage,
+  UsersIcon,
+  SitesIcon,
+} from "../../lib";
 
 const meta = {
   title: "Components/Sidebar",
@@ -18,12 +26,12 @@ const meta = {
 
 export default meta;
 
-export const Menu = {
-  render: (children: React.ReactElement) => {
+export const SampleSidebar = {
+  render: () => {
     return (
       <>
         <SidebarTrigger sidebarId="menu">
-          <Button variant={ButtonVariants.SUCCESS} label="Open Menu" classNames="my-3" onClick={() => {}} />
+          <Button variant={ButtonVariants.PRIMARY} label="Open" onClick={() => {}} />
         </SidebarTrigger>
 
         <Sidebar id="menu">

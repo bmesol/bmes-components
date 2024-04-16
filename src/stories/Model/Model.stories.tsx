@@ -1,10 +1,4 @@
-import { Button, ButtonVariants } from "../../lib/components/Button/Button";
-import { LabelTypes, LabelVariants } from "../../lib/components/Label/DTOs";
-import { ModelProvider } from "../../lib/components/Model/ModelProvider";
-import { TextBox } from "../../lib/components/TextBox/TextBox";
-import { useModel } from "../../lib/components/Model/Model";
-import { Model } from "../../lib/components/Model/Model";
-import { Label } from "../../lib/components/Label/Label";
+import { Model, useModel, ModelProvider, Button, ButtonVariants, Label, LabelVariants, TextBox } from "../../lib";
 import { cn } from "../../lib/shared/components/DTOs";
 import type { Meta } from "@storybook/react";
 import React from "react";
@@ -18,16 +12,16 @@ const meta: Meta<typeof Model> = {
 
 export default meta;
 
-export const Sample_Model = {
-  render: (children: React.ReactElement): JSX.Element => {
+export const SampleModel = {
+  render: () => {
     const App = () => {
       const model = useModel();
       return (
         <>
           <Button
-            variant={ButtonVariants.OUTLINE_PRIMARY}
+            variant={ButtonVariants.SUCCESS}
             label="Open Model"
-            classNames="m-3"
+            classNames="m-3 bg-dark text-white"
             onClick={() =>
               model.open({
                 title: "Edit profile",
@@ -40,7 +34,6 @@ export const Sample_Model = {
                   >
                     <div className="grid gap-2">
                       <Label
-                        type={LabelTypes.TEXT}
                         label="User Name"
                         variant={LabelVariants.DEFAULT}
                       />
@@ -52,7 +45,6 @@ export const Sample_Model = {
                     </div>
                     <div className="grid gap-2">
                       <Label
-                        type={LabelTypes.TEXT}
                         label="Email"
                         variant={LabelVariants.DEFAULT}
                       />

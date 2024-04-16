@@ -1,12 +1,12 @@
-import React from "react";
 import { TextBox } from "./../TextBox/TextBox";
+import { TextBoxTypes } from "../TextBox/DTOs";
 import { PinProps } from "./DTOs";
 import { usePin } from "./usePin";
-import { TextBoxTypes } from "../TextBox/DTOs";
+import React from "react";
 import "./Pin.scss";
 
 const Pin = (props: PinProps) => {
-  const { label = "", length = 0, required = false } = props;
+  const { label = "", length = 0, required = false, isDisabled = false } = props;
   const { pin, handleTextBoxChange, handleBackspace, inputRefs } = usePin(props);
   return (
     <>
@@ -25,6 +25,7 @@ const Pin = (props: PinProps) => {
             length={1}
             regex="^\d*$"
             required={required}
+            isDisabled={isDisabled}
           />
         ))}
       </div>

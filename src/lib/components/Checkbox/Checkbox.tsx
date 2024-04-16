@@ -1,6 +1,6 @@
 import { Checkbox as SharedCheckbox } from "../../shared/components/Checkbox/Checkbox";
-import { useCheckbox } from "./useCheckbox";
 import { CheckboxProps, Directions } from "./DTOs";
+import { useCheckbox } from "./useCheckbox";
 import React from "react";
 import "./Checkbox.scss";
 

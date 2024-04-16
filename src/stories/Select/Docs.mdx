@@ -1,0 +1,79 @@
+import { Meta, Title, Story } from "@storybook/blocks";
+import * as SelectStories from "./Select.stories.tsx";
+import { Preview } from "../Preview.tsx";
+
+<Meta of={SelectStories} />
+
+<Title />
+
+The `Select` component is a customizable user interface element designed to present a list of selectable options to the user in a dropdown menu format. It allows users to choose a single option from a list of items.
+
+## Props
+
+| Prop          | Type                                      | Required | Description                                                                                  |
+| ------------- | ----------------------------------------- | -------- | -------------------------------------------------------------------------------------------- |
+| label         | string                                    | No       | Label text for the select, displayed above the select.                                       |
+| items         | `Array<{ label: string, value: string }>` | Yes      | An array of objects representing the items to be displayed in the select.                    |
+| selectedValue | string                                    | No       | The value of the currently selected item. Use this prop to pre-select an item in the select. |
+| onValueChange | `(value: string)=>void`                   | Yes      | A callback function invoked when the user selects an item from the select.                   |
+| placeholder   | string                                    | No       | Placeholder text displayed in the select when no item is selected.                           |
+| isDisabled    | boolean                                   | No       | Specifies whether the Select is disabled, preventing user interactions.                      |
+| classNames    | string                                    | No       | Additional CSS classes for custom styling.                                                   |
+
+#### **Notes :**
+
+- Ensure that the `items` array passed to the Select component contains unique values for each item's `value` property to accurately handle selection changes.
+
+### Preview
+
+<Preview>
+  <Story of={SelectStories.SampleSelect} />
+</Preview>
+
+### Code
+
+```tsx
+import { Select, Button, ButtonVariants } from "@bmesol/bmes-components";
+
+export const SampleSelect = () => {
+  const [value, setValue] = useState("");
+  const courses = [
+    {
+      value: "Mechatronics Engineering",
+      label: "Mechatronics Engineering",
+    },
+    {
+      value: "Computer Science and Engineering",
+      label: "Computer Science and Engineering",
+    },
+    {
+      value: "Information Technology",
+      label: "Information Technology",
+    },
+    {
+      value: "Mechanical Engineering",
+      label: "Mechanical Engineering",
+    },
+  ];
+
+  const handleSubmission = () => {
+    if (value !== "") {
+      confirm(`Are you sure you want to select "${value}" as your course?`);
+    } else {
+      alert("Please select your course");
+    }
+  };
+
+  return (
+    <>
+      <Select label="Courses" items={courses} onValueChange={setValue} />
+      <Button
+        label="Submit"
+        variant={ButtonVariants.SECONDARY}
+        onClick={handleSubmission}
+        classNames="mt-4"
+      />
+    </>
+  );
+};
+```

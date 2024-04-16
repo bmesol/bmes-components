@@ -1,0 +1,71 @@
+import * as TextBoxStories from "./TextBox.stories.ts";
+import { Meta, Title, Story } from "@storybook/blocks";
+import { SampleTextBox } from "./SampleTextBox.tsx";
+import { Preview } from "./../Preview.tsx";
+
+<Meta of={TextBoxStories} />
+
+<Title />
+
+The TextBox component is a user interface element designed for collecting textual input in forms or interfaces.
+
+## Props
+
+The TextBox component is used to collect textual input from users within forms or interfaces. It comes with various props that allow developers to customize its behavior and appearance. Let's go through each prop and understand its purpose:
+
+| Props       | Type                                   | Required | Description                                                                                                                                                     |
+| ----------- | -------------------------------------- | -------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| label       | string                                 | No       | Provides a label or title for the TextBox component, describing the input field's purpose or expected content.                                                  |
+| type        | TextBoxTypes                           | No       | Specifies the type of input for the TextBox (TEXT for regular text or PASSWORD for a password input field).                                                     |
+| value       | string                                 | Yes      | Represents the current value of the TextBox component, allowing control of the input's value from the parent component.                                         |
+| onChange    | `(currentValue: string) => void`       | Yes      | A callback function triggered when the TextBox value changes, providing the updated value as an argument.                                                       |
+| regex       | string                                 | No       | Allows setting a regular expression for input validation, restricting the accepted text pattern.                                                                |
+| length      | number                                 | No       | Specifies the maximum length for the text input in the TextBox component, limiting the number of characters users can enter.                                    |
+| required    | boolean                                | No       | Indicates whether the TextBox input is mandatory, enforcing users to fill in the field before submitting a form.                                                |
+| placeholder | string                                 | No       | Defines placeholder text displayed within the input field when empty, offering guidance or context to users about the expected input.                           |
+| classNames  | string                                 | No       | Enables the addition of extra CSS class names to the TextBox component for custom styling.                                                                      |
+| isDisabled  | boolean                                | No       | Specifies whether the TexBox input is disabled, preventing user interactions.                                                                                   |
+| refs        | `((instance: any) => void)`            | No       | Allows assignment of a ref to the TextBox component for imperative access and manipulation.                                                                     |
+| onKeyDown   | `(event: React.KeyboardEvent) => void` | No       | An optional event handler triggered when a key is pressed down within the TextBox component, useful for custom logic or actions based on keyboard input events. |
+
+### Preview
+
+<Preview classNames="flex-column">
+  <SampleTextBox />
+</Preview>
+
+### Code
+
+```tsx
+import { TextBox, Button, ButtonVariants, SearchIcon } from "@bmesol/bmes-components";
+
+export const SampleTextBox = () => {
+  const [name, setName] = useState("");
+
+  const handleButtonClick = () => {
+    if (name.length) {
+      alert("Your Name : " + name);
+    } else {
+      alert("Please enter your name");
+    }
+  };
+
+  return (
+    <>
+      <TextBox
+        label="Name"
+        value={name}
+        onChange={(inputValue: string) => setName(inputValue)}
+        placeholder="Enter name"
+        regex="^[a-zA-Z\s]*$"
+      />
+      <Button
+        icon={<SearchIcon />}
+        label="Show My Name"
+        variant={ButtonVariants.PRIMARY}
+        onClick={handleButtonClick}
+      />
+    </>
+  );
+};
+```

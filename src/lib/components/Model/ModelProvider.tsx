@@ -1,8 +1,8 @@
-import React from "react";
 import { ModelContext } from "./ModelContext";
 import { ModelProviderProps } from "./DTOs";
 import { useModel } from "./useModel";
 import { Model } from "./Model";
+import React from "react";
 
 const ModelProvider = ({ children }: ModelProviderProps) => {
   const { contextValue, model } = useModel();

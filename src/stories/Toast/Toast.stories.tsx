@@ -1,10 +1,8 @@
+import { Button, ButtonVariants, ToastProvider, useToast } from "./../../lib";
 import React from "react";
-import { ToastProvider, useToast } from "./../../lib/components/Toast/Toast";
-import { Button, ButtonVariants } from "../../lib/components/Button/Button";
 
 const meta = {
   title: "Components/Toast",
-  component: ToastProvider,
   parameters: {
     layout: "centered",
   },
@@ -12,8 +10,8 @@ const meta = {
 
 export default meta;
 
-export const Toast_Message = {
-  render: (children: React.ReactElement): JSX.Element => {
+export const ToastMessage = {
+  render: () => {
     const App = () => {
       const toast = useToast();
       return (
@@ -53,8 +51,8 @@ export const Toast_Message = {
   },
 };
 
-export const Toast_Heading_Message = {
-  render: (children: React.ReactElement): JSX.Element => {
+export const ToastHeadingMessage = {
+  render: () => {
     const App = () => {
       const toast = useToast();
       return (

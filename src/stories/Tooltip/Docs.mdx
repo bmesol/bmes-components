@@ -1,5 +1,6 @@
 import * as TooltipStories from "./Tooltip.stories.tsx";
 import { Meta, Title, Story } from "@storybook/blocks";
+import { Preview } from "./../Preview.tsx";
 
 <Meta of={TooltipStories} />
 
@@ -9,7 +10,7 @@ The `Tooltip` component provides a simple and effective way to display additiona
 
 ## Props
 
-| Name     | Type            | Required | Default       | Description                                                            |
+| Props    | Type            | Required | Default       | Description                                                            |
 | -------- | --------------- | -------- | ------------- | ---------------------------------------------------------------------- |
 | trigger  | React.ReactNode | Yes      | -             | The element that triggers the display of the tooltip.                  |
 | position | Positions       | No       | Positions.TOP | Specifies the position of the tooltip relative to its trigger element. |
@@ -19,18 +20,18 @@ The `Tooltip` component provides a simple and effective way to display additiona
 
 The `Positions` enum specifies the position of the tooltip relative to its trigger element. It accepts one of the following values:
 
-- **TOP**: Positions the tooltip above the trigger element.
-- **RIGHT**: Positions the tooltip to the right of the trigger element.
-- **BOTTOM**: Positions the tooltip below the trigger element.
-- **LEFT**: Positions the tooltip to the left of the trigger element.
+- **TOP** : Positions the tooltip above the trigger element.
+- **RIGHT** : Positions the tooltip to the right of the trigger element.
+- **BOTTOM** : Positions the tooltip below the trigger element.
+- **LEFT** : Positions the tooltip to the left of the trigger element.
 
 By default, the tooltip is positioned at the top if the `position` prop is not provided.
 
-### Examples
-
 ### Preview
 
-<Story of={TooltipStories.Sample_Tooltip} />
+<Preview>
+  <Story of={TooltipStories.SampleTooltip} />
+</Preview>
 
 ### Code
 

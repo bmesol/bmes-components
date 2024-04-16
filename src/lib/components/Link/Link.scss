@@ -1,0 +1,26 @@
+@import "../../../styles/global.scss";
+
+@mixin Link($text-color) {
+  color: $text-color;
+  height: var(--lg-unit);
+  line-height: var(--lg-unit);
+}
+
+$link-colors: (
+  default: var(--gray-color),
+  primary: var(--primary-color),
+  secondary: var(--secondary-color),
+  danger: var(--danger-color),
+  success: var(--success-color),
+  warning: var(--warning-color),
+);
+
+@each $variant, $color in $link-colors {
+  .link {
+    &.#{$variant} {
+      @include Link($color);
+      text-decoration: underline;
+      text-underline-offset: var(--sm-unit);
+    }
+  }
+}

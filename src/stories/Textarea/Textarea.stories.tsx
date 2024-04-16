@@ -1,5 +1,4 @@
-import { Button, ButtonVariants } from "../../lib/components/Button/Button";
-import { Textarea } from "../../lib/components/Textarea/Textarea";
+import { Textarea, Button, ButtonVariants } from "../../lib";
 import type { Meta, StoryObj } from "@storybook/react";
 import React, { useState } from "react";
 
@@ -14,31 +13,25 @@ export default meta;
 
 type Story = StoryObj<typeof Textarea>;
 
-export const Sample_Textarea: Story = {
+export const SampleTextarea: Story = {
   render: () => {
-    const App = () => {
-      const [value, setValue] = useState("");
-      const handleTextareaChange = (currentValue: string) => {
-        setValue(currentValue);
-      };
-      return (
-        <div style={{minWidth: "50vw"}}>
-          <Textarea
-            label="Notes"
-            length={1000}
-            value={value}
-            onChange={handleTextareaChange}
-            placeholder="Enter value here"
-          />
-          <Button
-            variant={ButtonVariants.PRIMARY}
-            label="Submit"
-            classNames="bg-dark text-bg-dark m-3"
-            onClick={() => alert("Your Notes : " + value)}
-          />
-        </div>
-      );
-    };
-    return <App />;
+    const [value, setValue] = useState("");
+    return (
+      <div style={{ minWidth: "50vw" }}>
+        <Textarea
+          label="Notes"
+          length={1000}
+          value={value}
+          onChange={(inputValue: string) => setValue(inputValue)}
+          placeholder="Enter value here"
+        />
+        <Button
+          variant={ButtonVariants.PRIMARY}
+          label="Submit"
+          classNames="m-3"
+          onClick={() => alert("Your Notes : " + value)}
+        />
+      </div>
+    );
   },
 };

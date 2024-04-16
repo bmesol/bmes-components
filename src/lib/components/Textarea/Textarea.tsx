@@ -20,7 +20,7 @@ const Textarea = (props: TextareaProps) => {
             disabled={isDisabled}
             className="textarea resize-none"
           />
-          <div className="text-count">
+          <div className={`text-count ${isDisabled ? "disabled" : ""}`}>
             <span>{input.length}</span>/<span>{length}</span>
           </div>
         </div>

@@ -1,5 +1,4 @@
-import { Loading, LoadingProvider } from "../../lib/components/Loading/Loading";
-import { Button, ButtonVariants } from "../../lib/components/Button/Button";
+import { Loading, LoadingProvider, Button, ButtonVariants } from "../../lib";
 import { useLoading } from "../../lib/components/Loading/Loading";
 import type { Meta } from "@storybook/react";
 import React from "react";
@@ -13,7 +12,7 @@ const meta: Meta<typeof Loading> = {
 
 export default meta;
 
-export const Sample_Loading = {
+export const SampleLoading = {
   render: (children: React.ReactElement): JSX.Element => {
     const App = () => {
       const loading = useLoading();

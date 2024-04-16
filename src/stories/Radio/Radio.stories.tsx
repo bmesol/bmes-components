@@ -1,5 +1,4 @@
-import { Button, ButtonVariants } from "../../lib/components/Button/Button";
-import { Radio, Directions } from "../../lib/components/Radio/Radio";
+import { Radio, Directions, Button, ButtonVariants } from "../../lib";
 import type { Meta, StoryObj } from "@storybook/react";
 import React, { useState } from "react";
 
@@ -14,34 +13,27 @@ export default meta;
 
 type Story = StoryObj<typeof Radio>;
 
-export const Sample_Radio: Story = {
+export const SampleRadio: Story = {
   render: () => {
-    const App = () => {
-      const [gender, setGender] = useState("Male");
-      const genderRadioList = [ { label: "Male", value: "Male" }, { label: "Female", value: "Female" } ];
-      return (
-        <>
-          <div className="d-flex mt-4">
-            <Radio
-              label="Select Gender"
-              items={genderRadioList}
-              direction={Directions.HORIZONTAL}
-              selectedValue="Male"
-              onValueChange={setGender}
-            />
-          </div>
-
+    const [gender, setGender] = useState("Male");
+    const genderRadioList = [ { label: "Male", value: "Male" }, { label: "Female", value: "Female" } ];
+    return (
+      <>
+        <Radio
+          label="Gender"
+          items={genderRadioList}
+          direction={Directions.HORIZONTAL}
+          selectedValue="Male"
+          onValueChange={setGender}
+        />
+        <div className="text-center mt-4">
           <Button
-            label="Show Gender"
-            variant={ButtonVariants.OUTLINE_SECONDARY}
-            onClick={() => {
-              alert("You selected " + gender + " as your Gender");
-            }}
-            classNames="mt-4 mb-4"
+            label="Save"
+            variant={ButtonVariants.SUCCESS}
+            onClick={() => alert("You selected " + gender + " as your Gender")}
           />
-        </>
-      );
-    };
-    return <App />;
+        </div>
+      </>
+    );
   },
 };

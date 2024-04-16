@@ -1,5 +1,6 @@
 import * as SidebarStories from "./Sidebar.stories.tsx";
 import { Meta, Title, Story } from "@storybook/blocks";
+import { Preview } from "./../Preview.tsx";
 
 <Meta of={SidebarStories} />
 
@@ -21,61 +22,23 @@ The Sidebar component is designed to create a collapsible menu interface for nav
         * **`target`**: Optional target attribute for the link.
 * **SidebarFooter**: Content displayed at the bottom of the sidebar.
 
-## Import
-
-```tsx
-import { Sidebar, SidebarTrigger, SidebarHeader, SidebarMenuItems, SidebarMenuItem, SidebarFooter } from "@bmesol/bmes-components"
-```
-
-## Usage
-
-```tsx
-export const SampleMenu = () => {
-  return (
-    <>
-        <SidebarTrigger sidebarId="navMenu">
-            <button>Open Sidebar<button/>
-        </SidebarTrigger>
-
-        <Sidebar id="navMenu">
-            <SidebarHeader>
-                <div>Sidebar Header</div>
-            </SidebarHeader>
-            <SidebarMenuItems>
-                <SidebarMenuItem href={"https://www.bmesolutions.in/"} icon={<UserIcon />} target="blank">
-                    Item-1 with target
-                </SidebarMenuItem>
-                <SidebarMenuItem href={"https://www.bmesolutions.in/"} icon={<ContactsIcon />}>
-                    Item-2 without target
-                </SidebarMenuItem>
-            </SidebarMenuItems>
-            <SidebarFooter>
-                <div>Sidebar Footer</div>
-            </SidebarFooter>
-        </Sidebar>
-    </>
-  )
-}
-```
-
-### Example
-
 ### Preview
 
-<Story of={SidebarStories.Menu} />
+<Preview>
+  <Story of={SidebarStories.SampleSidebar} />
+</Preview>
 
 ### Code
 
 ```tsx
 
-import { Sidebar, SidebarTrigger, SidebarHeader, SidebarMenuItems, SidebarMenuItem, SidebarFooter } from "@bmesol/bmes-components"
-import { Button, ButtonVariants } from "@bmesol/bmes-components"
+import { Sidebar, SidebarTrigger, SidebarHeader, SidebarMenuItems, SidebarMenuItem, SidebarFooter, Button, ButtonVariants } from "@bmesol/bmes-components";
 
-export const SampleMenu = () => {
+export const SampleSidebar = () => {
   return (
     <>
         <SidebarTrigger sidebarId="menu">
-          <Button variant={ButtonVariants.SUCCESS} label="Open Menu" classNames="my-3" onClick={() => {}} />
+          <Button variant={ButtonVariants.PRIMARY} label="Open" />
         </SidebarTrigger>
 
         <Sidebar id="menu">

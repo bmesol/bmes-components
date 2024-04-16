@@ -14,6 +14,7 @@ interface RadioProps {
   direction?: Directions;
   selectedValue?: string;
   onValueChange: any;
+  isDisabled?: boolean;
   classNames?: string;
 }
 
