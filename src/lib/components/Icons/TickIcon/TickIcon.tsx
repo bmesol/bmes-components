@@ -12,6 +12,7 @@ const TickIcon = ({ size = IconSizes.MD, color, isActive, onClick }: IconProps) 
       xmlns="http://www.w3.org/2000/svg"
       xmlnsXlink="http://www.w3.org/1999/xlink"
       onClick={onClick}
+      className={onClick && "cursor-pointer"}
     >
       <desc>Created with Pixso.</desc>
       <defs />
@@ -20,16 +21,16 @@ const TickIcon = ({ size = IconSizes.MD, color, isActive, onClick }: IconProps) 
         width="24.000000"
         height="24.000000"
         fill="#FFFFFF"
-        fill-opacity="0"
+        fillOpacity="0"
       />
       <path
         id="Vector"
         d="M20 6L9 17L4 12"
         stroke={isActive && "var(--active-icon-color)" || color || "var(--icon-color)"}
-        stroke-opacity="1.000000"
-        stroke-width="2.000000"
-        stroke-linejoin="round"
-        stroke-linecap="round"
+        strokeOpacity="1.000000"
+        strokeWidth="2.000000"
+        strokeLinejoin="round"
+        strokeLinecap="round"
       />
     </svg>
   );

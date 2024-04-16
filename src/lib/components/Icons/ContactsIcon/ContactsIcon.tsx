@@ -11,6 +11,7 @@ const ContactsIcon = ({ size = IconSizes.MD, color, isActive, onClick }: IconPro
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       onClick={onClick}
+      className={onClick && "cursor-pointer"}
     >
       <path
         fillRule="evenodd"

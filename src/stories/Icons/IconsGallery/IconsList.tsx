@@ -17,6 +17,7 @@ import {
   InfoIcon,
   TickIcon,
   MailIcon,
+  MobileIcon
 } from "../../../lib";
 
 const icons = [
@@ -37,6 +38,7 @@ const icons = [
   { name: "TrashIcon", icon: <TrashIcon /> },
   { name: "MailIcon", icon: <MailIcon /> },
   { name: "LocationIcon", icon: <LocationIcon /> },
+  { name: "MobileIcon", icon: <MobileIcon /> },
 ];
 
 export { icons };

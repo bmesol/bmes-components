@@ -7,7 +7,7 @@ const Icon = ({ src, name }: IconProps) => {
   const Icons = () => {
     const { copyToClipboard } = useIcon({ name });
     return (
-      <div className="my-3 text-center" style={{ cursor: "pointer" }} title="Copy to clipboard" onClick={copyToClipboard}>
+      <div className="my-3 text-center cursor-pointer" title="Copy to clipboard" onClick={copyToClipboard}>
         <div className="d-flex align-items-center justify-content-center">
           {src}
         </div>
