@@ -2,7 +2,6 @@
 
 @mixin Label($text-color) {
   color: $text-color;
-  height: var(--lg-unit);
   line-height: var(--lg-unit);
 }
 
