@@ -6,7 +6,7 @@
 }
 
 .select-item:focus {
-  background-color: rgba(254, 210, 83, 0.1);
+  background-color: var(--select-hover-bg-color);
 }
 
 .select-item {
