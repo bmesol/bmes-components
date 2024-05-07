@@ -1,0 +1,8 @@
+@import "./../../../styles/global.scss";
+
+.badge {
+  padding: var(--base-unit);
+  color: var(--primary-bg-text-color);
+  background-color: var(--primary-color);
+  border-radius: var(--border-radius);
+}
