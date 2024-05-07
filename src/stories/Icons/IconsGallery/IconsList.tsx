@@ -17,7 +17,11 @@ import {
   InfoIcon,
   TickIcon,
   MailIcon,
-  MobileIcon
+  MobileIcon,
+  ChevronUpDownIcon,
+  PanIcon,
+  AadhaarIcon,
+  GstIcon,
 } from "../../../lib";
 
 const icons = [
@@ -39,6 +43,10 @@ const icons = [
   { name: "MailIcon", icon: <MailIcon /> },
   { name: "LocationIcon", icon: <LocationIcon /> },
   { name: "MobileIcon", icon: <MobileIcon /> },
+  { name: "ChevronUpDownIcon", icon: <ChevronUpDownIcon /> },
+  { name: "PanIcon", icon: <PanIcon /> },
+  { name: "AadhaarIcon", icon: <AadhaarIcon /> },
+  { name: "GstIcon", icon: <GstIcon /> },
 ];
 
 export { icons };

@@ -17,6 +17,10 @@ import {
   TrashIcon,
   UsersIcon,
   WorkerIcon,
+  ChevronUpDownIcon,
+  PanIcon,
+  AadhaarIcon,
+  GstIcon,
 } from "../../lib";
 import React from "react";
 import { Meta } from "@storybook/react";
@@ -52,3 +56,7 @@ export const Tick = IconTemplate(TickIcon);
 export const Trash = IconTemplate(TrashIcon);
 export const Users = IconTemplate(UsersIcon);
 export const Worker = IconTemplate(WorkerIcon);
+export const ChevronUpDown = IconTemplate(ChevronUpDownIcon);
+export const Pan = IconTemplate(PanIcon);
+export const Aadhaar = IconTemplate(AadhaarIcon);
+export const Gst = IconTemplate(GstIcon);

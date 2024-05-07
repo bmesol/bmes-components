@@ -37,3 +37,7 @@ export * from "./components/Icons/TrashIcon/TrashIcon";
 export * from "./components/Icons/MailIcon/MailIcon";
 export * from "./components/Icons/LocationIcon/LocationIcon";
 export * from "./components/Icons/PhoneIcon/PhoneIcon";
+export * from "./components/Icons/ChevronUpDownIcon/ChevronUpDownIcon";
+export * from "./components/Icons/PanIcon/PanIcon";
+export * from "./components/Icons/AadhaarIcon/AadhaarIcon";
+export * from "./components/Icons/GstIcon/GstIcon";
