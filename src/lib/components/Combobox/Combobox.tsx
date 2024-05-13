@@ -56,7 +56,7 @@ const Combobox = (props: DropdownProps) => {
                 className="w-100 px-2 py-2 bg-transparent focus:outline-none opacity-100"
               />
             </div>
-            <div className="border-theme1 border-t mb-1"></div>
+            {(items || searchString) && <div className="border-theme1 border-t mb-1"></div>}
             {!showCreateButton && filteredItems?.length === 0 ? (
               <Label label="No item found." variant={LabelVariants.DEFAULT} classNames="px-3 py-2" />
             ) : (
