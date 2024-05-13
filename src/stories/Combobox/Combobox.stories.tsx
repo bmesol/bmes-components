@@ -18,7 +18,7 @@ export const SampleCombobox: Story = {
     const [value, setValue] = useState("");
     const courses = [{ label: "Tamil", value: "Tamil" }, { label: "English", value: "English" }];
 
-    const handleCreateButton = () => {
+    const handleCreate = () => {
       confirm("Are you sure you want to add new option?");
       window.location.reload();
     };
@@ -29,8 +29,8 @@ export const SampleCombobox: Story = {
           <Combobox
             label="Select your language"
             items={courses}
-            onValueChange={(value: string) => setValue(value)}
-            createButton={handleCreateButton}
+            onValueChange={setValue}
+            onCreate={handleCreate}
           />
         </div>
         <div className="text-center">

@@ -18,7 +18,7 @@ The `Combobox` component is a customizable user interface element designed to pr
 | selectedValue    | string                                    | No       | The value of the currently selected item. Use this prop to pre-select an item in the combobox.        |
 | onValueChange    | `(value: string)=>void`                   | Yes      | A callback function invoked when the user selects an item from the combobox.                          |
 | showCreateButton | boolean                                   | No       | A boolean value indicating whether to enable the creation of new items in the combobox.               |
-| createButton     | function                                  | No       | A callback function triggered when the user clicks the create button (if `showCreateButton` is true). |
+| onCreate         | function                                  | No       | A callback function triggered when the user clicks the create button (if `showCreateButton` is true). |
 
 #### **Notes :**
 
@@ -39,7 +39,7 @@ export const SampleDropdown = () => {
   const [value, setValue] = useState("");
   const courses = [{ label: "Tamil", value: "Tamil" }, { label: "English", value: "English" }];
 
-  const handleCreateButton = () => {
+  const handleCreate = () => {
     confirm("Are you sure you want to add new option?");
     window.location.reload();
   };
@@ -50,8 +50,8 @@ export const SampleDropdown = () => {
         <Combobox
           label="Select your language"
           items={courses}
-          onValueChange={(value: string) => setValue(value)}
-          createButton={handleCreateButton}
+          onValueChange={setValue}
+          onCreate={handleCreate}
         />
       </div>
       <div className="text-center">

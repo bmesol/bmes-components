@@ -10,7 +10,7 @@ interface DropdownProps {
   selectedValue?: string;
   onValueChange: any;
   showCreateButton?: boolean;
-  createButton?: React.MouseEventHandler<HTMLDivElement>;
+  onCreate?: React.MouseEventHandler<HTMLDivElement>;
 }
 
 export { DropdownProps };
