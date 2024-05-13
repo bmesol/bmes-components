@@ -2,37 +2,26 @@ import { Popover, PopoverContent, PopoverTrigger } from "../../shared/components
 import { Button } from "../../shared/components/Button/Button";
 import { Check, ChevronsUpDown, Search } from "lucide-react";
 import { Label, LabelVariants, Badge } from "../../../lib";
-import React, { useEffect, useState } from "react";
-import { DropdownProps } from "./DTOs";
+import { useCombobox } from "./useCombobox";
+import { ComboboxProps } from "./DTOs";
+import React from "react";
 import "./Combobox.scss";
 
-const Combobox = (props: DropdownProps) => {
-  const { label, items, placeholder = "Select", selectedValue, onValueChange, showCreateButton = false, onCreate } = props;
+const Combobox = (props: ComboboxProps) => {
+  const { label, items, placeholder = "Select", showCreateButton = false } = props;
 
-  const [open, setOpen] = useState(false);
-  const [hover, setHover] = useState(false);
-  const [value, setValue] = useState(selectedValue || "");
-  const [searchString, setSearchString] = useState("");
-
-  const handleOnOpenChange = () => {
-    setOpen(!open);
-    setSearchString("");
-    setHover(false);
-  };
-
-  const filteredItems = items?.filter((item) => item.label.toLowerCase().includes(searchString.trim().toLowerCase()));
-
-  const handleValueChange = (newValue: string) => {
-    setValue(newValue);
-    setOpen(false);
-    setSearchString("");
-  };
-
-  useEffect(() => {
-    if (onValueChange) {
-      onValueChange(value);
-    }
-  }, [value]);
+  const {
+    open,
+    handleOnOpenChange,
+    value,
+    searchString,
+    setSearchString,
+    filteredItems,
+    handleValueChange,
+    hover,
+    setHover,
+    handleCreate,
+  } = useCombobox(props);
 
   return (
     <>
@@ -73,7 +62,7 @@ const Combobox = (props: DropdownProps) => {
                   </div>
                 ))}
                 {showCreateButton && searchString && !filteredItems?.some((item) => item.label === searchString) && (
-                  <div className="items justify-content-between px-3 py-1 combobox-content" onClick={onCreate}>
+                  <div className="items justify-content-between px-3 py-1 combobox-content" onClick={handleCreate}>
                     <Label variant={LabelVariants.SECONDARY} label={`"${searchString}"`} classNames="ms-3 me-2" />
                     <Badge label="New" />
                   </div>

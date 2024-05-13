@@ -3,14 +3,14 @@ interface ItemsType {
   value: string;
 }
 
-interface DropdownProps {
+interface ComboboxProps {
   label?: string;
   items?: ItemsType[];
   placeholder?: string;
   selectedValue?: string;
   onValueChange?: any;
   showCreateButton?: boolean;
-  onCreate?: React.MouseEventHandler<HTMLDivElement>;
+  onCreate?: Function;
 }
 
-export { DropdownProps };
+export { ComboboxProps, ItemsType };
