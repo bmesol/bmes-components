@@ -5,10 +5,10 @@ interface ItemsType {
 
 interface DropdownProps {
   label?: string;
-  items: ItemsType[];
+  items?: ItemsType[];
   placeholder?: string;
   selectedValue?: string;
-  onValueChange: any;
+  onValueChange?: any;
   showCreateButton?: boolean;
   onCreate?: React.MouseEventHandler<HTMLDivElement>;
 }
