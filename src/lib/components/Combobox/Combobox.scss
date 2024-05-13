@@ -1,0 +1,39 @@
+@import "../../../styles/global.scss";
+
+.combobox {
+  color: var(--gray-color);
+
+  & input, & input::placeholder {
+    color: var(--gray-color);
+  }
+}
+
+.search-icon {
+  color: var(--gray-color);
+}
+
+.chevrons-up-down-icon {
+  color: var(--gray-color);
+  stroke-width: 1;
+}
+
+.tick-icon {
+  color: var(--primary-color);
+  width: 22.69px;
+  height: 23px;
+}
+
+.items {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.combobox-content {
+  border-radius: var(--border-radius);
+}
+
+.combobox-content:hover, .selected-item {
+  background-color: var(--select-hover-bg-color);
+  border-radius: var(--border-radius);
+}

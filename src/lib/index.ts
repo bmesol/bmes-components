@@ -18,6 +18,7 @@ export * from "./components/Checkbox/Checkbox";
 export * from "./components/Loading/Loading";
 export * from "./components/Select/Select";
 export * from "./components/Badge/Badge";
+export * from "./components/Combobox/Combobox";
 
 // Icons
 export * from "./components/Icons/ClientsIcon/ClientsIcon";
