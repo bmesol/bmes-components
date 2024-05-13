@@ -36,7 +36,7 @@ To install packages from GitHub Packages using npm, ensure that you have the fol
 ## Installation
 
 ```
-npm install @bmesol/bmes-components@0.0.66-beta
+npm install @bmesol/bmes-components@0.0.67-beta
 ```
 
 Example usage
