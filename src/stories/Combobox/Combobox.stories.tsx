@@ -30,6 +30,7 @@ export const SampleCombobox: Story = {
             label="Select your language"
             items={courses}
             onValueChange={setValue}
+            showCreateButton={true}
             onCreate={handleCreate}
           />
         </div>

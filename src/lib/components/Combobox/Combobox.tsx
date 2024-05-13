@@ -7,7 +7,7 @@ import { DropdownProps } from "./DTOs";
 import "./Combobox.scss";
 
 const Combobox = (props: DropdownProps) => {
-  const { label, items, placeholder = "Select", selectedValue, onValueChange, showCreateButton = true, onCreate } = props;
+  const { label, items, placeholder = "Select", selectedValue, onValueChange, showCreateButton = false, onCreate } = props;
 
   const [open, setOpen] = useState(false);
   const [hover, setHover] = useState(false);
