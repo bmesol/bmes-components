@@ -10,6 +10,7 @@ interface ComboboxProps {
   selectedValue?: string;
   onValueChange?: any;
   showCreateButton?: boolean;
+  onSearch?: Function;
   onCreate?: Function;
 }
 

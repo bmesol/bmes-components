@@ -10,15 +10,16 @@ The `Combobox` component is a customizable user interface element designed to pr
 
 ## Props
 
-| Prop             | Type                                      | Required | Description                                                                                           |
-| ---------------- | ----------------------------------------- | -------- | ----------------------------------------------------------------------------------------------------- |
-| label            | string                                    | No       | Label text for the combobox, displayed above the combobox.                                            |
-| items            | `Array<{ label: string, value: string }>` | No       | An array of objects representing the items to be displayed in the combobox.                           |
-| placeholder      | string                                    | No       | Placeholder text displayed in the combobox when no item is selected.                                  |
-| selectedValue    | string                                    | No       | The value of the currently selected item. Use this prop to pre-select an item in the combobox.        |
-| onValueChange    | `(value: string)=>void`                   | No       | A callback function invoked when the user selects an item from the combobox.                          |
-| showCreateButton | boolean                                   | No       | A boolean value indicating whether to enable the creation of new items in the combobox.               |
-| onCreate         | function                                  | No       | A callback function triggered when the user clicks the create button (if `showCreateButton` is true). |
+| Prop             | Type                                      | Required | Description                                                                                                                                                                 |
+| ---------------- | ----------------------------------------- | -------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| label            | string                                    | No       | Label text for the combobox, displayed above the combobox.                                                                                                                  |
+| items            | `Array<{ label: string, value: string }>` | No       | An array of objects representing the items to be displayed in the combobox.                                                                                                 |
+| placeholder      | string                                    | No       | Placeholder text displayed in the combobox when no item is selected.                                                                                                        |
+| selectedValue    | string                                    | No       | The value of the currently selected item. Use this prop to pre-select an item in the combobox.                                                                              |
+| onValueChange    | `(value: string)=>void`                   | No       | A callback function invoked when the user selects an item from the combobox.                                                                                                |
+| showCreateButton | boolean                                   | No       | A boolean value indicating whether to enable the creation of new items in the combobox.                                                                                     |
+| onCreate         | function                                  | No       | A callback function triggered when the user clicks the create button (if `showCreateButton` is true).                                                                       |
+| onSearch         | `(searchValue: string) => void`           | No       | A function that will be called when the user initiates a search. It takes one parameter: `searchValue`, a string representing the current search query entered by the user. |
 
 #### **Notes :**
 

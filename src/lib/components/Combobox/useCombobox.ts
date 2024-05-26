@@ -1,8 +1,8 @@
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { ComboboxProps } from "./DTOs";
 
 const useCombobox = (props: ComboboxProps) => {
-  const { items, selectedValue, onValueChange, onCreate } = props;
+  const { items, selectedValue, onValueChange, onCreate, onSearch } = props;
 
   const [open, setOpen] = useState(false);
   const [hover, setHover] = useState(false);
@@ -35,6 +35,13 @@ const useCombobox = (props: ComboboxProps) => {
     }
   };
 
+  const handleSearch = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setSearchString(e.target.value.trimStart());
+    if (onSearch) {
+      onSearch(e.target.value.trimStart());
+    }
+  }
+
   return {
     open,
     handleOnOpenChange,
@@ -46,6 +53,7 @@ const useCombobox = (props: ComboboxProps) => {
     hover,
     setHover,
     handleCreate,
+    handleSearch,
   };
 };
 

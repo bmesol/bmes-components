@@ -21,6 +21,7 @@ const Combobox = (props: ComboboxProps) => {
     hover,
     setHover,
     handleCreate,
+    handleSearch,
   } = useCombobox(props);
 
   return (
@@ -40,12 +41,12 @@ const Combobox = (props: ComboboxProps) => {
               <input
                 type="text"
                 value={searchString}
-                onChange={(e) => setSearchString(e.target.value)}
+                onChange={handleSearch}
                 placeholder="Search here"
                 className="w-100 px-2 py-2 bg-transparent focus:outline-none opacity-100"
               />
             </div>
-            {((items && items.length !=0) || searchString) && <div className="border-theme1 border-t mb-1"></div>}
+            {((items && items.length !=0) || searchString) && <div className="border-theme1 border-t"></div>}
             {!showCreateButton && filteredItems?.length === 0 ? (
               <Label label="No item found." variant={LabelVariants.DEFAULT} classNames="px-3 py-2" />
             ) : (
@@ -54,7 +55,7 @@ const Combobox = (props: ComboboxProps) => {
                   <div
                     key={item.value}
                     onClick={() => handleValueChange(item.value)}
-                    className={`${(value === item.value && !hover) && "selected-item"} combobox-content items ps-2 pe-4 py-1`}
+                    className={`${(value === item.value && !hover) && "selected-item"} combobox-content items ps-2 pe-4 py-1 my-1`}
                     onMouseEnter={() => setHover(true)}
                   >
                     <Check className={`tick-icon me-1 ${value === item.value ? "opacity-100" : "opacity-0"}`} />
@@ -62,7 +63,7 @@ const Combobox = (props: ComboboxProps) => {
                   </div>
                 ))}
                 {showCreateButton && searchString && !filteredItems?.some((item) => item.label === searchString) && (
-                  <div className="items justify-content-between px-3 py-1 combobox-content" onClick={handleCreate}>
+                  <div className="items justify-content-between px-3 py-1 my-1 combobox-content" onClick={handleCreate}>
                     <Label variant={LabelVariants.SECONDARY} label={`"${searchString}"`} classNames="ms-3 me-2" />
                     <Badge label="New" />
                   </div>
