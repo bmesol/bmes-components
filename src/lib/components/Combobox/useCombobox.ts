@@ -13,7 +13,10 @@ const useCombobox = (props: ComboboxProps) => {
     if (onValueChange) {
       onValueChange(value);
     }
-  }, [value]);
+    if (onSearch) {
+      onSearch(searchString);
+    }
+  }, [value, searchString]);
 
   const handleOnOpenChange = () => {
     setOpen(!open);
@@ -37,9 +40,6 @@ const useCombobox = (props: ComboboxProps) => {
 
   const handleSearch = (e: React.ChangeEvent<HTMLInputElement>) => {
     setSearchString(e.target.value.trimStart());
-    if (onSearch) {
-      onSearch(e.target.value.trimStart());
-    }
   }
 
   return {
