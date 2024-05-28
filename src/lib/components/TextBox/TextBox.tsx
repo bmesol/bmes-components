@@ -16,7 +16,7 @@ const TextBox = (props: TextBoxProps) => {
         className={`textbox ${classNames} ${isDisabled ? "disabled" : ""}`}
         required={required}
         value={input}
-        onChange={(e)=>handleOnChange(e.target.value)}
+        onChange={(e)=>handleOnChange(e.target.value.trimStart())}
         onKeyDown={onKeyDown}
         ref={refs}
         disabled={isDisabled}

@@ -5,7 +5,7 @@ const useSearchBox = ({ onSearch }: SearchBoxProps) => {
   const [search, setSearch] = useState("");
 
   const handleSearch = (searchValue: string) => {
-    setSearch(searchValue);
+    setSearch(searchValue.trimStart());
   };
 
   const handleEnterToSearch = ( event: React.KeyboardEvent<HTMLInputElement> ) => {

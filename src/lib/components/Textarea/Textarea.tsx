@@ -15,7 +15,7 @@ const Textarea = (props: TextareaProps) => {
           <SharedTextarea
             maxLength={length}
             value={input}
-            onChange={(e) => handleOnChange(e.target.value)}
+            onChange={(e) => handleOnChange(e.target.value.trimStart())}
             placeholder={placeholder}
             disabled={isDisabled}
             className="textarea resize-none"
