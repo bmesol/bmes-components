@@ -43,3 +43,8 @@ export * from "./components/Icons/ChevronUpDownIcon/ChevronUpDownIcon";
 export * from "./components/Icons/PanIcon/PanIcon";
 export * from "./components/Icons/AadhaarIcon/AadhaarIcon";
 export * from "./components/Icons/GstIcon/GstIcon";
+export * from "./components/Icons/BankAccountIcon/BankAccountIcon";
+export * from "./components/Icons/PhonePeIcon/PhonePeIcon";
+export * from "./components/Icons/GpayIcon/GpayIcon";
+export * from "./components/Icons/UpiIcon/UpiIcon";
+export * from "./components/Icons/ClockIcon/ClockIcon";

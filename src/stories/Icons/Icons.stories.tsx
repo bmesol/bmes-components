@@ -21,6 +21,11 @@ import {
   PanIcon,
   AadhaarIcon,
   GstIcon,
+  BankAccountIcon,
+  PhonePeIcon,
+  GpayIcon,
+  UpiIcon,
+  ClockIcon,
 } from "../../lib";
 import React from "react";
 import { Meta } from "@storybook/react";
@@ -60,3 +65,8 @@ export const ChevronUpDown = IconTemplate(ChevronUpDownIcon);
 export const Pan = IconTemplate(PanIcon);
 export const Aadhaar = IconTemplate(AadhaarIcon);
 export const Gst = IconTemplate(GstIcon);
+export const BankAccount = IconTemplate(BankAccountIcon);
+export const PhonePe = IconTemplate(PhonePeIcon);
+export const Gpay = IconTemplate(GpayIcon);
+export const Upi = IconTemplate(UpiIcon);
+export const Clock = IconTemplate(ClockIcon);

@@ -22,6 +22,11 @@ import {
   PanIcon,
   AadhaarIcon,
   GstIcon,
+  BankAccountIcon,
+  PhonePeIcon,
+  GpayIcon,
+  UpiIcon,
+  ClockIcon,
 } from "../../../lib";
 
 const icons = [
@@ -47,6 +52,11 @@ const icons = [
   { name: "PanIcon", icon: <PanIcon /> },
   { name: "AadhaarIcon", icon: <AadhaarIcon /> },
   { name: "GstIcon", icon: <GstIcon /> },
+  { name: "BankAccountIcon", icon: <BankAccountIcon /> },
+  { name: "PhonePeIcon", icon: <PhonePeIcon /> },
+  { name: "GpayIcon", icon: <GpayIcon /> },
+  { name: "UpiIcon", icon: <UpiIcon /> },
+  { name: "ClockIcon", icon: <ClockIcon /> },
 ];
 
 export { icons };
