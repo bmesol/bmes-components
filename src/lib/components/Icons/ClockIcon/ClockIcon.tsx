@@ -33,7 +33,7 @@ const ClockIcon = ({ size = IconSizes.MD, color, isActive, onClick }: IconProps)
         fill="#FFFFFF"
         fillOpacity="0"
       />
-      <g clip-path="url(#clip729_14075)">
+      <g clipPath="url(#clip729_14075)">
         <path
           id="Icon"
           d="M12 22C6.47 22 2 17.52 2 12C2 6.47 6.47 2 12 2C17.52 2 22 6.47 22 12C22 17.52 17.52 22 12 22ZM12 6L12 12L16 14"
