@@ -16,6 +16,7 @@ interface RadioProps {
   onValueChange: any;
   isDisabled?: boolean;
   classNames?: string;
+  required?: boolean;
 }
 
 export { RadioProps, Directions };

@@ -42,6 +42,11 @@
       cursor: not-allowed;
     }
 
+    .required-icon-size {
+      width: 10px;
+      height: 10px;
+    }
+
     /* --- Button Component Styles --- */
     --button-padding: var(--base-unit) var(--xl-unit);
 

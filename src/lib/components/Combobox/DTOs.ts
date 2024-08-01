@@ -12,6 +12,7 @@ interface ComboboxProps {
   showCreateButton?: boolean;
   onSearch?: Function;
   onCreate?: Function;
+  required?: boolean;
 }
 
 export { ComboboxProps, ItemsType };

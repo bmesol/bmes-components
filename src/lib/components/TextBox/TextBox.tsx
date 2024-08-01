@@ -1,4 +1,5 @@
 import { TextBoxTypes, TextBoxProps } from "./DTOs";
+import { AsteriskIcon } from "lucide-react";
 import { useTextBox } from "./useTextBox";
 import React from "react";
 import "./TextBox.scss";
@@ -9,7 +10,7 @@ const TextBox = (props: TextBoxProps) => {
 
   return (
     <div className="textbox">
-      {label && <div className="mb-2 label">{label}</div>}
+      {label && <div className="mb-2 label d-flex">{label}{required && <sup>{<AsteriskIcon color="red" className="required-icon-size mt-2" />}</sup>}</div>}
       <input
         type={type}
         placeholder={`${placeholder}`}

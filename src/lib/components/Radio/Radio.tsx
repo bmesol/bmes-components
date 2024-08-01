@@ -1,14 +1,15 @@
 import { RadioGroup, RadioGroupItem } from "../../shared/components/RadioGroup/RadioGroup";
 import { RadioProps, Directions } from "./DTOs";
+import { AsteriskIcon } from "lucide-react";
 import React from "react";
 import "./Radio.scss";
 
 const Radio = (props: RadioProps) => {
-  const { label, items, direction, selectedValue, onValueChange, classNames = "", isDisabled = false } = props;
+  const { label, items, direction, selectedValue, onValueChange, classNames = "", isDisabled = false, required = false } = props;
   return (
     <>
       <div>
-        {label && <div className="mb-2 label">{label}</div>}
+        {label && <div className="mb-2 label d-flex">{label}{required && <sup>{<AsteriskIcon color="red" className="required-icon-size mt-2" />}</sup>}</div>}
         <RadioGroup
           defaultValue={selectedValue}
           onValueChange={onValueChange}

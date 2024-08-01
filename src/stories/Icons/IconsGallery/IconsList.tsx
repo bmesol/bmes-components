@@ -27,6 +27,8 @@ import {
   GpayIcon,
   UpiIcon,
   ClockIcon,
+  AsteriskIcon,
+  WorkersIcon,
 } from "../../../lib";
 
 const icons = [
@@ -57,6 +59,8 @@ const icons = [
   { name: "GpayIcon", icon: <GpayIcon /> },
   { name: "UpiIcon", icon: <UpiIcon /> },
   { name: "ClockIcon", icon: <ClockIcon /> },
+  { name: "AsteriskIcon", icon: <AsteriskIcon /> },
+  { name: "WorkersIcon", icon: <WorkersIcon /> },
 ];
 
 export { icons };

@@ -1,6 +1,6 @@
 import { Popover, PopoverContent, PopoverTrigger } from "../../shared/components/Popover/Popover";
+import { AsteriskIcon, Check, ChevronsUpDown, Search } from "lucide-react";
 import { Button } from "../../shared/components/Button/Button";
-import { Check, ChevronsUpDown, Search } from "lucide-react";
 import { Label, LabelVariants, Badge } from "../../../lib";
 import { useCombobox } from "./useCombobox";
 import { ComboboxProps } from "./DTOs";
@@ -8,7 +8,7 @@ import React from "react";
 import "./Combobox.scss";
 
 const Combobox = (props: ComboboxProps) => {
-  const { label, items, placeholder = "Select", showCreateButton = false } = props;
+  const { label, items, placeholder = "Select", showCreateButton = false, required = false } = props;
 
   const {
     open,
@@ -26,7 +26,7 @@ const Combobox = (props: ComboboxProps) => {
 
   return (
     <>
-      {label && ( <Label label={label} variant={LabelVariants.DEFAULT} classNames="text-black mb-2" /> )}
+      {label && <div className="mb-2 label d-flex">{label}{required && <sup>{<AsteriskIcon color="red" className="required-icon-size mt-2" />}</sup>}</div>}
       <Popover open={open} onOpenChange={handleOnOpenChange}>
         <PopoverTrigger asChild>
           <Button variant="outline" aria-expanded={open} className="w-100 justify-between">

@@ -26,6 +26,8 @@ import {
   GpayIcon,
   UpiIcon,
   ClockIcon,
+  AsteriskIcon,
+  WorkersIcon,
 } from "../../lib";
 import React from "react";
 import { Meta } from "@storybook/react";
@@ -70,3 +72,5 @@ export const PhonePe = IconTemplate(PhonePeIcon);
 export const Gpay = IconTemplate(GpayIcon);
 export const Upi = IconTemplate(UpiIcon);
 export const Clock = IconTemplate(ClockIcon);
+export const Asterisk = IconTemplate(AsteriskIcon);
+export const Workers = IconTemplate(WorkersIcon);
