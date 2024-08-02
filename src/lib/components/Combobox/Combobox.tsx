@@ -26,7 +26,7 @@ const Combobox = (props: ComboboxProps) => {
 
   return (
     <>
-      {label && <div className="mb-2 label d-flex">{label}{required && <sup>{<AsteriskIcon color="red" className="required-icon-size mt-2" />}</sup>}</div>}
+      {label && <div className="mb-2 label d-flex">{label}{required && <sup>{<AsteriskIcon color="red" className="required-icon-size mt-1" />}</sup>}</div>}
       <Popover open={open} onOpenChange={handleOnOpenChange}>
         <PopoverTrigger asChild>
           <Button variant="outline" aria-expanded={open} className="w-100 justify-between">
