@@ -11,7 +11,7 @@ const Textarea = (props: TextareaProps) => {
   return (
     <>
       <div className={classNames}>
-        {label && <div className="mb-2 label d-flex">{label}{required && <sup>{<AsteriskIcon color="red" className="required-icon-size mt-2" />}</sup>}</div>}
+        {label && <div className="mb-2 label d-flex">{label}{required && <sup>{<AsteriskIcon color="red" className="required-icon-size mt-1" />}</sup>}</div>}
         <div className="position-relative">
           <SharedTextarea
             maxLength={length}

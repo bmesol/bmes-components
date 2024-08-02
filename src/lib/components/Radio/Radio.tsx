@@ -9,7 +9,7 @@ const Radio = (props: RadioProps) => {
   return (
     <>
       <div>
-        {label && <div className="mb-2 label d-flex">{label}{required && <sup>{<AsteriskIcon color="red" className="required-icon-size mt-2" />}</sup>}</div>}
+        {label && <div className="mb-2 label d-flex">{label}{required && <sup>{<AsteriskIcon color="red" className="required-icon-size mt-1" />}</sup>}</div>}
         <RadioGroup
           defaultValue={selectedValue}
           onValueChange={onValueChange}

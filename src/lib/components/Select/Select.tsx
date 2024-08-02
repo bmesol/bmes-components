@@ -8,7 +8,7 @@ const Select = (props: SelectProps) => {
   const { label, items, selectedValue, onValueChange, placeholder, isDisabled = false, classNames = "", required = false } = props;
   return (
     <>
-      {label && <div className="mb-2 label d-flex">{label}{required && <sup>{<AsteriskIcon color="red" className="required-icon-size mt-2" />}</sup>}</div>}
+      {label && <div className="mb-2 label d-flex">{label}{required && <sup>{<AsteriskIcon color="red" className="required-icon-size mt-1" />}</sup>}</div>}
       <SharedSelect onValueChange={onValueChange} defaultValue={selectedValue} disabled={isDisabled}>
         <SelectTrigger className={`w-100 select ${classNames}`}>
           <SelectValue placeholder={`${placeholder || "Select"}`} />
