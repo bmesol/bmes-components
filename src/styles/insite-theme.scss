@@ -41,6 +41,11 @@
       cursor: not-allowed;
     }
 
+    .required-icon-size {
+      width: 12px;
+      height: 12px;
+    }
+
     /* --- Button Component Styles --- */
     --button-padding: var(--base-unit) var(--xl-unit);
     --button-fw: 700;

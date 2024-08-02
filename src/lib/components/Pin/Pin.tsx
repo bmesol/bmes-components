@@ -1,5 +1,6 @@
 import { TextBox } from "./../TextBox/TextBox";
 import { TextBoxTypes } from "../TextBox/DTOs";
+import { AsteriskIcon } from "lucide-react";
 import { PinProps } from "./DTOs";
 import { usePin } from "./usePin";
 import React from "react";
@@ -10,7 +11,7 @@ const Pin = (props: PinProps) => {
   const { pin, handleTextBoxChange, handleBackspace, inputRefs } = usePin(props);
   return (
     <>
-      {label && <div className="mb-2 label">{label}</div>}
+      {label && <div className="mb-2 label d-flex">{label}{required && <sup>{<AsteriskIcon color="red" className="required-icon-size mt-2" />}</sup>}</div>}
       <div className="d-flex justify-content-between pin">
         {Array.from({ length }, (_, index) => (
           <TextBox

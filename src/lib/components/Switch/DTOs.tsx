@@ -4,6 +4,7 @@ interface SwitchProps {
   onCheckedChange: any;
   isDisabled?: boolean;
   classNames?: string;
+  required?: boolean;
 }
 
 export { SwitchProps };

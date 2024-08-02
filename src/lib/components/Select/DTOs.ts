@@ -11,6 +11,7 @@ interface SelectProps {
   placeholder?: string;
   isDisabled?: boolean;
   classNames?: string;
+  required?: boolean;
 }
 
 export { SelectProps };
