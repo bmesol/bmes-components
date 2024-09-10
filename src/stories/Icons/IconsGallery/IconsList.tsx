@@ -29,6 +29,13 @@ import {
   ClockIcon,
   AsteriskIcon,
   WorkersIcon,
+  ShareIcon,
+  WhatsAppIcon,
+  GmailIcon,
+  InstagramIcon,
+  LinkedInIcon,
+  TelegramIcon,
+  FacebookIcon,
 } from "../../../lib";
 
 const icons = [
@@ -61,6 +68,13 @@ const icons = [
   { name: "ClockIcon", icon: <ClockIcon /> },
   { name: "AsteriskIcon", icon: <AsteriskIcon /> },
   { name: "WorkersIcon", icon: <WorkersIcon /> },
+  { name: "ShareIcon", icon: <ShareIcon /> },
+  { name: "WhatsAppIcon", icon: <WhatsAppIcon /> },
+  { name: "GmailIcon", icon: <GmailIcon /> },
+  { name: "InstagramIcon", icon: <InstagramIcon /> },
+  { name: "LinkedInIcon", icon: <LinkedInIcon /> },
+  { name: "TelegramIcon", icon: <TelegramIcon /> },
+  { name: "FacebookIcon", icon: <FacebookIcon /> },
 ];
 
 export { icons };

@@ -1,0 +1,31 @@
+import { Meta, Title, Story } from "@storybook/blocks";
+import * as ShareLink from "./ShareLink.stories.tsx";
+import { Preview } from "./../Preview.tsx";
+
+<Meta of={ShareLink} />
+
+<Title />
+
+The `ShareLink` component allows users to easily share a URL across popular social media platforms and messaging apps.
+
+## Props
+
+| Props | Type   | Required | Description                                 |
+| ----- | ------ | :------: | ------------------------------------------- |
+| url   | string |   Yes    | A string representing the URL to be shared. |
+
+### Preview
+
+<Preview>
+  <Story of={ShareLink.SampleShareLink} />
+</Preview>
+
+### Code
+
+```tsx
+import { ShareLink } from "@bmesol/bmes-components";
+
+export const SampleShareLink = () => {
+  return <ShareLink url="https://maps.app.goo.gl/qpZDsdWoBCKwPxkJ9" />;
+};
+```

@@ -28,6 +28,13 @@ import {
   ClockIcon,
   AsteriskIcon,
   WorkersIcon,
+  ShareIcon,
+  WhatsAppIcon,
+  GmailIcon,
+  InstagramIcon,
+  LinkedInIcon,
+  TelegramIcon,
+  FacebookIcon,
 } from "../../lib";
 import React from "react";
 import { Meta } from "@storybook/react";
@@ -74,3 +81,10 @@ export const Upi = IconTemplate(UpiIcon);
 export const Clock = IconTemplate(ClockIcon);
 export const Asterisk = IconTemplate(AsteriskIcon);
 export const Workers = IconTemplate(WorkersIcon);
+export const Share = IconTemplate(ShareIcon);
+export const WhatsApp = IconTemplate(WhatsAppIcon);
+export const Gmail = IconTemplate(GmailIcon);
+export const Instagram = IconTemplate(InstagramIcon);
+export const LinkedIn = IconTemplate(LinkedInIcon);
+export const Telegram = IconTemplate(TelegramIcon);
+export const Facebook = IconTemplate(FacebookIcon);
