@@ -19,6 +19,7 @@ export * from "./components/Loading/Loading";
 export * from "./components/Select/Select";
 export * from "./components/Badge/Badge";
 export * from "./components/Combobox/Combobox";
+export * from "./components/ShareLink/ShareLink";
 
 // Icons
 export * from "./components/Icons/ClientsIcon/ClientsIcon";
@@ -50,3 +51,10 @@ export * from "./components/Icons/UpiIcon/UpiIcon";
 export * from "./components/Icons/ClockIcon/ClockIcon";
 export * from "./components/Icons/AsteriskIcon/AsteriskIcon";
 export * from "./components/Icons/WorkersIcon/WorkersIcon";
+export * from "./components/Icons/ShareIcon/ShareIcon";
+export * from "./components/Icons/WhatsAppIcon/WhatsAppIcon";
+export * from "./components/Icons/GmailIcon/GmailIcon";
+export * from "./components/Icons/InstagramIcon/InstagramIcon";
+export * from "./components/Icons/LinkedInIcon/LinkedInIcon";
+export * from "./components/Icons/TelegramIcon/TelegramIcon";
+export * from "./components/Icons/FacebookIcon/FacebookIcon";
