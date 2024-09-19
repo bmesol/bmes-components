@@ -2,7 +2,7 @@ import { useModel, ShareIcon } from "../../index";
 import { ShareLinkForm } from "./ShareLinkForm";
 import React from "react";
 
-const ShareLink = (props: { url: string }) => {
+const ShareLink = (props: { url: string, color?: string }) => {
   const model = useModel();
 
   const handleShareButton = () => {
@@ -13,7 +13,7 @@ const ShareLink = (props: { url: string }) => {
     });
   };
 
-  return <ShareIcon onClick={handleShareButton} />;
+  return <ShareIcon onClick={handleShareButton} color={props.color} />;
 };
 
 export { ShareLink };
