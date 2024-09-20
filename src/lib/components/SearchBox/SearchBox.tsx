@@ -7,7 +7,7 @@ import React from "react";
 import "./SearchBox.scss";
 
 const SearchBox = (props: SearchBoxProps) => {
-  const { onSearch } = props;
+  const { onSearch, regex } = props;
   const { search, handleSearch, handleEnterToSearch, handleSearchButton } = useSearchBox({ onSearch });
   return (
     <>
@@ -18,6 +18,7 @@ const SearchBox = (props: SearchBoxProps) => {
           value={search}
           onChange={handleSearch}
           onKeyDown={handleEnterToSearch}
+          regex={regex}
         />
         <Button
           icon={<SearchIcon />}
