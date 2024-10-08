@@ -1,4 +1,4 @@
-import * as TextBoxStories from "./TextBox.stories.ts";
+import * as TextBoxStories from "./TextBox.stories.tsx";
 import { Meta, Title, Story } from "@storybook/blocks";
 import { SampleTextBox } from "./SampleTextBox.tsx";
 import { Preview } from "./../Preview.tsx";
@@ -27,6 +27,8 @@ The TextBox component is used to collect textual input from users within forms o
 | isDisabled  | boolean                                | No       | Specifies whether the TexBox input is disabled, preventing user interactions.                                                                                   |
 | refs        | `((instance: any) => void)`            | No       | Allows assignment of a ref to the TextBox component for imperative access and manipulation.                                                                     |
 | onKeyDown   | `(event: React.KeyboardEvent) => void` | No       | An optional event handler triggered when a key is pressed down within the TextBox component, useful for custom logic or actions based on keyboard input events. |
+| id          | string                                 | No       | Defines a unique identifier for the TextBox component, typically used to reference the element or associate it with a label.                                     |
+| name        | string                                 | No       | Specifies the name of the input, often used when submitting form data or accessing the input field's value in a form.                                           |
 
 ### Preview
 
