@@ -15,7 +15,6 @@ const Combobox = (props: ComboboxProps) => {
     handleOnOpenChange,
     value,
     searchString,
-    setSearchString,
     filteredItems,
     handleValueChange,
     hover,
@@ -25,7 +24,7 @@ const Combobox = (props: ComboboxProps) => {
   } = useCombobox(props);
 
   return (
-    <>
+    <div className="combobox-label">
       {label && <div className="mb-2 label d-flex">{label}{required && <sup>{<AsteriskIcon color="red" className="required-icon-size mt-1" />}</sup>}</div>}
       <Popover open={open} onOpenChange={handleOnOpenChange}>
         <PopoverTrigger asChild>
@@ -73,7 +72,7 @@ const Combobox = (props: ComboboxProps) => {
           </>
         </PopoverContent>
       </Popover>
-    </>
+    </div>
   );
 };
 
