@@ -29,6 +29,7 @@ $button-variants: (
     }
     &.outline-#{$variant}:hover {
       @include button(nth($colors, 1), nth($colors, 2));
+      border: 2px solid nth($colors, 1);
     }
   }
 }
