@@ -4,8 +4,6 @@ enum TextBoxTypes {
 }
 
 interface TextBoxProps {
-  id?: string;
-  name?: string;
   label?: string;
   type?: TextBoxTypes;
   regex?: string;
